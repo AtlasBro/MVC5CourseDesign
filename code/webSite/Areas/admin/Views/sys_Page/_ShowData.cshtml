@@ -1,0 +1,121 @@
+﻿@*数据展示的公用视图*@
+@model rui.pagerBase
+
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+<input type="hidden" class="pagerinfo" data-rowcount="@Model.RowCount" data-pagesize="@Model.PageSize"
+       data-pageindex="@Model.PageIndex" data-pagecount="@Model.PageCount"
+       data-orderfield="@Model.OrderField" data-orderway="@Model.OrderWay" />
+@{ rui.dbTools.removeShowColumn(Model.showColumn, "操作"); }
+<table>
+    <thead>
+        <tr>
+            @foreach (System.Data.DataRow row in Model.showColumn.Rows)
+            {
+                string colName = row["fieldCode"].ToString();
+                if (row["isOrder"].ToString() == "True")
+                {
+                    <th data-option="@row["optionValue"]" data-field="@row["fieldCode"]" data-order="@Model.OrderWay">@row["fieldName"]@Html.orderColumn(Model.OrderField, Model.OrderWay, row["fieldCode"].ToString())</th>
+                }
+                else
+                {
+                    <th data-option="@row["optionValue"]">@row["fieldName"]</th>
+                }
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.dataTable.Rows.Count; i++)
+        {
+            string rowID = Model.dataTable.Rows[i]["rowID"].ToString();
+            string keyCode = Model.dataTable.Rows[i][Model.keyField].ToString();
+            <tr data-code="@keyCode">
+                @foreach (System.Data.DataRow row in Model.showColumn.Rows)
+                {
+                    string colName = row["fieldCode"].ToString();
+                    string fieldCode = Model.dataTable.Rows[i]["fieldCode"].ToString();
+                    if (colName == "操作")
+                    {
+                        <td class="opRow"></td>
+                    }
+                    else if (colName == "cFieldName")
+                    {
+                        <td>
+                            @Html.Hidden("fieldCodeList", fieldCode)
+                            @Html.TextBox("cFieldNameList", Model.dataTable.Rows[i][colName], new { style="width:160px;" })
+                        </td>
+                    }
+                    else if (colName == "showOrder")
+                    {
+                        <td>
+                            @Html.TextBox("showOrderList", Model.dataTable.Rows[i][colName], new { style = "width:45px;" })
+                        </td>
+                    }
+                    else if (colName == "colWidth")
+                    {
+                        <td>
+                            @Html.TextBox("colWidthList", Model.dataTable.Rows[i][colName], new { style = "width:45px;" })
+                        </td>
+                    }
+                    else if (colName == "fixedValue")
+                    {
+                        <td>
+                            @Html.DropDownList("fixedValueList", rui.listHelper.bind停靠位置(false, Model.dataTable.Rows[i][colName]))
+                        </td>
+                    }
+                    else if (colName == "alignType")
+                    {
+                        <td>
+                            @Html.DropDownList("alignTypeList", rui.listHelper.bind对其方式(false, Model.dataTable.Rows[i][colName]))
+                        </td>
+                    }
+                    else if (colName == "isShow")
+                    {
+                        <td>
+                            @{  string isShowName = fieldCode + "_isShow"; }
+                            @if (Model.dataTable.Rows[i]["isShow"].ToString() == "True")
+                            {
+                                <input type="checkbox" name="@isShowName" value="isShow" checked="checked" />
+                            }
+                            else
+                            {
+                                <input type="checkbox" name="@isShowName" value="isShow" />
+                            }
+                        </td>
+                    }
+                    else if (colName == "isOrder")
+                    {
+                        <td>
+                            @{ string isOrderName = fieldCode + "_isOrder"; }
+                            @if (Model.dataTable.Rows[i]["isOrder"].ToString() == "True")
+                            {
+                                <input type="checkbox" name="@isOrderName" value="isOrder" checked="checked" />
+                            }
+                            else
+                            {
+                                <input type="checkbox" name="@isOrderName" value="isOrder" />
+                            }
+                        </td>
+                    }
+                    else if (colName == "isResize")
+                    {
+                        <td>
+                            @{ string resizeName = fieldCode + "_isResize"; }
+                            @if (Model.dataTable.Rows[i]["isResize"].ToString() == "True")
+                            {
+                                <input type="checkbox" name="@resizeName" value="isResize" checked="checked" />
+                            }
+                            else
+                            {
+                                <input type="checkbox" name="@resizeName" value="isResize" />
+                            }
+                        </td>
+                    }
+                    else
+                    {
+                        <td>@Model.dataTable.Rows[i][colName]</td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>

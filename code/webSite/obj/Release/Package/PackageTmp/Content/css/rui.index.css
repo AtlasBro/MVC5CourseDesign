@@ -1,0 +1,73 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+/* 清除子元素浮动影响 */
+.f_north:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.f_north {
+    overflow: hidden;
+    height: 40px;
+    color: white;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 900;
+    background-color: #FE5C13;
+}
+
+.f_left {
+    width: 160px;
+}
+
+    .f_left .ul_module > div {
+        box-sizing: border-box;
+        line-height: 27px;
+        height: 30px;
+        font-size: 11pt;
+        font-weight: 600;
+        padding-left: 15px;
+        background-color: #F2F2F2;
+        border-top: 1pt dotted #02F2F2;
+    }
+
+    .f_left .ul_module .arrow {
+        float: right;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        margin-top: 7px;
+        background-image: url(/Content/easyui/bootstrap/images/accordion_arrows.png);
+        background-position: -16px 0px;
+        background-repeat: no-repeat;
+    }
+
+    .f_left .active > div {
+        background-color: #FE5C13;
+        color: white;
+        font-weight: 900;
+    }
+
+    .f_left .active .arrow {
+        background-position: 0px 0px;
+    }
+
+    .f_left .ul_resource {
+        overflow: auto;
+    }
+
+        .f_left .ul_resource li {
+            line-height: 22px;
+            padding-left: 15px;
+        }

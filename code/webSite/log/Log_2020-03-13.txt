@@ -1,0 +1,11 @@
+2020-03-13 19:23:55.6694 Error 登录信息有误，无法登录
+-------------------------
+   在 rui.excptHelper.throwEx(String msg)
+   在 db.bll.loginAdminHelper.login(String userCode, String password, String orgCode, dbEntities dc) 位置 G:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\dbLibrary\bll\rbac\loginAdminHelper.cs:行号 56
+   在 web.Controllers.LoginController.loginAdmin(String tbxUserName, String tbxPassword, String orgCode) 位置 G:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\WebSite\Controllers\LoginController.cs:行号 50
+-------------------------
+ 
+2020-03-13 19:24:01.9338 Info sys_Home-index 
+2020-03-13 19:24:03.0708 Info sys_Home-desktop 
+2020-03-13 19:24:04.7149 Info rbac_Role-select 
+2020-03-13 19:24:08.1881 Info rbac_User-Select 

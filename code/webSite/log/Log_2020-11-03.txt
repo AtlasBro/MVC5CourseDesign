@@ -1,0 +1,29 @@
+2020-11-03 19:50:30.5896 Info rbac_Resource-Select 
+2020-11-03 19:50:41.3934 Info sys_Home-index 
+2020-11-03 19:50:42.9438 Info sys_Home-desktop 
+2020-11-03 19:51:07.6472 Info rbac_Resource-select 
+2020-11-03 19:51:54.8179 Info rbac_Resource-Select 
+2020-11-03 19:52:00.4933 Info rbac_Resource-Select 
+2020-11-03 19:52:02.7725 Info rbac_Resource-Select 
+2020-11-03 19:52:05.6042 Info rbac_Resource-Select 
+2020-11-03 19:52:17.2609 Info rbac_Resource-select 
+2020-11-03 19:54:46.7494 Info rbac_Resource-Select 
+2020-11-03 19:54:50.4245 Error 登录信息有误，无法登录
+-------------------------
+   在 rui.excptHelper.throwEx(String msg)
+   在 db.bll.loginAdminHelper.login(String userCode, String password, String orgCode, dbEntities dc) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\dbLibrary\bll\rbac\loginAdminHelper.cs:行号 56
+   在 web.Controllers.LoginController.loginAdmin(String tbxUserName, String tbxPassword, String orgCode) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\WebSite\Controllers\LoginController.cs:行号 46
+-------------------------
+ 
+2020-11-03 19:54:55.7710 Info sys_Home-index 
+2020-11-03 19:54:56.1573 Info sys_Home-desktop 
+2020-11-03 19:55:15.2150 Info rbac_Resource-select 
+2020-11-03 19:55:19.4312 Info rbac_Resource-Select 
+2020-11-03 19:55:29.3663 Info rbac_Resource-Select 
+2020-11-03 19:55:32.1540 Info rbac_Module-select 
+2020-11-03 19:55:34.7357 Info rbac_Resource-select 
+2020-11-03 19:55:39.5609 Info rbac_Resource-Select 
+2020-11-03 19:55:49.1509 Info rbac_Resource-Select 
+2020-11-03 19:56:02.9395 Info rbac_Resource-select 
+2020-11-03 19:56:12.7861 Info rbac_Resource-Select 
+2020-11-03 19:56:18.3099 Info rbac_Resource-Select 

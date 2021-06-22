@@ -1,0 +1,72 @@
+﻿@model db.view.rbac_RoleUser
+@{
+    ViewBag.Title = "角色关联用户";
+}
+
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#containerLink").pager("reflesh", exeCountSql);
+            $("#containerNoLink").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#containerLink").pager();
+            $("#containerNoLink").pager();
+        });
+
+        $(document).ready(function () {
+            //创建tab
+            $("#tabsSub").tabs({
+                border: false,
+                plain: true,
+                onSelect: function (title, index) {
+
+                }
+            });
+        });
+    </script>
+}
+<div id="tabsSub" class="easyui-tabs">
+    <div title="已关联账户" style="padding: 0px;">
+        <div class="container" id="containerLink" data-url="/admin/rbac_RoleUser/SelectLinkUsers">
+            <div class="search">
+                <input type="hidden" name="rowID" value="@ViewData["rowID"]" />
+                <span>所属部门：@Html.DropDownListFor(a => a.deptCode, db.bll.sbs_Dept.bindDdl(true), new { @class = "ddlDeptLink" })</span>
+                <span>用户编号：@Html.TextBoxFor(a => a.userCode)</span>
+                <span>用户名称：@Html.TextBoxFor(a=>a.userName)</span>
+            </div>
+            <div class="toolbar">
+                <a class="opSearch">查询</a>
+                @Html.ActionLink("删除选择项", "deleteLinkUsers", new { rowID = rui.requestHelper.getValue("rowID") }, new { @class = "listBatchOp opSave", data_msg = "确认删除选择？" })
+            </div>
+
+            <div class="pager"></div>
+            <div class="showData cbxCol">
+                @Html.Action("SelectLinkUsers")
+            </div>
+        </div>
+    </div>
+    <div title="未关联账户" style="padding: 0px;">
+        <div class="container" id="containerNoLink" data-url="/admin/rbac_RoleUser/SelectNoLinkUsers">
+            <div class="search">
+                <input type="hidden" name="rowID" value="@ViewData["rowID"]" />
+                <span>所属部门：@Html.DropDownListFor(a => a.deptCode, db.bll.sbs_Dept.bindDdl(true), new { @class = "ddlDeptNoLink" })</span>
+                <span>用户编号：@Html.TextBoxFor(a => a.userCode)</span>
+                <span>用户名称：@Html.TextBoxFor(a => a.userName)</span>
+            </div>
+            <div class="toolbar">
+                <a class="opSearch">查询</a>
+                @Html.ActionLink("添加选择项", "addNoLinkUsers", new { rowID = rui.requestHelper.getValue("rowID") }, new { @class = "listBatchOp opSave",data_msg = "确认添加选择？" })
+            </div>
+            <div class="pager"></div>
+            <div class="showData cbxCol">
+                @Html.Action("SelectNoLinkUsers")
+            </div>
+        </div>
+    </div>
+</div>

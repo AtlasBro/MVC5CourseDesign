@@ -1,0 +1,373 @@
+2021-06-07 14:09:03.8956 Info sys_Home-index 
+2021-06-07 14:09:28.9485 Info bks_Book-Select 
+2021-06-07 14:09:31.0335 Info sys_Home-desktop 
+2021-06-07 14:09:37.0144 Info bks_Book-Detail 
+2021-06-07 14:13:31.0109 Info sys_Home-index 
+2021-06-07 14:13:31.8714 Info sys_Home-desktop 
+2021-06-07 14:13:33.6874 Info bks_Book-Select 
+2021-06-07 14:13:56.1815 Info bks_Book-Update 
+2021-06-07 14:14:08.1797 Info bks_Book-select 
+2021-06-07 14:15:07.0406 Info bks_Book-Detail 
+2021-06-07 14:15:10.5313 Info bks_BookStock-Select 
+2021-06-07 14:15:12.9546 Info bks_BookStockDetail-select 
+2021-06-07 14:15:13.9230 Info bks_BookStock-Select 
+2021-06-07 14:15:15.8935 Info bks_BookStock-Detail 
+2021-06-07 14:15:15.9476 Info sys_BillAttach-SelectPartial 
+2021-06-07 14:15:19.9403 Info bks_BookStock-Update 
+2021-06-07 14:15:19.9939 Info bks_BookStockDetail-select 
+2021-06-07 14:15:20.9632 Info sys_BillAttach-SelectPartial 
+2021-06-07 14:15:27.5443 Info bks_BookStock-Select 
+2021-06-07 14:15:29.7154 Info bks_BookStockDetail-select 
+2021-06-07 14:15:31.5723 Info rbac_Resource-select 
+2021-06-07 14:15:36.9722 Info rbac_Module-select 
+2021-06-07 14:15:40.6484 Info rbac_Resource-select 
+2021-06-07 14:15:48.2655 Info rbac_Resource-Delete 
+2021-06-07 14:15:48.6527 Info rbac_Resource-Select 
+2021-06-07 14:15:51.2585 Info rbac_Module-select 
+2021-06-07 14:15:52.4315 Info rbac_Resource-select 
+2021-06-07 14:15:54.4248 Info sys_Home-index 
+2021-06-07 14:15:55.9844 Info sys_Home-index 
+2021-06-07 14:15:56.5212 Info sys_Home-desktop 
+2021-06-07 14:15:59.3215 Info bks_BookStock-Select 
+2021-06-07 14:16:00.8375 Info bks_BookStock-Detail 
+2021-06-07 14:16:00.8469 Info sys_BillAttach-SelectPartial 
+2021-06-07 14:18:56.5630 Info sys_Home-desktop 
+2021-06-07 14:21:56.9299 Info sys_Home-desktop 
+2021-06-07 14:26:20.6701 Info sys_Home-index 
+2021-06-07 14:26:20.8472 Info sys_Home-desktop 
+2021-06-07 14:26:24.0334 Info bks_BookStock-Select 
+2021-06-07 14:26:29.5139 Info bks_BookStock-Update 
+2021-06-07 14:26:30.6841 Info bks_BookStockDetail-select 
+2021-06-07 14:26:31.0646 Info sys_BillAttach-SelectPartial 
+2021-06-07 14:26:39.1954 Info bks_BookStock-Select 
+2021-06-07 14:29:20.9197 Info sys_Home-desktop 
+2021-06-07 14:32:21.0012 Info sys_Home-desktop 
+2021-06-07 14:37:13.4772 Info sys_Home-index 
+2021-06-07 14:37:14.1391 Info sys_Home-desktop 
+2021-06-07 14:37:18.5360 Info bks_Book-Select 
+2021-06-07 14:37:26.3967 Info bks_Book-Detail 
+2021-06-07 14:37:31.2206 Info bks_Book-Select 
+2021-06-07 14:37:32.7701 Info bks_BookType-Select 
+2021-06-07 14:37:40.2725 Info bks_BookType-select 
+2021-06-07 14:40:14.4922 Info sys_Home-desktop 
+2021-06-07 14:40:58.4625 Info sys_Home-index 
+2021-06-07 14:40:58.9339 Info sys_Home-desktop 
+2021-06-07 14:41:01.2545 Info rbac_Resource-select 
+2021-06-07 14:41:10.0083 Info rbac_Module-select 
+2021-06-07 14:41:12.8239 Info rbac_Resource-Insert 
+2021-06-07 14:41:13.1881 Info rbac_Resource-select 
+2021-06-07 14:41:15.3523 Info rbac_Resource-Insert 
+2021-06-07 14:41:59.0009 Info rbac_Resource-Insert 
+2021-06-07 14:41:59.2295 Info rbac_Resource-Update 
+2021-06-07 14:41:59.4026 Info rbac_ResourceOp-SelectPartial 
+2021-06-07 14:41:59.7518 Info sys_BillAttach-SelectPartial 
+2021-06-07 14:42:04.3160 Info sys_Home-index 
+2021-06-07 14:42:05.0917 Info sys_Home-desktop 
+2021-06-07 14:42:07.2712 Info bks_Press-Select 
+2021-06-07 14:44:09.4865 Info sys_Home-index 
+2021-06-07 14:44:09.6119 Info sys_Home-desktop 
+2021-06-07 14:44:11.6709 Info bks_Press-Select 
+2021-06-07 14:44:14.1922 Info bks_Press-Detail 
+2021-06-07 14:45:05.1472 Info sys_Home-desktop 
+2021-06-07 14:45:46.3157 Info sys_Home-index 
+2021-06-07 14:45:46.9796 Info sys_Home-desktop 
+2021-06-07 14:45:48.7345 Info bks_Press-Select 
+2021-06-07 14:45:52.8597 Info bks_Press-Select 
+2021-06-07 14:46:01.4063 Info bks_BookType-Select 
+2021-06-07 14:46:05.1338 Info bks_Press-Select 
+2021-06-07 14:46:28.2932 Info sys_Home-index 
+2021-06-07 14:46:29.2151 Info sys_Home-desktop 
+2021-06-07 14:46:31.6206 Info bks_Press-Select 
+2021-06-07 14:46:32.8636 Info sys_ExlImport-Import 
+2021-06-07 14:46:59.8547 Info sys_ExlImport-ImportUpload 
+2021-06-07 14:47:02.1202 Info sys_ExlImport-disPlayImport 
+2021-06-07 14:47:30.3239 Info sys_ExlImport-SaveData 
+2021-06-07 14:47:30.3548 Info 导入出错 
+2021-06-07 14:47:30.3558 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 14:47:30.3558 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 14:47:41.6181 Info sys_ExlImport-SaveData 
+2021-06-07 14:47:41.6461 Info 导入出错 
+2021-06-07 14:47:41.6461 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 14:47:41.6470 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 14:47:48.5791 Info sys_ExlImport-ImportUpload 
+2021-06-07 14:47:48.5900 Info sys_ExlImport-disPlayImport 
+2021-06-07 14:47:51.0898 Info sys_ExlImport-SaveData 
+2021-06-07 14:47:51.1187 Info 导入出错 
+2021-06-07 14:47:51.1187 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 14:47:51.1187 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 14:49:29.3022 Info sys_Home-desktop 
+2021-06-07 14:52:26.4069 Info bks_Book-Select 
+2021-06-07 14:52:29.3699 Info sys_Home-desktop 
+2021-06-07 14:52:32.9454 Info sys_Home-desktop 
+2021-06-07 14:52:33.9394 Info bks_Book-Select 
+2021-06-07 14:52:34.5806 Info bks_BookType-Select 
+2021-06-07 14:53:31.5208 Info sys_Home-index 
+2021-06-07 14:53:32.1707 Info sys_Home-desktop 
+2021-06-07 14:53:34.0775 Info bks_BookType-Select 
+2021-06-07 14:53:35.7329 Info bks_Press-Select 
+2021-06-07 14:53:38.2535 Info bks_Book-Select 
+2021-06-07 14:53:39.5700 Info bks_Book-SelectExport 
+2021-06-07 14:53:56.5955 Info bks_Book-Select 
+2021-06-07 14:53:57.3882 Info bks_BookType-Select 
+2021-06-07 14:53:59.7324 Info bks_Book-Select 
+2021-06-07 14:54:01.1423 Info bks_Press-Select 
+2021-06-07 14:54:02.0387 Info sys_ExlImport-Import 
+2021-06-07 14:54:37.4861 Info sys_ExlImport-ImportUpload 
+2021-06-07 14:54:37.5967 Info sys_ExlImport-disPlayImport 
+2021-06-07 14:54:39.9865 Info sys_ExlImport-SaveData 
+2021-06-07 14:54:40.2385 Info 导入出错 
+2021-06-07 14:54:40.2445 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 14:54:40.2465 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 14:56:32.5287 Info sys_Home-desktop 
+2021-06-07 14:59:10.9937 Info sys_Home-index 
+2021-06-07 14:59:11.4617 Info sys_Home-desktop 
+2021-06-07 14:59:13.9801 Info bks_Press-Select 
+2021-06-07 14:59:15.7868 Info bks_BookType-Select 
+2021-06-07 14:59:17.4195 Info bks_Press-Select 
+2021-06-07 14:59:18.2054 Info sys_ExlImport-Import 
+2021-06-07 14:59:22.3231 Info sys_ExlImport-ImportUpload 
+2021-06-07 14:59:22.3341 Info sys_ExlImport-disPlayImport 
+2021-06-07 14:59:23.8264 Info sys_ExlImport-SaveData 
+2021-06-07 14:59:23.8532 Info 导入出错 
+2021-06-07 14:59:23.8532 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 14:59:23.8542 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 15:02:47.3338 Info sys_Home-index 
+2021-06-07 15:02:47.9886 Info sys_Home-desktop 
+2021-06-07 15:02:52.5472 Info bks_Press-Select 
+2021-06-07 15:02:53.6360 Info sys_ExlImport-Import 
+2021-06-07 15:02:58.3373 Info sys_ExlImport-ImportUpload 
+2021-06-07 15:02:58.6707 Info sys_ExlImport-disPlayImport 
+2021-06-07 15:03:00.1923 Info sys_ExlImport-SaveData 
+2021-06-07 15:03:00.4476 Info 导入出错 
+2021-06-07 15:03:00.4507 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 15:03:00.4537 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 15:04:26.8101 Info sys_Home-index 
+2021-06-07 15:04:26.9836 Info sys_Home-desktop 
+2021-06-07 15:04:29.6837 Info bks_Press-Select 
+2021-06-07 15:04:30.5583 Info sys_ExlImport-Import 
+2021-06-07 15:04:34.1623 Info sys_ExlImport-ImportUpload 
+2021-06-07 15:04:34.1743 Info sys_ExlImport-disPlayImport 
+2021-06-07 15:04:35.6248 Info sys_ExlImport-SaveData 
+2021-06-07 15:04:35.6554 Info 导入出错 
+2021-06-07 15:04:35.6554 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 15:04:35.6564 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 15:05:48.3512 Info sys_Home-desktop 
+2021-06-07 15:07:27.0608 Info sys_Home-desktop 
+2021-06-07 15:08:48.4033 Info sys_Home-desktop 
+2021-06-07 15:10:20.6644 Info sys_ExlImport-SaveData 
+2021-06-07 15:10:21.0183 Info 导入出错 
+2021-06-07 15:10:21.0192 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 15:10:21.0212 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 15:10:27.1097 Info sys_Home-desktop 
+2021-06-07 15:11:48.4535 Info sys_Home-desktop 
+2021-06-07 15:12:45.8326 Info sys_ExlImport-SaveData 
+2021-06-07 15:12:45.8585 Info 导入出错 
+2021-06-07 15:12:45.8585 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 15:12:45.8585 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 15:12:51.1426 Info sys_ExlImport-SaveData 
+2021-06-07 15:12:51.1682 Info 导入出错 
+2021-06-07 15:12:51.1682 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 129
+------------End-------------
+ 
+2021-06-07 15:12:51.1692 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 139
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 15:13:27.1554 Info sys_Home-desktop 
+2021-06-07 15:14:27.0657 Info sys_Home-index 
+2021-06-07 15:14:27.7224 Info sys_Home-desktop 
+2021-06-07 15:14:29.9463 Info bks_Press-Select 
+2021-06-07 15:14:31.0444 Info sys_ExlImport-Import 
+2021-06-07 15:14:35.0331 Info sys_ExlImport-SaveData 
+2021-06-07 15:14:35.0441 Info 导入出错 
+2021-06-07 15:14:36.9591 Info sys_ExlImport-ImportUpload 
+2021-06-07 15:14:37.3042 Info sys_ExlImport-disPlayImport 
+2021-06-07 15:14:38.4455 Info sys_ExlImport-SaveData 
+2021-06-07 15:14:38.6886 Info 导入出错 
+2021-06-07 15:14:38.6926 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 130
+------------End-------------
+ 
+2021-06-07 15:14:38.6956 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_Press.SaveData(dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\book\bks_Press.cs:行号 140
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\prj\sys_ExlImport.cs:行号 15
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-07 15:23:45.9942 Info sys_Home-index 
+2021-06-07 15:23:47.1468 Info sys_Home-desktop 
+2021-06-07 15:23:49.1197 Info bks_Book-Select 
+2021-06-07 15:23:50.7749 Info bks_BookType-Select 
+2021-06-07 15:23:53.2506 Info bks_Press-Select 
+2021-06-07 15:23:54.9626 Info sys_ExlImport-Import 
+2021-06-07 15:23:57.8728 Info sys_ExlImport-ImportUpload 
+2021-06-07 15:23:58.2258 Info sys_ExlImport-disPlayImport 
+2021-06-07 15:24:00.1093 Info sys_ExlImport-SaveData 
+2021-06-07 15:24:03.8899 Info bks_BookStock-Select 
+2021-06-07 15:24:05.3876 Info bks_BookStock-Detail 
+2021-06-07 15:24:05.7040 Info sys_BillAttach-SelectPartial 
+2021-06-07 15:24:08.8980 Info bks_BookStock-Update 
+2021-06-07 15:24:08.9534 Info bks_BookStockDetail-select 
+2021-06-07 15:24:09.3187 Info sys_BillAttach-SelectPartial 
+2021-06-07 15:24:14.8748 Info bks_BookStockDetail-Insert 
+2021-06-07 15:24:19.0900 Info bks_BookStockDetail-Insert 
+2021-06-07 15:24:19.2325 Info bks_BookStockDetail-Update 
+2021-06-07 15:24:20.6230 Info bks_BookStockDetail-Select 
+2021-06-07 15:24:22.7069 Info select_Dlg-SelectBook 
+2021-06-07 15:24:25.6710 Info select_Dlg-selectBook 
+2021-06-07 15:24:27.4300 Info bks_BookStockDetail-Select 
+2021-06-07 15:24:30.4398 Info select_Dlg-SelectBook 
+2021-06-07 15:24:33.9268 Info bks_BookStockDetail-batchInsert 
+2021-06-07 15:24:33.9839 Info bks_BookStockDetail-Select 
+2021-06-07 15:24:43.9929 Info sys_BillAttach-fileUpload 
+2021-06-07 15:24:44.0019 Error 未能找到路径“C:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\WebSite\upload\bill\bks_BookStock\2021\6\20210607152443bks_Press.xlsx”的一部分。
+------------begin-------------
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode)
+   在 System.Web.HttpPostedFile.SaveAs(String filename)
+   在 db.bll.sys_BillAttach.upload(String resourceCode, String keyCode, dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\system\sys_BillAttach.Df.cs:行号 40
+   在 web.Areas.admin.Controllers.sys_BillAttachController.fileUpload(String resourceCode, String keyCode) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_BillAttachController.cs:行号 34
+------------End-------------
+ 
+2021-06-07 15:24:44.0114 Info sys_BillAttach-SelectPartial 
+2021-06-07 15:25:10.5478 Info sys_BillAttach-fileUpload 
+2021-06-07 15:25:10.5518 Error 未能找到路径“C:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\WebSite\upload\bill\bks_BookStock\2021\6\20210607152510bks_Press.xlsx”的一部分。
+------------begin-------------
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode)
+   在 System.Web.HttpPostedFile.SaveAs(String filename)
+   在 db.bll.sys_BillAttach.upload(String resourceCode, String keyCode, dbEntities dc) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\dbLibrary\bll\system\sys_BillAttach.Df.cs:行号 40
+   在 web.Areas.admin.Controllers.sys_BillAttachController.fileUpload(String resourceCode, String keyCode) 位置 c:\Users\Administrator\Desktop\MVC5开发框架 - 2013\code\webSite\Areas\admin\Controllers\sys_BillAttachController.cs:行号 34
+------------End-------------
+ 
+2021-06-07 15:25:10.5598 Info sys_BillAttach-SelectPartial 
+2021-06-07 15:25:19.4157 Info bks_BookStock-Select 
+2021-06-07 15:25:21.8847 Info bks_Book-Select 
+2021-06-07 15:25:22.9388 Info bks_Book-Detail 
+2021-06-07 15:25:26.4502 Info bks_Book-Update 
+2021-06-07 15:25:31.5436 Info bks_Book-Update 
+2021-06-07 15:25:31.6008 Info bks_Book-select 
+2021-06-07 15:26:47.4968 Info sys_Home-desktop 

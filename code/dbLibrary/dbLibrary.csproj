@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69ECB6D0-563C-4ADE-831C-E06EF1E9B377}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>db</RootNamespace>
+    <AssemblyName>dbLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\packages\_dll\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\packages\_dll\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.50.0\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="JWT, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JWT.5.0.0\lib\net46\JWT.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>..\packages\_dll\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\_dll\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="ruiLibrary, Version=1.0.0.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\ruiLibrary\bin\Debug\ruiLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="af_AuditFlow.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_AuditFlowDept.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_AuditLog.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_AuditNode.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_AuditPost.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_AuditPostUser.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_AuditType.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_BillCdnField.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_BillEditField.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="af_NodeRelation.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_Book.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_BookStock.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_BookStockDetail.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_BookType.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_Customer.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_CustomerAddress.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_OrderDetail.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_OrderInfo.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_Press.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_ShoppingTrolley.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bks_Supplier.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bll\audit\af_AuditFlow.cs" />
+    <Compile Include="bll\audit\af_AuditLog.cs" />
+    <Compile Include="bll\audit\af_AuditNode.cs" />
+    <Compile Include="bll\audit\af_AuditType.cs" />
+    <Compile Include="bll\audit\af_NodeRelation.cs" />
+    <Compile Include="bll\book\bks_Books.cs" />
+    <Compile Include="bll\book\bks_BookStock.cs" />
+    <Compile Include="bll\book\bks_BookStockDetail.cs" />
+    <Compile Include="bll\book\bks_BookType.cs" />
+    <Compile Include="bll\book\bks_Press.cs" />
+    <Compile Include="bll\book\bks_Supplier.cs" />
+    <Compile Include="bll\client\bks_BookType.cs" />
+    <Compile Include="bll\rbac\rbac_DataPriv.cs" />
+    <Compile Include="bll\rbac\rbac_Module.cs" />
+    <Compile Include="bll\rbac\rbac_Operation.cs" />
+    <Compile Include="bll\rbac\rbac_Platform.cs" />
+    <Compile Include="bll\rbac\rbac_Resource.cs" />
+    <Compile Include="bll\rbac\rbac_ResourceOp.cs" />
+    <Compile Include="bll\rbac\rbac_Role.cs" />
+    <Compile Include="bll\rbac\rbac_RolePriv.cs" />
+    <Compile Include="bll\rbac\rbac_RoleUser.cs" />
+    <Compile Include="bll\rbac\rbac_User.cs" />
+    <Compile Include="bll\rbac\rbac_UserOrg.cs" />
+    <Compile Include="bll\rbac\rbac_UserPriv.cs" />
+    <Compile Include="bll\sbasic\sbs_Dept.cs" />
+    <Compile Include="bll\sbasic\sbs_Empl.cs" />
+    <Compile Include="bll\sbasic\sbs_Org.cs" />
+    <Compile Include="bll\audit\af_AuditPost.cs" />
+    <Compile Include="bll\audit\af_AuditPostUser.cs" />
+    <Compile Include="bll\system\sys_BillAttach.Df.cs" />
+    <Compile Include="bll\system\sys_UCPage.cs" />
+    <Compile Include="bll\system\sys_WebLog.Df.cs" />
+    <Compile Include="dbModel1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbModel1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbModel1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\db\ruiDbContext.cs" />
+    <Compile Include="lib\db\efHelper.cs" />
+    <Compile Include="meta\Book\bks_Book.cs" />
+    <Compile Include="meta\Book\bks_BookStock.cs" />
+    <Compile Include="meta\Book\bks_BookStockDetail.cs" />
+    <Compile Include="meta\Book\bks_BookType.cs" />
+    <Compile Include="meta\Book\bks_Press.cs" />
+    <Compile Include="meta\Book\bks_Supplier.cs" />
+    <Compile Include="prj\appReturnResult.cs" />
+    <Compile Include="prj\dataCheck.cs" />
+    <Compile Include="prj\enumHelperPrj.cs" />
+    <Compile Include="prj\innerCodePrj.cs" />
+    <Compile Include="prj\listHelperPrj.cs" />
+    <Compile Include="prj\loginInfo.cs" />
+    <Compile Include="prj\sys_ExlImport.cs" />
+    <Compile Include="meta\audit\af_AuditFlow.cs" />
+    <Compile Include="meta\audit\af_AuditNode.cs" />
+    <Compile Include="meta\audit\af_AuditPost.cs" />
+    <Compile Include="meta\audit\af_AuditType.cs" />
+    <Compile Include="meta\audit\af_NodeRelation.cs" />
+    <Compile Include="meta\rbac\rbac_Module.cs" />
+    <Compile Include="meta\rbac\rbac_Resource.cs" />
+    <Compile Include="meta\rbac\rbac_Role.cs" />
+    <Compile Include="meta\rbac\rbac_User.cs" />
+    <Compile Include="meta\sbasic\sbs_Dept.cs" />
+    <Compile Include="meta\sbasic\sbs_Empl.cs" />
+    <Compile Include="meta\sbasic\sbs_Org.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="bll\audit\auditBill\IBill.cs" />
+    <Compile Include="bll\audit\auditHelper.cs" />
+    <Compile Include="lib\sys\enumHelper.cs" />
+    <Compile Include="lib\sys\innerCode.cs" />
+    <Compile Include="lib\sys\listHelper.cs" />
+    <Compile Include="bll\rbac\loginAdminHelper.cs" />
+    <Compile Include="lib\sys\privCtl.cs" />
+    <Compile Include="bll\rbac\privRbacHelper.cs" />
+    <Compile Include="rbac_Config.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_DataPriv.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_Module.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_Operation.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_Resource.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_ResourceOp.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_Role.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_RolePriv.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_RoleUser.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_User.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_UserOrg.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rbac_UserPriv.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sbs_Dept.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sbs_Empl.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sbs_Org.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_af_AuditCenter.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_af_AuditFlow.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_af_AuditPostUser.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_bks_Book.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_bks_BookType.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_rbac_Resource.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_rbac_User.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_rbac_UserOrg.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_sbs_Dept.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_sbs_Empl.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_sys_BillAttach.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_BillAttach.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_Column.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_DataSyncInterface.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_DataSyncInterfaceDetail.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_UCColumn.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_UCPager.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_WebLog.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="view\audit\af_AuditCenter.cs" />
+    <Compile Include="view\audit\af_AuditFlow.cs" />
+    <Compile Include="view\audit\af_AuditFlowDept.cs" />
+    <Compile Include="view\audit\af_AuditFlowDesign.cs" />
+    <Compile Include="view\audit\af_AuditFlowUser.cs" />
+    <Compile Include="view\audit\af_AuditLog.cs" />
+    <Compile Include="view\audit\af_AuditType.cs" />
+    <Compile Include="view\audit\af_SelectAuditFlow.cs" />
+    <Compile Include="view\book\bks_Book.cs" />
+    <Compile Include="view\book\bks_BookStock.cs" />
+    <Compile Include="view\book\bks_BookStockDetail.cs" />
+    <Compile Include="view\book\bks_BookType.cs" />
+    <Compile Include="view\book\bks_Press.cs" />
+    <Compile Include="view\book\bks_Supplier.cs" />
+    <Compile Include="view\rbac\rbac_Module.cs" />
+    <Compile Include="view\rbac\rbac_Resource.cs" />
+    <Compile Include="view\rbac\rbac_ResourceOp.cs" />
+    <Compile Include="view\rbac\rbac_Role.cs" />
+    <Compile Include="view\rbac\rbac_RolePriv.cs" />
+    <Compile Include="view\rbac\rbac_RoleUser.cs" />
+    <Compile Include="view\rbac\rbac_User.cs" />
+    <Compile Include="view\rbac\rbac_UserOrg.cs" />
+    <Compile Include="view\rbac\rbac_UserPriv.cs" />
+    <Compile Include="view\sbasic\sbs_Dept.cs" />
+    <Compile Include="view\sbasic\sbs_Empl.cs" />
+    <Compile Include="view\sbasic\sbs_Materiel.cs" />
+    <Compile Include="view\sbasic\sbs_Org.cs" />
+    <Compile Include="view\audit\af_AuditPost.cs" />
+    <Compile Include="view\audit\af_AuditPostUser.cs" />
+    <Compile Include="view\system\adminIndex.cs" />
+    <Compile Include="view\system\loginAdmin.cs" />
+    <Compile Include="view\system\pageConfig.cs" />
+    <Compile Include="view\system\sys_BillAttach.cs" />
+    <Compile Include="wx_User.cs">
+      <DependentUpon>dbModel1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="dbModel1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="dbModel1.edmx.diagram">
+      <DependentUpon>dbModel1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\dbLibrary.dll" />
+    <Content Include="bin\Debug\dbLibrary.pdb" />
+    <Content Include="dbModel1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbModel1.edmx</DependentUpon>
+      <LastGenOutput>dbModel1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dbModel1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbModel1.edmx</DependentUpon>
+      <LastGenOutput>dbModel1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

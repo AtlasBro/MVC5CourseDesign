@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "不要意思出错误了";
+}
+@{Layout = null;}
+
+<h2 style="width:500px; margin-left:auto; margin-right:auto;">系统出错了,错误原因见下方</h2>
+<h2 style="width:500px; margin-left:auto; margin-right:auto; color:red;">@HttpContext.Current.Session["errorMessage"]</h2>

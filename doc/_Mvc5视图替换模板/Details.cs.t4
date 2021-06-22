@@ -1,0 +1,40 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension=".cshtml" #>
+<#@ include file="Imports.include.t4" #>
+@model <#= ViewDataTypeName #>
+
+@{
+	ViewBag.Title = "<#= ViewName#>";
+}
+
+
+<div class="dialog">
+<#
+foreach (PropertyMetadata property in ModelMetadata.Properties) 
+{
+	bool tag = true;
+	if(property.PropertyName == "rowID" || property.PropertyName == "rowNum")
+	{
+		tag = false;
+	}
+    if (tag == true && property.Scaffold && !property.IsForeignKey) 
+	{
+
+#>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.<#= GetValueExpression(property) #>)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.<#= GetValueExpression(property) #>)
+    </div>
+
+<#
+    }
+}
+#>
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>
+
+<#@ include file="ModelMetadataFunctions.cs.include.t4" #>

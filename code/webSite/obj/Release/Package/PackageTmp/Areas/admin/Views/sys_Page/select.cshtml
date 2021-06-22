@@ -1,0 +1,74 @@
+﻿@model db.view.pageConfig
+
+@*
+    //在页面的搜索栏加入这个即可,Search()方法内需要配置ResourceCode的属性值
+    @Html.ActionLink("定制", "select", "sys_Page", new { ResourceCode = Model.ResourceCode }, new { @class = "opPage showDialogRRM" })
+*@
+
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+@{
+    ViewBag.Title = "页面定制";
+}
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+
+        //保存
+        $(document).ready(function () {
+            //保存
+            $(".opSave").click(function () {
+                ajaxFormUrl($("form"), "/admin/sys_Page/update", function (data) {
+                    showJsonResult(data, function () {
+                        refleshData(false);
+                    });
+                });
+                return false;
+            });
+            //重置
+            $(".opReset").click(function () {
+                var keyCode =$(this).attr("data-keycode");
+                ajaxPost("/admin/sys_Page/reSet", { resourceCode: keyCode }, function (data) {
+                    showJsonResult(data, function () {
+                        refleshData(false);
+                    });
+                });
+            });
+
+        });
+    </script>
+}
+
+<div class="container" id="container">
+    @using (Html.BeginForm())
+    {
+        <div class="search" style=" margin-bottom:5px; padding-left:5px;">
+            <span>
+                @Html.HiddenFor(a => a.ResourceCode)
+            </span>
+            <span style="margin-right:80px;">
+                分页大小： @Html.TextBoxFor(a => a.cPageSize, new { style = "width:50px;" }) 行每页
+            </span>
+            <span>
+                页面宽度： @Html.TextBoxFor(a => a.cPageWidth, new { style = "width:50px;" }) 像素
+            </span>
+            <div class="toolbar">
+                <a class="opSave">保存</a>
+                <a class="opReset opBtn" data-keycode="@Model.ResourceCode">重置</a>
+            </div>
+        </div>
+        <div class="pager"></div>
+        <div class="showData">
+            @{Html.RenderPartial("_ShowData");}
+        </div>
+    }
+</div>

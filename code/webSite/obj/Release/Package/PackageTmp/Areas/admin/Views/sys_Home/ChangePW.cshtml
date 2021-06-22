@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "changePW";
+}
+
+<form action="ChangePW">
+    <div class="dialog">
+        <div class="editor-label">
+            账户名称
+        </div>
+        <div class="editor-field">
+            @rui.sessionHelper.getValue("admin.userCode")
+        </div>
+        <div class="editor-label">
+            原密码
+        </div>
+        <div class="editor-field">
+            <input name="oldPW" type="password" />
+        </div>
+        <div class="editor-label">
+            新密码
+        </div>
+        <div class="editor-field">
+            <input name="newPW1" type="password" />
+        </div>
+        <div class="editor-label">
+            重复密码
+        </div>
+        <div class="editor-field">
+           <input name="newPW2" type="password" />
+        </div>
+        <p class="button">
+            <a class="billSave opSave" data-close="true">保存</a>
+            <a class="opClose">关闭</a>
+        </p>
+    </div>
+</form>

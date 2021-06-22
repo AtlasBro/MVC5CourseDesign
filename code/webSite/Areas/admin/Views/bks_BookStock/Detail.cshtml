@@ -1,0 +1,68 @@
+﻿@model db.bks_BookStock
+
+@{
+    ViewBag.Title = "入库主表详情";
+    //wzrui 2020-02-19
+}
+
+
+<div class="dialog">
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.stockCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.stockCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.stockDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.stockDate)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.userCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.userCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.supplierCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.supplierCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.status)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.remark)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.remark)
+    </div>
+
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>
+<fieldset>
+    <legend>相关附件</legend>
+    @{
+        var routeValue = new
+        {
+            attachResourceCode = "bks_BookStock",  //资源标识
+            attachKeyCode = Model.stockCode,  //单据主键值
+            attachOpMode = "Detail"
+        };
+        Html.RenderAction("SelectPartial", "sys_BillAttach", routeValue);
+    }
+</fieldset>
+

@@ -1,0 +1,41 @@
+﻿@model db.bks_BookType
+
+@{
+	ViewBag.Title = "Detail";
+}
+
+
+<div class="dialog">
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.bookTypeCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bookTypeCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.bookTypeName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bookTypeName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.showOrder)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.showOrder)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.remark)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.remark)
+    </div>
+
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>
+

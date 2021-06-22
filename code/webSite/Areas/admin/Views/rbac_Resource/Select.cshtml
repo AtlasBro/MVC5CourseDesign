@@ -1,0 +1,65 @@
+﻿@model db.view.rbac_Resource
+@{
+    ViewBag.Title = "资源维护";
+}
+
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+
+        $(document).ready(function () {
+            //新增资源,自动选中模块
+            $(".opInsert").click(function () {
+                var url = $(this).attr("href") + "?moduleCode=" + $(".moduleCodeDdl").val();
+                openDialog($(this).text(), url, window, "type2", true);
+                return false;
+            });
+            //变更模块
+            $(".batchChangeModuleOp").click(function () {
+                var moduleCode = $(".moduleCodeDdl").val();
+                if (isNull(moduleCode)) {
+                    showInfo("必须选择模块");
+                    return false;
+                }
+                listBatchOp($(this), "moduleCode=" + moduleCode);
+                return false;
+            });
+        });
+    </script>
+}
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+<div class="container" id="container" data-width="@Model.PageWidth" data-url="/admin/rbac_Resource/Select">
+    <div class="search">
+        <span>所属模块：@Html.DropDownListFor(a => a.moduleCode, db.bll.rbac_Module.bindDdl(true), new { @class="moduleCodeDdl" })</span>
+        <span>资源名称：@Html.TextBoxFor(a => a.resourceName)</span>
+    </div>
+    <div class="toolbar">
+        <a class="opSearch">查询</a>
+        @Html.ActionLink("新增", "Insert", new { }, new { @class = "opInsert", data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Insert) })
+        @Html.ActionLink("批量保存", "batchSave", new { }, new { @class = "listBatchSave opBtn", data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.BatchSave), data_formid = "form" })
+        @Html.ActionLink("批量显示", "batchShow", new { }, new { data_show = rui.privCtl.isPriv(ctrl, "batchShow"), @class = "listBatchOp opBtn", data_msg = "确认批量显示?", data_formid = "form" })
+        @Html.ActionLink("批量隐藏", "batchNoShow", new { }, new { data_show = rui.privCtl.isPriv(ctrl, "batchNoShow"), @class = "listBatchOp opBtn", data_msg = "确认批量隐藏?", data_formid = "form" })
+        @Html.ActionLink("批量+1", "batchAdd", new { }, new { data_show = rui.privCtl.isPriv(ctrl, "batchAdd"), @class = "listBatchOp opBtn", data_msg = "确认批量+1?", data_formid = "form" })
+        @Html.ActionLink("批量-1", "batchSub", new { }, new { data_show = rui.privCtl.isPriv(ctrl, "batchSub"), @class = "listBatchOp opBtn", data_msg = "确认批量-1?", data_formid = "form" })
+        @Html.ActionLink("变更模块", "batchChangeModule", new { }, new { data_show = rui.privCtl.isPriv(ctrl, "batchChangeModule"), @class = "batchChangeModuleOp opBtn", data_msg = "确认变更模块?", data_formid = "form" })
+        @Html.ActionLink("Excel导入", "Import", "sys_ExlImport", new { tableName = "rbac_Resource" }, new { data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Import), @class = "showDialogR opImport" })
+        @Html.ActionLink("Excel导出", "SelectExport", new { }, new { @class = "opExlExport", data_show = rui.privCtl.isPriv(ctrl, "Export"), })
+        @Html.ActionLink("定制", "select", "sys_Page", new { ResourceCode = Model.ResourceCode }, new { @class = "opPage showDialogRRM" })
+    </div>
+    <div class="pager"></div>
+    <form id="form" action="/admin/rbac_Resource/batchSave">
+        <div class="showData cbxCol layTable">
+            @{Html.RenderPartial("_ShowData");}
+        </div>
+    </form>
+</div>

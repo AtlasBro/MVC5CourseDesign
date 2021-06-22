@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ruiMvcFrameworkModelStoreContainer" CdmEntityContainer="dbEntities">
+    <EntitySetMapping Name="af_AuditFlow">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_AuditFlow">
+        <MappingFragment StoreEntitySet="af_AuditFlow">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="isUse" ColumnName="isUse" />
+          <ScalarProperty Name="auditTypeCode" ColumnName="auditTypeCode" />
+          <ScalarProperty Name="flowName" ColumnName="flowName" />
+          <ScalarProperty Name="flowCode" ColumnName="flowCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_AuditFlowDept">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_AuditFlowDept">
+        <MappingFragment StoreEntitySet="af_AuditFlowDept">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="deptCode" ColumnName="deptCode" />
+          <ScalarProperty Name="flowCode" ColumnName="flowCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_AuditLog">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_AuditLog">
+        <MappingFragment StoreEntitySet="af_AuditLog">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="auditRemark" ColumnName="auditRemark" />
+          <ScalarProperty Name="auditResult" ColumnName="auditResult" />
+          <ScalarProperty Name="auditDate" ColumnName="auditDate" />
+          <ScalarProperty Name="recordType" ColumnName="recordType" />
+          <ScalarProperty Name="fromType" ColumnName="fromType" />
+          <ScalarProperty Name="printTag" ColumnName="printTag" />
+          <ScalarProperty Name="passType" ColumnName="passType" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="nodeCode" ColumnName="nodeCode" />
+          <ScalarProperty Name="startNodeCode" ColumnName="startNodeCode" />
+          <ScalarProperty Name="flowCode" ColumnName="flowCode" />
+          <ScalarProperty Name="auditTypeCode" ColumnName="auditTypeCode" />
+          <ScalarProperty Name="relatedDeptCode" ColumnName="relatedDeptCode" />
+          <ScalarProperty Name="relatedUserCode" ColumnName="relatedUserCode" />
+          <ScalarProperty Name="relatedKeyCode" ColumnName="relatedKeyCode" />
+          <ScalarProperty Name="relatedRowID" ColumnName="relatedRowID" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_AuditNode">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_AuditNode">
+        <MappingFragment StoreEntitySet="af_AuditNode">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="isEmailInform" ColumnName="isEmailInform" />
+          <ScalarProperty Name="isNoteInform" ColumnName="isNoteInform" />
+          <ScalarProperty Name="editFieldCodes" ColumnName="editFieldCodes" />
+          <ScalarProperty Name="selectPostCodes" ColumnName="selectPostCodes" />
+          <ScalarProperty Name="selectRoleCodes" ColumnName="selectRoleCodes" />
+          <ScalarProperty Name="selectUserCodes" ColumnName="selectUserCodes" />
+          <ScalarProperty Name="auditPostCodes" ColumnName="auditPostCodes" />
+          <ScalarProperty Name="auditRoleCodes" ColumnName="auditRoleCodes" />
+          <ScalarProperty Name="auditUserCodes" ColumnName="auditUserCodes" />
+          <ScalarProperty Name="passType" ColumnName="passType" />
+          <ScalarProperty Name="printTag" ColumnName="printTag" />
+          <ScalarProperty Name="nodeType" ColumnName="nodeType" />
+          <ScalarProperty Name="nodeDesc" ColumnName="nodeDesc" />
+          <ScalarProperty Name="nodeJson" ColumnName="nodeJson" />
+          <ScalarProperty Name="nodeCode" ColumnName="nodeCode" />
+          <ScalarProperty Name="flowCode" ColumnName="flowCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_AuditPost">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_AuditPost">
+        <MappingFragment StoreEntitySet="af_AuditPost">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="importDate" ColumnName="importDate" />
+          <ScalarProperty Name="sourceFrom" ColumnName="sourceFrom" />
+          <ScalarProperty Name="isDeptPost" ColumnName="isDeptPost" />
+          <ScalarProperty Name="postName" ColumnName="postName" />
+          <ScalarProperty Name="postCode" ColumnName="postCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_AuditPostUser">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_AuditPostUser">
+        <MappingFragment StoreEntitySet="af_AuditPostUser">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="importDate" ColumnName="importDate" />
+          <ScalarProperty Name="sourceFrom" ColumnName="sourceFrom" />
+          <ScalarProperty Name="deptCode" ColumnName="deptCode" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="postCode" ColumnName="postCode" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_AuditType">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_AuditType">
+        <MappingFragment StoreEntitySet="af_AuditType">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="isAudit" ColumnName="isAudit" />
+          <ScalarProperty Name="auditTypeName" ColumnName="auditTypeName" />
+          <ScalarProperty Name="auditTypeCode" ColumnName="auditTypeCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_BillCdnField">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_BillCdnField">
+        <MappingFragment StoreEntitySet="af_BillCdnField">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="fieldName" ColumnName="fieldName" />
+          <ScalarProperty Name="fieldCode" ColumnName="fieldCode" />
+          <ScalarProperty Name="auditTypeCode" ColumnName="auditTypeCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_BillEditField">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_BillEditField">
+        <MappingFragment StoreEntitySet="af_BillEditField">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="fieldName" ColumnName="fieldName" />
+          <ScalarProperty Name="fieldCode" ColumnName="fieldCode" />
+          <ScalarProperty Name="auditTypeCode" ColumnName="auditTypeCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="af_NodeRelation">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.af_NodeRelation">
+        <MappingFragment StoreEntitySet="af_NodeRelation">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="nodeJson" ColumnName="nodeJson" />
+          <ScalarProperty Name="nodeGuid" ColumnName="nodeGuid" />
+          <ScalarProperty Name="passExpression" ColumnName="passExpression" />
+          <ScalarProperty Name="endNodeCode" ColumnName="endNodeCode" />
+          <ScalarProperty Name="startNodeCode" ColumnName="startNodeCode" />
+          <ScalarProperty Name="flowCode" ColumnName="flowCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_Config">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_Config">
+        <MappingFragment StoreEntitySet="rbac_Config">
+          <ScalarProperty Name="keyType" ColumnName="keyType" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_DataPriv">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_DataPriv">
+        <MappingFragment StoreEntitySet="rbac_DataPriv">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="dataPrivName" ColumnName="dataPrivName" />
+          <ScalarProperty Name="dataPrivCode" ColumnName="dataPrivCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_Module">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_Module">
+        <MappingFragment StoreEntitySet="rbac_Module">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="showOrder" ColumnName="showOrder" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+          <ScalarProperty Name="upModuleCode" ColumnName="upModuleCode" />
+          <ScalarProperty Name="moduleName" ColumnName="moduleName" />
+          <ScalarProperty Name="moduleCode" ColumnName="moduleCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_Operation">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_Operation">
+        <MappingFragment StoreEntitySet="rbac_Operation">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="showOrder" ColumnName="showOrder" />
+          <ScalarProperty Name="operationName" ColumnName="operationName" />
+          <ScalarProperty Name="operationCode" ColumnName="operationCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_Resource">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_Resource">
+        <MappingFragment StoreEntitySet="rbac_Resource">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="pagerCount" ColumnName="pagerCount" />
+          <ScalarProperty Name="pageWidth" ColumnName="pageWidth" />
+          <ScalarProperty Name="dataControl" ColumnName="dataControl" />
+          <ScalarProperty Name="opControl" ColumnName="opControl" />
+          <ScalarProperty Name="resourceUrl" ColumnName="resourceUrl" />
+          <ScalarProperty Name="haveOperations" ColumnName="haveOperations" />
+          <ScalarProperty Name="showOrder" ColumnName="showOrder" />
+          <ScalarProperty Name="isShow" ColumnName="isShow" />
+          <ScalarProperty Name="moduleCode" ColumnName="moduleCode" />
+          <ScalarProperty Name="resourceName" ColumnName="resourceName" />
+          <ScalarProperty Name="resourceCode" ColumnName="resourceCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_ResourceOp">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_ResourceOp">
+        <MappingFragment StoreEntitySet="rbac_ResourceOp">
+          <ScalarProperty Name="showOrder" ColumnName="showOrder" />
+          <ScalarProperty Name="operationName" ColumnName="operationName" />
+          <ScalarProperty Name="operationCode" ColumnName="operationCode" />
+          <ScalarProperty Name="resourceCode" ColumnName="resourceCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_Role">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_Role">
+        <MappingFragment StoreEntitySet="rbac_Role">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="userType" ColumnName="userType" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_RolePriv">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_RolePriv">
+        <MappingFragment StoreEntitySet="rbac_RolePriv">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="dataPriv" ColumnName="dataPriv" />
+          <ScalarProperty Name="opPriv" ColumnName="opPriv" />
+          <ScalarProperty Name="resourceCode" ColumnName="resourceCode" />
+          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_RoleUser">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_RoleUser">
+        <MappingFragment StoreEntitySet="rbac_RoleUser">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_User">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_User">
+        <MappingFragment StoreEntitySet="rbac_User">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="relatedCode" ColumnName="relatedCode" />
+          <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_UserOrg">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_UserOrg">
+        <MappingFragment StoreEntitySet="rbac_UserOrg">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="isAllPrj" ColumnName="isAllPrj" />
+          <ScalarProperty Name="isLogin" ColumnName="isLogin" />
+          <ScalarProperty Name="deptCode" ColumnName="deptCode" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rbac_UserPriv">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.rbac_UserPriv">
+        <MappingFragment StoreEntitySet="rbac_UserPriv">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="dataPriv" ColumnName="dataPriv" />
+          <ScalarProperty Name="opPriv" ColumnName="opPriv" />
+          <ScalarProperty Name="resourceCode" ColumnName="resourceCode" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sbs_Dept">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sbs_Dept">
+        <MappingFragment StoreEntitySet="sbs_Dept">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="importDate" ColumnName="importDate" />
+          <ScalarProperty Name="sourceFrom" ColumnName="sourceFrom" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="upDeptCode" ColumnName="upDeptCode" />
+          <ScalarProperty Name="deptType" ColumnName="deptType" />
+          <ScalarProperty Name="deptName" ColumnName="deptName" />
+          <ScalarProperty Name="deptCode" ColumnName="deptCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sbs_Empl">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sbs_Empl">
+        <MappingFragment StoreEntitySet="sbs_Empl">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="importDate" ColumnName="importDate" />
+          <ScalarProperty Name="sourceFrom" ColumnName="sourceFrom" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="deptCode" ColumnName="deptCode" />
+          <ScalarProperty Name="emplName" ColumnName="emplName" />
+          <ScalarProperty Name="emplCode" ColumnName="emplCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sbs_Org">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sbs_Org">
+        <MappingFragment StoreEntitySet="sbs_Org">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="importDate" ColumnName="importDate" />
+          <ScalarProperty Name="sourceFrom" ColumnName="sourceFrom" />
+          <ScalarProperty Name="whOnlineValue" ColumnName="whOnlineValue" />
+          <ScalarProperty Name="isWHOnline" ColumnName="isWHOnline" />
+          <ScalarProperty Name="isDefault" ColumnName="isDefault" />
+          <ScalarProperty Name="orgName" ColumnName="orgName" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_BillAttach">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sys_BillAttach">
+        <MappingFragment StoreEntitySet="sys_BillAttach">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="uploadDateTime" ColumnName="uploadDateTime" />
+          <ScalarProperty Name="uploadUserCode" ColumnName="uploadUserCode" />
+          <ScalarProperty Name="attachContent" ColumnName="attachContent" />
+          <ScalarProperty Name="attachMIME" ColumnName="attachMIME" />
+          <ScalarProperty Name="attachLength" ColumnName="attachLength" />
+          <ScalarProperty Name="attachName" ColumnName="attachName" />
+          <ScalarProperty Name="prieviewUrl" ColumnName="prieviewUrl" />
+          <ScalarProperty Name="attachUrl" ColumnName="attachUrl" />
+          <ScalarProperty Name="relatedDetailNo" ColumnName="relatedDetailNo" />
+          <ScalarProperty Name="relatedKeyCode" ColumnName="relatedKeyCode" />
+          <ScalarProperty Name="relatedResourceCode" ColumnName="relatedResourceCode" />
+          <ScalarProperty Name="attachCode" ColumnName="attachCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_Column">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sys_Column">
+        <MappingFragment StoreEntitySet="sys_Column">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="optionValue" ColumnName="optionValue" />
+          <ScalarProperty Name="alignType" ColumnName="alignType" />
+          <ScalarProperty Name="fixedValue" ColumnName="fixedValue" />
+          <ScalarProperty Name="isResize" ColumnName="isResize" />
+          <ScalarProperty Name="colWidth" ColumnName="colWidth" />
+          <ScalarProperty Name="isOrder" ColumnName="isOrder" />
+          <ScalarProperty Name="showOrder" ColumnName="showOrder" />
+          <ScalarProperty Name="isShow" ColumnName="isShow" />
+          <ScalarProperty Name="fieldName" ColumnName="fieldName" />
+          <ScalarProperty Name="fieldCode" ColumnName="fieldCode" />
+          <ScalarProperty Name="resourceCode" ColumnName="resourceCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_DataSyncInterface">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sys_DataSyncInterface">
+        <MappingFragment StoreEntitySet="sys_DataSyncInterface">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="isPrimary" ColumnName="isPrimary" />
+          <ScalarProperty Name="sourceTableOrderExpression" ColumnName="sourceTableOrderExpression" />
+          <ScalarProperty Name="sourceTableWhereExpression" ColumnName="sourceTableWhereExpression" />
+          <ScalarProperty Name="sourceTableJoinExpression" ColumnName="sourceTableJoinExpression" />
+          <ScalarProperty Name="sourceTableName" ColumnName="sourceTableName" />
+          <ScalarProperty Name="syskeyFieldName" ColumnName="syskeyFieldName" />
+          <ScalarProperty Name="sysInsertTableName" ColumnName="sysInsertTableName" />
+          <ScalarProperty Name="sysTableName" ColumnName="sysTableName" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_DataSyncInterfaceDetail">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sys_DataSyncInterfaceDetail">
+        <MappingFragment StoreEntitySet="sys_DataSyncInterfaceDetail">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="filter" ColumnName="filter" />
+          <ScalarProperty Name="showOrder" ColumnName="showOrder" />
+          <ScalarProperty Name="import" ColumnName="import" />
+          <ScalarProperty Name="show" ColumnName="show" />
+          <ScalarProperty Name="checkOrder" ColumnName="checkOrder" />
+          <ScalarProperty Name="sourceFieldAliasName" ColumnName="sourceFieldAliasName" />
+          <ScalarProperty Name="sourceFieldName" ColumnName="sourceFieldName" />
+          <ScalarProperty Name="sysFieldName" ColumnName="sysFieldName" />
+          <ScalarProperty Name="sysTableName" ColumnName="sysTableName" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_UCColumn">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sys_UCColumn">
+        <MappingFragment StoreEntitySet="sys_UCColumn">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="alignType" ColumnName="alignType" />
+          <ScalarProperty Name="fixedValue" ColumnName="fixedValue" />
+          <ScalarProperty Name="isResize" ColumnName="isResize" />
+          <ScalarProperty Name="colWidth" ColumnName="colWidth" />
+          <ScalarProperty Name="isOrder" ColumnName="isOrder" />
+          <ScalarProperty Name="showOrder" ColumnName="showOrder" />
+          <ScalarProperty Name="isShow" ColumnName="isShow" />
+          <ScalarProperty Name="fieldName" ColumnName="fieldName" />
+          <ScalarProperty Name="fieldCode" ColumnName="fieldCode" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="resourceCode" ColumnName="resourceCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_UCPager">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sys_UCPager">
+        <MappingFragment StoreEntitySet="sys_UCPager">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="pageWidth" ColumnName="pageWidth" />
+          <ScalarProperty Name="pageSize" ColumnName="pageSize" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="resourceCode" ColumnName="resourceCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sys_WebLog">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.sys_WebLog">
+        <MappingFragment StoreEntitySet="sys_WebLog">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="requestType" ColumnName="requestType" />
+          <ScalarProperty Name="accessLoc" ColumnName="accessLoc" />
+          <ScalarProperty Name="fromLoc" ColumnName="fromLoc" />
+          <ScalarProperty Name="ipLoc" ColumnName="ipLoc" />
+          <ScalarProperty Name="fromIP" ColumnName="fromIP" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="logType" ColumnName="logType" />
+          <ScalarProperty Name="logDate" ColumnName="logDate" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_User">
+      <EntityTypeMapping TypeName="ruiMvcFrameworkModel.wx_User">
+        <MappingFragment StoreEntitySet="wx_User">
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="importDate" ColumnName="importDate" />
+          <ScalarProperty Name="sourceFrom" ColumnName="sourceFrom" />
+          <ScalarProperty Name="isAttentive" ColumnName="isAttentive" />
+          <ScalarProperty Name="headerImg" ColumnName="headerImg" />
+          <ScalarProperty Name="userSex" ColumnName="userSex" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="nickName" ColumnName="nickName" />
+          <ScalarProperty Name="weixinUserCode" ColumnName="weixinUserCode" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="rowNum" ColumnName="rowNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

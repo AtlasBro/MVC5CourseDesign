@@ -1,0 +1,150 @@
+﻿@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 62.5%;
+    background-image: url(/content/login/image/login_bg.jpg);
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0px;
+}
+
+#UserLogin_container {
+    position: absolute;
+    width: 775px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    margin-left: -387.5px;
+    margin-top: -215px;
+    z-index: 2;
+}
+
+#Logo {
+    width: 600px;
+    height: 51px;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 25pt;
+}
+
+#UserLogin_BlankBg {
+    width: 775px;
+    height: 300px;
+    background-image: url(/content/login/image/Login_Blank_bg.png);
+}
+
+#UserLogin_left {
+    width: 380px;
+    height: auto;
+    float: left;
+    margin-top: 10px;
+    margin-left: 14px;
+}
+
+#UserLogin_slide {
+    width: 360px;
+    height: 270px;
+    float: left;
+    font-size: 1.6em;
+    border: 2px #CCCCCC solid;
+}
+
+    #UserLogin_slide .swiper-container {
+        width: 360px;
+        height: 270px;
+    }
+
+    #UserLogin_slide .swiper-slide {
+        background-position: center;
+        background-size: cover;
+    }
+
+        #UserLogin_slide .swiper-slide img {
+            width: 360px;
+            height: 270px;
+        }
+
+
+#UserLogin_form {
+    padding-top: 80px;
+    width: 380px;
+    float: right;
+}
+    /* 单元格高度 */
+    #UserLogin_form tr {
+        line-height: 38px;
+    }
+
+    #UserLogin_form .formLeft {
+        width: 80px;
+        text-align: right;
+        letter-spacing: 10px;
+    }
+
+    #UserLogin_form .formRight {
+        padding-left: 10px;
+        width: 280px;
+        text-align: left;
+    }
+
+    #UserLogin_form label {
+        font-size: 1.3em;
+        color: #FE5C13;
+        font-weight: bold;
+    }
+
+    #UserLogin_form input {
+        width: 250px;
+        height: 28px;
+        border: 1px solid #CCC;
+    }
+
+    #UserLogin_form Select {
+        width: 250px;
+        height: 28px;
+        border: 1px solid #CCC;
+    }
+
+    #UserLogin_form .LoginBtn {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+#footer {
+    position: fixed;
+    width: 100%;
+    bottom: 5px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.4em;
+    color: black;
+}
+
+/* 半透明的遮罩层 ajax请求用 */
+#loading {
+    background: #000;
+    filter: alpha(opacity=30); /* IE的透明度 */
+    opacity: 0.3; /* 透明度 */
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100; /* 此处的图层要大于页面 */
+    display: none;
+}

@@ -1,0 +1,4 @@
+﻿dbTools\App.Config
+dbLibrary\App.Config
+webSite\Web.config
+codeTest\App.Config

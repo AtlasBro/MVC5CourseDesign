@@ -1,0 +1,46 @@
+﻿@model db.af_AuditType
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<div class="dialog">
+    <div class="display-label hide">
+        @Html.DisplayNameFor(model => model.rowID)
+    </div>
+    <div class="display-field hide">
+        @Html.DisplayFor(model => model.rowID)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.auditTypeCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.auditTypeCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.auditTypeName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.auditTypeName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.isAudit)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.isAudit)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.remark)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.remark)
+    </div>
+
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>

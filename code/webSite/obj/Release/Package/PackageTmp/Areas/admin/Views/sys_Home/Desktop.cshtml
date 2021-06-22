@@ -1,0 +1,74 @@
+﻿@{ViewBag.Title = "我的桌面";}
+@*后台我的桌面*@
+
+@section header
+{
+    <meta http-equiv="refresh" content="180" />
+    <style type="text/css">
+        .panel {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 10pt;
+        }
+
+        .block {
+            border: 1pt solid rgba(255, 255, 255, 0.9);
+            margin-left: auto;
+            margin-right: auto;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            border: 1pt solid #A4D8E3;
+            height: 25px;
+            line-height: 25px;
+            padding-left: 5px;
+            background-color: #E1F1FF;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .header a:link, .header a:visited, .header a:hover, a:active {
+                color: blue;
+                font-weight: 800;
+            }
+
+            .header .left {
+                float: left;
+            }
+
+            .header .right {
+                float: right;
+                padding-right: 10px;
+                font-size: 10pt;
+            }
+
+        .content {
+            border: 1pt solid #C0C0C0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#containerWaitAudit").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#containerWaitAudit").pager();
+        });
+
+    </script>
+
+    <script type="text/javascript">
+
+    </script>
+}
+
+<div class="">
+
+
+</div>

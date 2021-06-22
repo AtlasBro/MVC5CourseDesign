@@ -1,0 +1,83 @@
+﻿@model db.rbac_User
+
+@{
+    ViewBag.Title = "Update";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div class="dialog">
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.rowNum)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.rowNum)
+            @Html.ValidationMessageFor(model => model.rowNum)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userCode)
+        </div>
+        <div class="editor-field read">
+            @Html.EditorFor(model => model.userCode)
+            @Html.ValidationMessageFor(model => model.userCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userName)
+        </div>
+        <div class="editor-field read">
+            @Html.EditorFor(model => model.userName)
+            @Html.ValidationMessageFor(model => model.userName)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.password)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.password)
+            @Html.ValidationMessageFor(model => model.password)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.relatedCode)
+        </div>
+        <div class="editor-field read hide">
+            @Html.TextBox("emplInfo", string.Format("{0}({1})", db.bll.rbac_User.getNameByCode(Model.relatedCode, db.efHelper.newDc()), Model.relatedCode))
+            @Html.HiddenFor(model => model.relatedCode)
+            @Html.ValidationMessageFor(model => model.relatedCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.deptCode)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.deptCode, db.bll.sbs_Dept.bindDdl(true, true))
+            @Html.ValidationMessageFor(model => model.deptCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.isLogin)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.isLogin, rui.listHelper.bind是否(true))
+            @Html.ValidationMessageFor(model => model.isLogin)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.remark)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.remark)
+            @Html.ValidationMessageFor(model => model.remark)
+        </div>
+
+        <p class="button">
+            <a class="billSave opSave" data-close="true">保存</a>
+            <a class="opClose">关闭</a>
+        </p>
+    </div>
+}
+

@@ -1,0 +1,53 @@
+﻿@*数据展示的公用视图*@
+@model rui.pagerBase
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+
+<input type="hidden" class="pagerinfo" data-rowcount="@Model.RowCount" data-pagesize="@Model.PageSize"
+       data-pageindex="@Model.PageIndex" data-pagecount="@Model.PageCount"
+       data-orderfield="@Model.OrderField" data-orderway="@Model.OrderWay" />
+<table>
+    <thead>
+        <tr>
+            @foreach (System.Data.DataRow row in Model.showColumn.Rows)
+            {
+                string colName = row["fieldCode"].ToString();
+                if (row["isOrder"].ToString() == "True")
+                {
+                    <th data-option="@row["optionValue"]" data-field="@row["fieldCode"]" data-order="@Model.OrderWay">@row["fieldName"]@Html.orderColumn(Model.OrderField, Model.OrderWay, row["fieldCode"].ToString())</th>
+                }
+                else
+                {
+                    <th data-option="@row["optionValue"]">@row["fieldName"]</th>
+                }
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.dataTable.Rows.Count; i++)
+        {
+            string rowID = Model.dataTable.Rows[i]["rowID"].ToString();
+            string keyCode = Model.dataTable.Rows[i][Model.keyField].ToString();
+            <tr data-code="@keyCode">
+                @foreach (System.Data.DataRow row in Model.showColumn.Rows)
+                {
+                    string colName = row["fieldCode"].ToString();
+
+                    if (colName == "操作")
+                    {
+                        <td class="opRow">
+                            @Html.ActionLink("详情", "Detail", new { rowID = rowID }, new { @class = "showDialog", data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Detail) })
+                            @Html.ActionLink("修改", "Update", new { rowID = rowID }, new { @class = "showDialogR", data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Update) })
+                            @Html.ActionLink("删除", "Delete", new { rowID = rowID }, new { @class = "listDelete", data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Delete) })
+                            @Html.ActionLink("授权", "Priv", new { rowID = rowID }, new { @class = "showDialog", data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Priv) })
+                            @Html.ActionLink("关联用户", "LinkUsers", "rbac_RoleUser", new { rowID = rowID }, new { @class = "showDialog", data_show = rui.privCtl.isPriv(ctrl, "LinkUsers") })
+                        </td>
+                    }
+                    else
+                    {
+                        <td>@Model.dataTable.Rows[i][colName]</td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>

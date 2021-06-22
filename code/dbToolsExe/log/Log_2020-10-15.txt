@@ -1,0 +1,11 @@
+2020-10-15 20:49:36.1365 Error 违反了 PRIMARY KEY 约束“PK__sys_Colu__FA994F814222D4EF”。不能在对象“dbo.sys_Column”中插入重复键。重复键值为 (sys_BillAttach, attachContent)。
+语句已终止。
+-------------------------
+   在 System.Data.Common.DbDataAdapter.UpdatedRowStatusErrors(RowUpdatedEventArgs rowUpdatedEvent, BatchCommandInfo[] batchCommands, Int32 commandCount)
+   在 System.Data.Common.DbDataAdapter.UpdatedRowStatus(RowUpdatedEventArgs rowUpdatedEvent, BatchCommandInfo[] batchCommands, Int32 commandCount)
+   在 System.Data.Common.DbDataAdapter.Update(DataRow[] dataRows, DataTableMapping tableMapping)
+   在 System.Data.Common.DbDataAdapter.UpdateFromDataTable(DataTable dataTable, DataTableMapping tableMapping)
+   在 System.Data.Common.DbDataAdapter.Update(DataTable dataTable)
+   在 dbTools.frm列配置.btnSave_Click(Object sender, EventArgs e) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\dbTools\frm列配置.cs:行号 76
+-------------------------
+ 

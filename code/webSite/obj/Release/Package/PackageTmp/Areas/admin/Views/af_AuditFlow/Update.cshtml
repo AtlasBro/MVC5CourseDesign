@@ -1,0 +1,73 @@
+﻿@model db.af_AuditFlow
+
+@{
+    ViewBag.Title = "Update";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <div class="dialog">
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.rowNum)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.rowNum)
+            @Html.ValidationMessageFor(model => model.rowNum)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.flowCode)
+        </div>
+        <div class="editor-field read">
+            @Html.EditorFor(model => model.flowCode)
+            @Html.ValidationMessageFor(model => model.flowCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.flowName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.flowName)
+            @Html.ValidationMessageFor(model => model.flowName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.auditTypeCode)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(a => a.auditTypeCode, db.bll.af_AuditType.bindDdl())
+            @Html.ValidationMessageFor(model => model.auditTypeCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.isUse)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(a => a.isUse, rui.listHelper.bind是否())
+            @Html.ValidationMessageFor(model => model.isUse)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.orgCode)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(a => a.orgCode, db.bll.sbs_Org.bindDdl())
+            @Html.ValidationMessageFor(model => model.orgCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.remark)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.remark)
+            @Html.ValidationMessageFor(model => model.remark)
+        </div>
+
+        <p class="button">
+            <a class="billSave opSave" data-close="true">保存</a>
+            <a class="opClose">关闭</a>
+        </p>
+    </div>
+}
+

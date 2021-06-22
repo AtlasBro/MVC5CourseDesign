@@ -1,0 +1,67 @@
+﻿@model db.rbac_Module
+
+@{
+    ViewBag.Title = "模型新增";
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="dialog">
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.rowID)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.rowID)
+            @Html.ValidationMessageFor(model => model.rowID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.moduleCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.moduleCode)
+            @Html.ValidationMessageFor(model => model.moduleCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.moduleName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.moduleName)
+            @Html.ValidationMessageFor(model => model.moduleName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userType)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(a => a.userType, rui.listHelper.bind模块账户类型(false))
+            @Html.ValidationMessageFor(model => model.userType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.showOrder)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.showOrder)
+            @Html.ValidationMessageFor(model => model.showOrder)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.remark)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.remark)
+            @Html.ValidationMessageFor(model => model.remark)
+        </div>
+
+        <p class="button">
+            <a class="billSave opSave" data-close="true">保存</a>
+            <a class="opClose">关闭</a>
+        </p>
+    </div>
+}
+
+

@@ -1,0 +1,154 @@
+﻿@model db.rbac_Resource
+
+@{
+    ViewBag.Title = "Insert";
+}
+
+@section header
+{
+    <style type="text/css">
+        .haveOperation {
+        }
+
+            .haveOperation span {
+                float: left;
+                width: 120px;
+                display: block;
+                text-align: right;
+            }
+    </style>
+    <script type="text/javascript" charset="utf-8" src=@Url.Content("/uEditor/ueditor.config.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" charset="utf-8" src=@Url.Content("/uEditor/ueditor.all.min.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" charset="utf-8" src=@Url.Content("/uEditor/lang/zh-cn/zh-cn.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript">
+    //保存时获取值
+    function saveBefore() {
+        $(".uEditorProxy").val(ue.getContent());
+        return "";
+    }
+    var ue;
+    $(document).ready(function () {
+        //实例化编辑器
+        ue = UE.getEditor('uEditor');
+
+        //修改时获取以前的值
+        ue.ready(function () {
+            ue.setContent($(".uEditorProxy").val());
+        });
+    });
+    </script>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+<div class="dialog">
+    <div class="editor-label hide">
+        @Html.LabelFor(model => model.rowID)
+    </div>
+    <div class="editor-field hide">
+        @Html.EditorFor(model => model.rowID)
+        @Html.ValidationMessageFor(model => model.rowID)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.resourceCode)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.resourceCode)
+        @Html.ValidationMessageFor(model => model.resourceCode)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.resourceName)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.resourceName)
+        @Html.ValidationMessageFor(model => model.resourceName)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.moduleCode)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(a => a.moduleCode, db.bll.rbac_Module.bindDdl())
+        @Html.ValidationMessageFor(model => model.moduleCode)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.showOrder)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.showOrder)
+        @Html.ValidationMessageFor(model => model.showOrder)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.resourceUrl)
+    </div>
+    <div class="editor-field three">
+        @Html.EditorFor(model => model.resourceUrl)
+        @Html.ValidationMessageFor(model => model.resourceUrl)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.opControl)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(a => a.opControl, rui.listHelper.bind是否())
+        @Html.ValidationMessageFor(model => model.opControl)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.dataControl)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(a => a.dataControl, rui.listHelper.bind是否())
+        @Html.ValidationMessageFor(model => model.dataControl)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.pageWidth)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(a => a.pageWidth)
+        @Html.ValidationMessageFor(model => model.pageWidth)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.isShow)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(a => a.isShow, rui.listHelper.bind是否())
+        @Html.ValidationMessageFor(model => model.pageWidth)
+    </div>
+
+    <fieldset>
+        <legend>
+            @Html.LabelFor(model => model.haveOperations)
+        </legend>
+        <div class="haveOperation">
+            @Html.CheckBoxListFor(model => model.haveOperations, Model.operationCodeDdlList)
+            @Html.ValidationMessageFor(model => model.haveOperations)
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            @Html.LabelFor(model => model.remark)
+        </legend>
+        <div>
+            @Html.HiddenFor(model => model.remark, new { @class = "uEditorProxy" })
+            <script id="uEditor" type="text/plain" style="width: 100%; height: 200px;">
+            </script>
+        </div>
+    </fieldset>
+
+    <p class="button">
+        <a class="billSave opSave">保存</a>
+    </p>
+</div>
+}
+
+

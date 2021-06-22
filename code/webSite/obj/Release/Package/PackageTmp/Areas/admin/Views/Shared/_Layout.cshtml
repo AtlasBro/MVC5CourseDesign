@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+@*后台母版页*@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @*字体库*@
+    <link href="@Url.Content("~/content/fontawesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+
+    @*jquery*@
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery-1.12.4.min.js")></script>
+    @*easyUI*@
+    <link href="@Url.Content("~/content/easyui/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/content/easyui/bootstrap/easyui.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/content/easyui/jquery.easyui.js")"></script>
+    @*layui*@
+    <link href="@Url.Content("~/content/layui/css/layui.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/content/layui/layui.js")"></script>
+    @*chosen*@
+    <link href="@Url.Content("~/content/chosen/chosen.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/content/chosen/jquery.chosen.js")"></script>
+    @*jquery.validate*@
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.validate-vsdoc.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.validate.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.validate.message.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.validate.unobtrusive.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.metadata.js")></script>
+    @*jquery库*@
+    <script type="text/javascript" src="@Url.Content("~/content/scripts/jquery.ajaxfileupload.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/content/scripts/jquery.tableInput.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/content/my97DatePicker/WdatePicker.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/content/scripts/jquery.form.js")"></script>
+
+    @*自己的样式代码*@
+    <link href="@Url.Content("~/content/fontawesome/css/rui.button.css"+rui.configHelper.ctxKey)" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/content/css/rui.layout.css"+rui.configHelper.ctxKey)" rel="stylesheet" type="text/css" />
+
+    @*自己封装的js*@
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.tools.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/fontawesome/rui.button.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.modelDialog.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.dropDownList.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.bill.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.cbxMulSelected.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.table_rui.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.table_lay.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.table.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.pager.js"+rui.configHelper.ctxKey)></script>
+    <script type="text/javascript" src=@Url.Content("~/content/scripts/rui.layout.js"+rui.configHelper.ctxKey)></script>
+
+    <script type="text/javascript">
+        //后台页面直接在浏览器中打开，则跳转到后台登录页面
+        $(document).ready(function () {
+            if (window == top)
+                top.location.href = "/login/loginAdmin";
+        });
+    </script>
+
+    @RenderSection("header", required: false)
+</head>
+<body>
+    <div class="pageLayout">
+        @RenderBody()
+    </div>
+    <div id="loading">
+        <img src="/Content/images/loading.gif" />
+    </div>
+</body>
+</html>

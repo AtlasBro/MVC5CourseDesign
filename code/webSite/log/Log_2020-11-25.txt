@@ -1,0 +1,156 @@
+2020-11-25 17:07:22.2166 Info rbac_User-Select 
+2020-11-25 17:07:30.4796 Info sys_Home-index 
+2020-11-25 17:07:32.1040 Info sys_Home-desktop 
+2020-11-25 17:07:36.6668 Info rbac_User-Select 
+2020-11-25 17:07:43.6934 Info rbac_User-Insert 
+2020-11-25 17:07:51.3270 Info rbac_User-select 
+2020-11-25 17:08:30.2771 Info rbac_User-Insert 
+2020-11-25 17:08:35.1245 Info sys_Home-index 
+2020-11-25 17:08:35.3954 Info sys_Home-desktop 
+2020-11-25 17:08:36.9106 Info rbac_User-Select 
+2020-11-25 17:08:39.7690 Info rbac_User-Update 
+2020-11-25 17:08:50.8129 Info rbac_User-select 
+2020-11-25 17:08:52.7153 Info rbac_User-Update 
+2020-11-25 17:08:59.7746 Info rbac_User-select 
+2020-11-25 17:09:22.3355 Info rbac_User-Update 
+2020-11-25 17:09:26.6587 Info rbac_User-select 
+2020-11-25 17:09:32.0199 Info rbac_User-Insert 
+2020-11-25 17:09:43.5217 Info rbac_User-Insert 
+2020-11-25 17:10:01.5049 Info rbac_User-select 
+2020-11-25 17:10:02.0072 Info rbac_User-Update 
+2020-11-25 17:11:26.3253 Info sbs_Empl-select 
+2020-11-25 17:11:35.5155 Info sys_Home-desktop 
+2020-11-25 17:11:35.9725 Info rbac_User-select 
+2020-11-25 17:11:48.9665 Info sbs_Empl-select 
+2020-11-25 17:11:50.7341 Info sbs_Empl-Insert 
+2020-11-25 17:12:00.5739 Info sbs_Empl-Insert 
+2020-11-25 17:12:00.8862 Info sbs_Empl-Update 
+2020-11-25 17:12:01.4028 Info sbs_Empl-select 
+2020-11-25 17:12:04.7879 Info sbs_Empl-setLogin 
+2020-11-25 17:12:04.9011 Error 已经创建过该组织内的登录账号
+-------------------------
+   在 rui.excptHelper.throwEx(String msg)
+   在 db.bll.rbac_User.createRelatedUser(String userCode, String userName, String orgCode, String deptCode, dbEntities dc) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\dbLibrary\bll\rbac\rbac_User.cs:行号 250
+   在 db.bll.sbs_Empl.setLogin(String selected, dbEntities dc) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\dbLibrary\bll\sbasic\sbs_Empl.cs:行号 172
+-------------------------
+ 
+2020-11-25 17:12:04.9061 Info sbs_Empl-select 
+2020-11-25 17:12:14.2576 Info sbs_Empl-Delete 
+2020-11-25 17:12:14.3035 Error 该职工已创建登录账号，需要先删除登录账号
+-------------------------
+   在 rui.excptHelper.throwEx(String msg)
+   在 db.efHelper.checkCanDelete(String tableName, String fieldName, String fieldValue, String errorMsg, String whereExpr) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\dbLibrary\lib\db\efHelper.cs:行号 220
+   在 db.bll.sbs_Empl.delete(String keyCode, dbEntities dc) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\dbLibrary\bll\sbasic\sbs_Empl.cs:行号 92
+-------------------------
+ 
+2020-11-25 17:12:14.3189 Error 该职工已创建登录账号，需要先删除登录账号
+-------------------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 db.bll.sbs_Empl.delete(String keyCode, dbEntities dc) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\dbLibrary\bll\sbasic\sbs_Empl.cs:行号 99
+   在 web.Areas.admin.Controllers.sbs_EmplController.Delete(String rowID) 位置 E:\Projecting\_MVC5开发框架 - 腾讯40\trunk\code\WebSite\Areas\admin\Controllers\sbs_EmplController.cs:行号 107
+-------------------------
+ 
+2020-11-25 17:12:21.8423 Info sys_Home-exit 
+2020-11-25 17:12:29.4700 Info sys_Home-index 
+2020-11-25 17:12:29.6652 Info sys_Home-desktop 
+2020-11-25 17:12:32.3099 Info sys_Home-exit 
+2020-11-25 17:12:34.7809 Info sys_Home-index 
+2020-11-25 17:12:34.9888 Info sys_Home-desktop 
+2020-11-25 17:12:36.9734 Info sbs_Empl-select 
+2020-11-25 17:12:38.8039 Info rbac_User-Select 
+2020-11-25 17:12:42.7261 Info rbac_User-Delete 
+2020-11-25 17:12:43.5141 Info rbac_User-select 
+2020-11-25 17:13:40.2432 Info rbac_User-Select 
+2020-11-25 17:13:44.4185 Info sbs_Dept-select 
+2020-11-25 17:13:47.3266 Info sbs_Dept-Update 
+2020-11-25 17:14:04.9400 Info sbs_Dept-Update 
+2020-11-25 17:14:05.0057 Info sbs_Dept-select 
+2020-11-25 17:14:08.8660 Info sbs_Dept-Update 
+2020-11-25 17:14:15.6151 Info sbs_Dept-Update 
+2020-11-25 17:14:15.7249 Info sbs_Dept-select 
+2020-11-25 17:14:17.6196 Info sbs_Org-select 
+2020-11-25 17:14:24.0168 Info sys_Home-index 
+2020-11-25 17:14:24.2195 Info sys_Home-desktop 
+2020-11-25 17:14:25.5315 Info rbac_User-Select 
+2020-11-25 17:23:04.6229 Info sys_Home-index 
+2020-11-25 17:23:06.2493 Info sys_Home-desktop 
+2020-11-25 17:23:09.5634 Info rbac_User-Select 
+2020-11-25 17:23:18.8118 Info rbac_User-Delete 
+2020-11-25 17:23:19.1035 Info rbac_User-select 
+2020-11-25 17:23:23.6734 Info sbs_Empl-select 
+2020-11-25 17:23:27.4884 Info sbs_Empl-Update 
+2020-11-25 17:23:28.8720 Info sbs_Empl-select 
+2020-11-25 17:23:30.7091 Info sbs_Empl-Delete 
+2020-11-25 17:23:30.8001 Info sbs_Empl-select 
+2020-11-25 17:23:33.1620 Info sbs_Empl-Delete 
+2020-11-25 17:23:33.3222 Info sbs_Empl-select 
+2020-11-25 17:23:37.3502 Info sbs_Org-select 
+2020-11-25 17:23:40.4965 Info sys_Home-exit 
+2020-11-25 17:48:36.4218 Info sys_Home-index 
+2020-11-25 17:48:37.8757 Info sys_Home-desktop 
+2020-11-25 17:48:40.3558 Info sys_Home-exit 
+2020-11-25 17:48:42.8971 Info sys_Home-index 
+2020-11-25 17:48:43.1109 Info sys_Home-desktop 
+2020-11-25 17:48:45.0123 Info sbs_Dept-select 
+2020-11-25 17:48:49.1590 Info sbs_Dept-Insert 
+2020-11-25 17:48:52.5160 Info sbs_Dept-select 
+2020-11-25 17:51:43.3162 Info sys_Home-desktop 
+2020-11-25 17:54:43.5038 Info sys_Home-desktop 
+2020-11-25 17:57:43.6728 Info sys_Home-desktop 
+2020-11-25 18:00:43.8381 Info sys_Home-desktop 
+2020-11-25 18:39:38.7247 Info sys_Home-index 
+2020-11-25 18:39:40.9267 Info sys_Home-desktop 
+2020-11-25 18:39:43.1033 Info sbs_Dept-select 
+2020-11-25 18:39:47.0078 Info sbs_Dept-Insert 
+2020-11-25 18:39:48.9577 Info sbs_Dept-select 
+2020-11-25 18:41:10.0571 Info sbs_Dept-select 
+2020-11-25 18:43:01.4236 Info sys_Home-desktop 
+2020-11-25 18:43:03.4265 Info sbs_Dept-select 
+2020-11-25 18:43:13.6411 Info sys_Home-exit 
+2020-11-25 18:43:17.9099 Info sys_Home-index 
+2020-11-25 18:43:38.9876 Info sys_Home-index 
+2020-11-25 18:43:39.5896 Info sys_Home-desktop 
+2020-11-25 18:43:44.1683 Info sbs_Dept-select 
+2020-11-25 18:43:48.2060 Info sbs_Dept-Insert 
+2020-11-25 18:43:51.7264 Info sbs_Dept-select 
+2020-11-25 18:44:01.7376 Info sbs_Dept-Insert 
+2020-11-25 18:44:06.7969 Info sbs_Dept-Insert 
+2020-11-25 18:44:07.7373 Info sbs_Dept-select 
+2020-11-25 18:44:08.2446 Info sbs_Dept-Update 
+2020-11-25 18:44:12.2633 Info sbs_Dept-Delete 
+2020-11-25 18:44:12.7042 Info sbs_Dept-select 
+2020-11-25 18:44:19.3387 Info sbs_Dept-Update 
+2020-11-25 18:44:30.6216 Info sbs_Dept-Update 
+2020-11-25 18:44:30.7942 Info sbs_Dept-select 
+2020-11-25 19:09:36.9305 Info sys_Home-index 
+2020-11-25 19:09:38.9246 Info sys_Home-desktop 
+2020-11-25 19:09:41.4719 Info sbs_Empl-select 
+2020-11-25 19:09:45.5477 Info sys_Home-exit 
+2020-11-25 19:09:48.0831 Info sys_Home-index 
+2020-11-25 19:09:48.2587 Info sys_Home-desktop 
+2020-11-25 19:09:53.2939 Info rbac_Role-select 
+2020-11-25 19:09:55.9010 Info rbac_User-Select 
+2020-11-25 19:10:00.4805 Info sys_Home-exit 
+2020-11-25 20:08:22.2158 Info sys_Home-index 
+2020-11-25 20:08:25.2459 Info sys_Home-desktop 
+2020-11-25 20:08:27.5228 Info rbac_User-Select 
+2020-11-25 20:08:30.7914 Info rbac_User-Update 
+2020-11-25 20:08:32.7899 Info rbac_User-Update 
+2020-11-25 20:08:32.9628 Info rbac_User-select 
+2020-11-25 20:08:44.2870 Info rbac_Resource-select 
+2020-11-25 20:09:27.7443 Info sys_Home-index 
+2020-11-25 20:09:27.8839 Info sys_Home-desktop 
+2020-11-25 20:09:29.8438 Info rbac_Resource-select 
+2020-11-25 20:09:35.2400 Info sys_Home-index 
+2020-11-25 20:09:35.4882 Info sys_Home-desktop 
+2020-11-25 20:09:37.4896 Info rbac_Resource-select 
+2020-11-25 20:09:48.4327 Info rbac_Module-select 
+2020-11-25 20:09:52.2176 Info sbs_Org-select 
+2020-11-25 20:09:53.0059 Info sbs_Dept-select 
+2020-11-25 20:09:54.8662 Info sbs_Empl-select 
+2020-11-25 20:09:57.4537 Info rbac_User-Select 
+2020-11-25 20:10:02.1174 Info rbac_Resource-select 
+2020-11-25 20:10:10.4843 Info rbac_User-Insert 
+2020-11-25 20:10:13.1084 Info rbac_User-select 
+2020-11-25 20:10:16.8194 Info sbs_Empl-select 
+2020-11-25 20:10:22.6954 Info rbac_Role-select 

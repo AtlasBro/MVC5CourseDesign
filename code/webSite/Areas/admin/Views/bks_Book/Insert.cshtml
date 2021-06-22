@@ -1,0 +1,214 @@
+﻿@model db.bks_Book
+
+@{
+    ViewBag.Title = "Insert";
+}
+
+<script type="text/javascript" charset="utf-8" src="/uEditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/uEditor/ueditor.all.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/uEditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+    //保存前，从uEditor取值赋值给代理表单
+    function saveBefore() {
+        $(".uEditorProxy_authorIntroduce").val(ue_authorIntroduce.getContent());
+        $(".uEditorProxy_bookIntroduce").val(ue_bookIntroduce.getContent());
+        return "";
+    }
+    var ue_authorIntroduce;
+    var ue_bookIntroduce;
+
+    //页面加载后，从代理表单取值付给uEditor
+    $(document).ready(function () {
+        //实例化作者介绍的编辑器
+        ue_authorIntroduce = UE.getEditor('uEditor_authorIntroduce');
+        //赋值
+        ue_authorIntroduce.ready(function () {
+            ue_authorIntroduce.setContent($(".uEditorProxy_authorIntroduce").val());
+        });
+
+        //实例化图书介绍的编辑器
+        ue_bookIntroduce = UE.getEditor('uEditor_bookIntroduce');
+        //赋值
+        ue_bookIntroduce.ready(function () {
+            ue_bookIntroduce.setContent($(".uEditorProxy_bookIntroduce").val());
+        });
+    });
+
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+<div class="dialog">
+    <div class="editor-label">
+        @Html.LabelFor(model => model.bookCode)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.bookCode)
+        @Html.ValidationMessageFor(model => model.bookCode)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.bookName)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.bookName)
+        @Html.ValidationMessageFor(model => model.bookName)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.isbnNO)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.isbnNO)
+        @Html.ValidationMessageFor(model => model.isbnNO)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.price)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.price)
+        @Html.ValidationMessageFor(model => model.price)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.authorName)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.authorName)
+        @Html.ValidationMessageFor(model => model.authorName)
+    </div>
+
+    <fieldset>
+        <legend>
+            @Html.LabelFor(model => model.authorIntroduce)
+        </legend>
+        <div>
+            @Html.HiddenFor(model => model.authorIntroduce, new { @class = "uEditorProxy_authorIntroduce" })
+            <script id="uEditor_authorIntroduce" type="text/plain" style="width: 100%; height: 400px;">
+            </script>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            @Html.LabelFor(model => model.bookIntroduce)
+        </legend>
+        <div>
+            @Html.HiddenFor(model => model.bookIntroduce, new { @class = "uEditorProxy_bookIntroduce" })
+            <script id="uEditor_bookIntroduce" type="text/plain" style="width: 100%; height: 400px;">
+            </script>
+        </div>
+    </fieldset>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.bookDirectory)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.bookDirectory)
+        @Html.ValidationMessageFor(model => model.bookDirectory)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.bookTypeCode)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(model => model.bookTypeCode, db.bll.bks_BookType.bindDdl(true))
+        @Html.ValidationMessageFor(model => model.bookTypeCode)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.pressCode)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(model => model.pressCode, db.bll.bks_Press.bindDdl(true))
+        @Html.ValidationMessageFor(model => model.pressCode)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.pressDate)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxDateFor(model => model.pressDate)
+        @Html.ValidationMessageFor(model => model.pressDate)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.release)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.release)
+        @Html.ValidationMessageFor(model => model.release)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.surfacePic)
+    </div>
+    <div class="editor-field">
+        <input type="file" name="surfacePicCt1" />
+        @*@Html.EditorFor(model => model.surfacePic)*@
+        @*@Html.ValidationMessageFor(model => model.surfacePic)*@
+    </div>
+
+    @*<div class="editor-label">
+            @Html.LabelFor(model => model.isSell)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.isSell)
+            @Html.ValidationMessageFor(model => model.isSell)
+        </div>*@
+
+    @*<div class="editor-label">
+            @Html.LabelFor(model => model.stockSum)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.stockSum)
+            @Html.ValidationMessageFor(model => model.stockSum)
+        </div>*@
+
+    @*<div class="editor-label">
+            @Html.LabelFor(model => model.sellSum)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sellSum)
+            @Html.ValidationMessageFor(model => model.sellSum)
+        </div>*@
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.remark)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.remark)
+        @Html.ValidationMessageFor(model => model.remark)
+    </div>
+
+    <p class="button">
+        <a class="billSave opSave" data-close="true">保存</a>
+        <a class="opClose">关闭</a>
+    </p>
+</div>
+}
+<fieldset>
+    <legend>
+        @Html.LabelFor(model => model.authorIntroduce)
+    </legend>
+    <div>
+        @Html.HiddenFor(model => model.authorIntroduce, new { @class = "uEditorProxy_authorIntroduce" })
+        <script id="uEditor_authorIntroduce" type="text/plain" style="width: 100%; height: 400px;">
+        </script>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>
+        @Html.LabelFor(model => model.bookIntroduce)
+    </legend>
+    <div>
+        @Html.HiddenFor(model => model.bookIntroduce, new { @class = "uEditorProxy_bookIntroduce" })
+        <script id="uEditor_bookIntroduce" type="text/plain" style="width: 100%; height: 400px;">
+        </script>
+    </div>
+</fieldset>

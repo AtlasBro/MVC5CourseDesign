@@ -1,0 +1,122 @@
+﻿@{
+    //附件操作主界面
+    ViewBag.Title = "Select";
+    //系统资源界面有对应的调用方法
+}
+
+@model db.view.sys_BillAttach
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+<div class="container" id="containerAttach" data-url="/admin/sys_BillAttach/SelectPartial">
+    <div class="search">
+        <span>
+            @Html.HiddenFor(a => a.attachResourceCode)
+        </span>
+        <span>
+            @Html.HiddenFor(a => a.attachKeyCode)
+        </span>
+        <span>
+            @Html.HiddenFor(a => a.attachOpMode)
+        </span>
+    </div>
+    @if (Model.attachOpMode == "Update")
+    {
+        <div class="toolbar">
+            选择文件：<input type="file" id="fileUpload_Attach" multiple="multiple" name="file" />
+            <a class="uploadAttach opUpload" data-show="@rui.privCtl.isPriv(ctrl,rui.privCtl.eOp.AttachUpload)" data-resourcecode="@Model.attachResourceCode" data-keycode="@Model.attachKeyCode">上传附件</a>
+            <a class="saveAttach opSave">保存数据</a>
+        </div>
+    }
+    <div class="pager"></div>
+    <form id="formAttach" action="/admin/sys_BillAttach/saveUpload">
+        <div class="showData">
+            @{Html.RenderPartial("_ShowData" + Model.attachOpMode);}
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    //刷新当前页面的数据
+    function refleshAttachData(exeCountSql) {
+        $("#containerAttach").pager("reflesh", exeCountSql);
+    }
+    //初始化分页
+    $(function () {
+        $("#containerAttach").pager();
+    });
+
+    //异步上传文件的方法
+    function ajaxFileUpload(url, success) {
+        $.ajaxFileUpload({
+            url: url, //用于文件上传的服务器端请求地址
+            secureuri: false, //一般设置为false
+            fileElementId: 'fileUpload_Attach', //文件上传控件的id属性
+            dataType: 'json', //返回值类型 一般设置为json
+            success: success,
+            error: function (data, status, e)//服务器响应失败处理函数
+            {
+                info(data);
+                info(status);
+                info(e);
+                alert("上传出错");
+            }
+        });
+        return false;
+    }
+
+    //上传附件，上传成功后，刷新附件列表
+    $(document).ready(function () {
+        //上传附件
+        $("#containerAttach").on("click", ".uploadAttach", function () {
+            info("上传附件");
+            var resourceCode = $(this).attr("data-resourceCode");
+            var keyCode = $(this).attr("data-keyCode");
+            if ($("#fileUpload_Attach").val().length > 0) {
+                var url = "/admin/sys_BillAttach/fileUpload?resourceCode=" + resourceCode + "&keyCode=" + keyCode;
+                //调用异步上传方法
+                ajaxFileUpload(url, function (data, status) {
+                    showJsonResult(data, function () {
+                        //刷新附件列表
+                        refleshAttachData(true);
+                        $("#fileUpload_Attach").val("");
+                    });
+                });
+            } else {
+                alert("请选择文件");
+            }
+            return false;
+        });
+
+        //删除附件
+        $("#containerAttach").on("click", ".deleteAttach", function () {
+            info("删除附件");
+            if (confirm("确认删除")) {
+                var url = $(this).attr("href");
+                ajaxPost(url, null, function (data) {
+                    showJsonResult(data, function () {
+                        //刷新附件列表
+                        refleshAttachData(true);
+                    });
+                });
+            }
+            return false;
+        });
+
+        //保存附件备注
+        $("#containerAttach").on("click", ".saveAttach", function () {
+            info("保存附件");
+            ajaxForm($("#formAttach"), function (data) {
+                showJsonResult(data, function () {
+
+                });
+            });
+        });
+
+        //如果详情模式，并且无附件，则隐藏
+        if ($("#containerAttach input[name='attachOpMode']").val() == "Detail") {
+            if ($("#containerAttach .showData:contains('无数据')").length > 0) {
+                //$("#containerAttach").parent("fieldset").hide();
+            }
+        }
+    });
+</script>
+
+

@@ -1,0 +1,70 @@
+﻿@model rui.pagerBase
+<input type="hidden" class="pagerinfo" data-rowcount="@Model.RowCount" data-pagesize="@Model.PageSize"
+       data-pageindex="@Model.PageIndex" data-pagecount="@Model.PageCount"
+       data-orderfield="@Model.OrderField" data-orderway="@Model.OrderWay" />
+<style type="text/css">
+    .opRow span {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .opRow input {
+        margin-left: 1px;
+    }
+</style>
+<table>
+    <thead>
+        <tr>
+            @foreach (System.Data.DataRow row in Model.showColumn.Rows) {
+                if (row["isOrder"].ToString() == "True") {
+                    <th data-option="@row["optionValue"]" data-field="@row["fieldCode"]" data-order="@Model.OrderWay">@row["fieldName"]@Html.orderColumn(Model.OrderField, Model.OrderWay, row["fieldCode"].ToString())</th>
+                } else {
+                    <th data-option="@row["optionValue"]">@row["fieldName"]</th>
+                }
+            }
+            <th class="cbxtd">
+                <input type="checkbox" />
+            </th>
+            <th style="width:50%">
+                按钮权限
+            </th>
+            <th>数据权限</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.dataTable.Rows.Count; i++)
+        {
+            string rowID = Model.dataTable.Rows[i]["rowID"].ToString();
+            string keyCode = Model.dataTable.Rows[i][Model.keyField].ToString();
+            <tr data-code="@keyCode">
+                @foreach (System.Data.DataRow row in Model.showColumn.Rows) {
+                    <td>@Model.dataTable.Rows[i][row["fieldCode"].ToString()]</td>
+                }
+                <td class="cbxtd" style="width:26px;text-align:center;">
+                    <input type="checkbox" class="selectRow" />
+                </td>
+                <td class="opRow">
+                    <!--资源编号-->
+                    @Html.Hidden("resourceCodeList", Model.dataTable.Rows[i][Model.keyField])
+                    @Html.CheckBoxListPriv(keyCode + "_cbx", Model.dataTable.Rows[i]["opPriv"].ToString(),
+                         Model.dataTable.Rows[i]["haveOpPriv"].ToString(), db.bll.rbac_ResourceOp.bindDdl(keyCode))
+                </td>
+                <td>
+                    <!--登录用户拥有的数据权限-->
+                    @Html.Hidden(keyCode + "_dataPriv", Model.dataTable.Rows[i]["dataPriv"])
+                    <!--被授权用户拥有的数据权限-->
+                    @Html.Hidden(keyCode + "_haveDataPriv", Model.dataTable.Rows[i]["haveDataPriv"])
+                    <!--数据权限下拉框，当拥有的小于被授权用户拥有的时候，隐藏下拉框-->
+                    @Html.DropDownList(keyCode + "_ddl", db.bll.rbac_DataPriv.bindDdl(Model.dataTable.Rows[i]["dataPriv"].ToString(),
+                            Model.dataTable.Rows[i]["haveDataPriv"].ToString(), false),
+                        new
+                        {
+                            data_show = (Model.dataTable.Rows[i]["dataControl"].ToString() == "是" &&
+                                db.bll.privRbacHelper.compareDataPriv(Model.dataTable.Rows[i]["dataPriv"].ToString()
+                                , Model.dataTable.Rows[i]["haveDataPriv"].ToString()))
+                        })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

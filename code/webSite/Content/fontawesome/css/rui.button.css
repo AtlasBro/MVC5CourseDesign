@@ -1,0 +1,21 @@
+﻿
+.btn:hover, .btn:focus, .btn.focus {
+  text-decoration: none;
+}
+
+.btn{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    border:1px solid;
+    border-color: #ccc;
+    padding: 2px 5px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+
+.btn:hover{
+    color: #333;
+    border-color: #adadad;
+    background-color: #e6e6e6;
+}

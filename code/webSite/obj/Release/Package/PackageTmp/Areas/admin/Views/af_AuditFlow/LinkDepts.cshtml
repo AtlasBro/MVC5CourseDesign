@@ -1,0 +1,73 @@
+﻿@model db.view.af_AuditFlowDept
+@{
+    ViewBag.Title = "审批流关联部门";
+}
+
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#containerLink").pager("reflesh", exeCountSql);
+            $("#containerNoLink").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#containerLink").pager();
+            $("#containerNoLink").pager();
+        });
+
+        $(document).ready(function () {
+            //创建tab
+            $("#tabsSub").tabs({
+                border: false,
+                plain: true,
+                onSelect: function (title, index) {
+
+                }
+            });
+        });
+    </script>
+}
+<div id="tabsSub" class="easyui-tabs">
+    <div title="已关联部门" style="padding: 0px;">
+        <div class="container" id="containerLink" data-url="/admin/af_AuditFlow/SelectLinkDepts">
+            <div class="search">
+                <input type="hidden" name="rowID" value="@rui.requestHelper.getValue("rowID")" />
+                <span>所属组织：@Html.DropDownListFor(a => a.orgCode, db.bll.sbs_Org.bindDdlForLogin())</span>
+                <span>部门编号：@Html.TextBoxFor(a => a.deptCode)</span>
+                <span>部门名称：@Html.TextBoxFor(a => a.deptName)</span>
+            </div>
+            <div class="toolbar">
+                <a class="opSearch">查询</a>
+                @Html.ActionLink("删除选择项", "deleteLinkDepts", new { rowID = rui.requestHelper.getValue("rowID") }, new { @class = "listBatchOp opSave", data_msg = "确认删除选择？" })
+            </div>
+
+            <div class="pager"></div>
+            <div class="showData cbxCol">
+                @Html.Action("SelectLinkDepts")
+            </div>
+        </div>
+    </div>
+    <div title="未关联部门" style="padding: 0px;">
+        <div class="container" id="containerNoLink" data-url="/admin/af_AuditFlow/SelectNoLinkDepts">
+            <div class="search">
+                <input type="hidden" name="rowID" value="@rui.requestHelper.getValue("rowID")" />
+                <span>所属组织：@Html.DropDownListFor(a => a.orgCode, db.bll.sbs_Org.bindDdlForLogin())</span>
+                <span>部门编号：@Html.TextBoxFor(a => a.deptCode)</span>
+                <span>部门名称：@Html.TextBoxFor(a => a.deptName)</span>
+            </div>
+            <div class="toolbar">
+                <a class="opSearch">查询</a>
+                @Html.ActionLink("添加选择项", "addNoLinkDepts", new { rowID = rui.requestHelper.getValue("rowID") }, new { @class = "listBatchOp opSave",data_msg = "确认添加选择？" })
+            </div>
+
+            <div class="pager"></div>
+            <div class="showData cbxCol">
+                @Html.Action("SelectNoLinkDepts")
+            </div>
+        </div>
+    </div>
+</div>

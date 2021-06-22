@@ -1,0 +1,64 @@
+﻿@model db.view.rbac_UserPriv
+@{
+    ViewBag.Title = "用户授权";
+}
+
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+        $(document).ready(function () {
+            //保存授权
+            $("#opSavePriv").click(function () {
+                //异步提交表单
+                ajaxForm($("form"),function (data) {
+                    showJsonResult(data);
+                });
+            });
+            //模块切换
+            $("#ddlModule").change(function () {
+                $(".opSearch").trigger("click");
+            });
+            //表头的批量选择
+            $(".showData").on("click", "thead :checkbox", function () {
+                if ($(this).is(":checked"))
+                    $(".showData tbody :checkbox").prop("checked", true);
+                else
+                    $(".showData tbody :checkbox").removeAttr("checked");
+            });
+            //行内的批量选择
+            $(".showData").on("click", ".selectRow", function () {
+                if ($(this).is(":checked"))
+                    $(this).parents("tr").find(".opRow :checkbox").prop("checked", true);
+                else
+                    $(this).parents("tr").find(".opRow :checkbox").removeAttr("checked");
+            });
+        });
+    </script>
+}
+<div class="container"  id="container" data-url="/admin/rbac_User/Priv">
+    @using (Html.BeginForm("Priv", "rbac_User", FormMethod.Post, new { @class = "form-search form-inline", id = "formMain" }))
+    {
+        <div class="search">
+            @Html.HiddenFor(a => a.rowID)
+            <span>所属模块：@Html.DropDownListFor(a => a.moduleCode, Model.moduleList, new { id="ddlModule"})</span>
+        </div>
+        <div class="toolbar">
+            <a class="opSearch">查询</a>
+            @Html.ActionLink("保存", "Priv", new { }, new { @class = "opSave listBatchSave" })
+        </div>
+        <div class="pager"></div>
+        <div class="showData">
+            @{Html.RenderPartial("_ShowDataPriv");}
+        </div>
+    }
+</div>

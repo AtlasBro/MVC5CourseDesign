@@ -1,0 +1,34 @@
+﻿@model db.view.sbs_Materiel
+@{
+    ViewBag.Title = "物料-性能测试表";
+    //wzrui 2019-03-24
+}
+
+@section header
+{
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+    </script>
+}
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+<div class="container" id="container" data-width="@Model.PageWidth" data-url="/admin/sbs_Materiel/Select">
+    <div class="search">
+        <span>物料编码：@Html.TextBoxFor(a => a.materielCode)</span>
+    </div>
+    <div class="toolbar">
+        <a class="opSearch">查询</a>
+        @Html.ActionLink("新增", "Insert", new { }, new { data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Insert), @class = "showDialogR opInsert" })
+        @Html.ActionLink("定制", "select", "sys_Page", new { ResourceCode = Model.ResourceCode }, new { @class = "opPage showDialogRRM" })
+    </div>
+    <div class="pager"></div>
+    <div class="showData layTable cbxCol">
+        @{Html.RenderPartial("_ShowData");}
+    </div>
+</div>

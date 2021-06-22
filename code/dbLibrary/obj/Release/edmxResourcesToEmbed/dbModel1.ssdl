@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ruiMvcFrameworkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="af_AuditFlow">
+    <Key>
+      <PropertyRef Name="flowCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="flowCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="flowName" Type="nvarchar" MaxLength="50" />
+    <Property Name="auditTypeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="isUse" Type="nchar" MaxLength="1" />
+    <Property Name="orgCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_AuditFlowDept">
+    <Key>
+      <PropertyRef Name="flowCode" />
+      <PropertyRef Name="deptCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="flowCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="deptCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_AuditLog">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="relatedRowID" Type="bigint" Nullable="false" />
+    <Property Name="relatedKeyCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="relatedUserCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="relatedDeptCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="auditTypeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="flowCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="startNodeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="nodeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="createDate" Type="datetime" Nullable="false" />
+    <Property Name="passType" Type="nchar" MaxLength="2" />
+    <Property Name="printTag" Type="nvarchar" MaxLength="50" />
+    <Property Name="fromType" Type="nvarchar" MaxLength="10" />
+    <Property Name="recordType" Type="nchar" MaxLength="2" />
+    <Property Name="auditDate" Type="datetime" />
+    <Property Name="auditResult" Type="nvarchar" MaxLength="10" />
+    <Property Name="auditRemark" Type="nvarchar" MaxLength="500" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_AuditNode">
+    <Key>
+      <PropertyRef Name="flowCode" />
+      <PropertyRef Name="nodeCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="flowCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nodeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nodeJson" Type="nvarchar(max)" />
+    <Property Name="nodeDesc" Type="nvarchar" MaxLength="50" />
+    <Property Name="nodeType" Type="nvarchar" MaxLength="10" />
+    <Property Name="printTag" Type="nvarchar" MaxLength="10" />
+    <Property Name="passType" Type="nchar" MaxLength="2" />
+    <Property Name="auditUserCodes" Type="nvarchar" MaxLength="500" />
+    <Property Name="auditRoleCodes" Type="nvarchar" MaxLength="500" />
+    <Property Name="auditPostCodes" Type="nvarchar" MaxLength="500" />
+    <Property Name="selectUserCodes" Type="nvarchar" MaxLength="500" />
+    <Property Name="selectRoleCodes" Type="nvarchar" MaxLength="500" />
+    <Property Name="selectPostCodes" Type="nvarchar" MaxLength="500" />
+    <Property Name="editFieldCodes" Type="nvarchar" MaxLength="500" />
+    <Property Name="isNoteInform" Type="nchar" MaxLength="1" />
+    <Property Name="isEmailInform" Type="nchar" MaxLength="1" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_AuditPost">
+    <Key>
+      <PropertyRef Name="postCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="postCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="postName" Type="nvarchar" MaxLength="50" />
+    <Property Name="isDeptPost" Type="nchar" MaxLength="1" />
+    <Property Name="sourceFrom" Type="nvarchar" MaxLength="20" />
+    <Property Name="importDate" Type="datetime" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_AuditPostUser">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="postCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="orgCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="deptCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="sourceFrom" Type="nvarchar" MaxLength="20" />
+    <Property Name="importDate" Type="datetime" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_AuditType">
+    <Key>
+      <PropertyRef Name="auditTypeCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="auditTypeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="auditTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="isAudit" Type="nchar" MaxLength="1" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_BillCdnField">
+    <Key>
+      <PropertyRef Name="auditTypeCode" />
+      <PropertyRef Name="fieldCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="auditTypeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fieldCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fieldName" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_BillEditField">
+    <Key>
+      <PropertyRef Name="auditTypeCode" />
+      <PropertyRef Name="fieldCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="auditTypeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fieldCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fieldName" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="af_NodeRelation">
+    <Key>
+      <PropertyRef Name="flowCode" />
+      <PropertyRef Name="startNodeCode" />
+      <PropertyRef Name="endNodeCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="flowCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="startNodeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="endNodeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="passExpression" Type="nvarchar" MaxLength="500" />
+    <Property Name="nodeGuid" Type="nvarchar" MaxLength="50" />
+    <Property Name="nodeJson" Type="nvarchar(max)" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_Config">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="keyType" Type="int" />
+  </EntityType>
+  <EntityType Name="rbac_DataPriv">
+    <Key>
+      <PropertyRef Name="dataPrivCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="dataPrivCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dataPrivName" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_Module">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="moduleCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="moduleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="upModuleCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="userType" Type="nvarchar" MaxLength="50" />
+    <Property Name="showOrder" Type="int" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_Operation">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="operationCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="operationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="showOrder" Type="int" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_Resource">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="resourceCode" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="resourceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="moduleCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="isShow" Type="nchar" MaxLength="1" />
+    <Property Name="showOrder" Type="int" />
+    <Property Name="haveOperations" Type="nvarchar" MaxLength="500" />
+    <Property Name="resourceUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="opControl" Type="nchar" MaxLength="1" />
+    <Property Name="dataControl" Type="nchar" MaxLength="1" />
+    <Property Name="pageWidth" Type="int" />
+    <Property Name="pagerCount" Type="int" />
+    <Property Name="remark" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rbac_ResourceOp">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="resourceCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="operationCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="operationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="showOrder" Type="bigint" />
+  </EntityType>
+  <EntityType Name="rbac_Role">
+    <Key>
+      <PropertyRef Name="roleCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="roleCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="roleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="userType" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_RolePriv">
+    <Key>
+      <PropertyRef Name="roleCode" />
+      <PropertyRef Name="resourceCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="roleCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="resourceCode" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="opPriv" Type="nvarchar" MaxLength="1000" />
+    <Property Name="dataPriv" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_RoleUser">
+    <Key>
+      <PropertyRef Name="roleCode" />
+      <PropertyRef Name="userCode" />
+      <PropertyRef Name="orgCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="roleCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="orgCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_User">
+    <Key>
+      <PropertyRef Name="userCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nchar" MaxLength="32" />
+    <Property Name="isAdmin" Type="nchar" MaxLength="1" />
+    <Property Name="relatedCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_UserOrg">
+    <Key>
+      <PropertyRef Name="userCode" />
+      <PropertyRef Name="orgCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="orgCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="deptCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="isLogin" Type="nchar" MaxLength="1" />
+    <Property Name="isAllPrj" Type="nchar" MaxLength="1" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rbac_UserPriv">
+    <Key>
+      <PropertyRef Name="userCode" />
+      <PropertyRef Name="orgCode" />
+      <PropertyRef Name="resourceCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="orgCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="resourceCode" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="opPriv" Type="nvarchar" MaxLength="1000" />
+    <Property Name="dataPriv" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sbs_Dept">
+    <Key>
+      <PropertyRef Name="deptCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="deptCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="deptName" Type="nvarchar" MaxLength="50" />
+    <Property Name="deptType" Type="nvarchar" MaxLength="50" />
+    <Property Name="upDeptCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="orgCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="sourceFrom" Type="nvarchar" MaxLength="20" />
+    <Property Name="importDate" Type="datetime" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sbs_Empl">
+    <Key>
+      <PropertyRef Name="emplCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="emplCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="emplName" Type="nvarchar" MaxLength="50" />
+    <Property Name="deptCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="orgCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="10" />
+    <Property Name="sex" Type="nchar" MaxLength="1" />
+    <Property Name="IDCard" Type="nvarchar" MaxLength="18" />
+    <Property Name="phoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="sourceFrom" Type="nvarchar" MaxLength="50" />
+    <Property Name="importDate" Type="datetime" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sbs_Org">
+    <Key>
+      <PropertyRef Name="orgCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="orgCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="orgName" Type="nvarchar" MaxLength="50" />
+    <Property Name="isDefault" Type="nchar" MaxLength="1" />
+    <Property Name="isWHOnline" Type="nchar" MaxLength="1" />
+    <Property Name="whOnlineValue" Type="nvarchar" MaxLength="10" />
+    <Property Name="sourceFrom" Type="nvarchar" MaxLength="20" />
+    <Property Name="importDate" Type="datetime" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sys_BillAttach">
+    <Key>
+      <PropertyRef Name="attachCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="attachCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="relatedResourceCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="relatedKeyCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="relatedDetailNo" Type="int" />
+    <Property Name="attachUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="prieviewUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="attachName" Type="nvarchar" MaxLength="100" />
+    <Property Name="attachLength" Type="bigint" />
+    <Property Name="attachMIME" Type="nvarchar" MaxLength="200" />
+    <Property Name="attachContent" Type="nvarchar" MaxLength="1000" />
+    <Property Name="uploadUserCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="uploadDateTime" Type="datetime" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sys_Column">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+      <PropertyRef Name="fieldCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="resourceCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fieldCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fieldName" Type="nvarchar" MaxLength="50" />
+    <Property Name="isShow" Type="bit" />
+    <Property Name="showOrder" Type="int" />
+    <Property Name="isOrder" Type="bit" />
+    <Property Name="colWidth" Type="int" />
+    <Property Name="isResize" Type="bit" />
+    <Property Name="fixedValue" Type="nvarchar" MaxLength="10" />
+    <Property Name="alignType" Type="nvarchar" MaxLength="10" />
+    <Property Name="optionValue" Type="nvarchar" MaxLength="1000" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sys_DataSyncInterface">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="sysTableName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="sysInsertTableName" Type="nvarchar" MaxLength="50" />
+    <Property Name="syskeyFieldName" Type="nvarchar" MaxLength="50" />
+    <Property Name="sourceTableName" Type="nvarchar" MaxLength="50" />
+    <Property Name="sourceTableJoinExpression" Type="nvarchar" MaxLength="1000" />
+    <Property Name="sourceTableWhereExpression" Type="nvarchar" MaxLength="1000" />
+    <Property Name="sourceTableOrderExpression" Type="nvarchar" MaxLength="1000" />
+    <Property Name="isPrimary" Type="nchar" MaxLength="1" />
+    <Property Name="remark" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="sys_DataSyncInterfaceDetail">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="sysTableName" Type="nvarchar" MaxLength="50" />
+    <Property Name="sysFieldName" Type="nvarchar" MaxLength="50" />
+    <Property Name="sourceFieldName" Type="nvarchar" MaxLength="50" />
+    <Property Name="sourceFieldAliasName" Type="nvarchar" MaxLength="50" />
+    <Property Name="checkOrder" Type="int" />
+    <Property Name="show" Type="nchar" MaxLength="1" />
+    <Property Name="import" Type="nchar" MaxLength="1" />
+    <Property Name="showOrder" Type="int" />
+    <Property Name="filter" Type="nchar" MaxLength="1" />
+    <Property Name="remark" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="sys_UCColumn">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+      <PropertyRef Name="userCode" />
+      <PropertyRef Name="fieldCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="resourceCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fieldCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fieldName" Type="nvarchar" MaxLength="50" />
+    <Property Name="isShow" Type="bit" />
+    <Property Name="showOrder" Type="int" />
+    <Property Name="isOrder" Type="bit" />
+    <Property Name="colWidth" Type="int" />
+    <Property Name="isResize" Type="bit" />
+    <Property Name="fixedValue" Type="nvarchar" MaxLength="10" />
+    <Property Name="alignType" Type="nvarchar" MaxLength="10" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sys_UCPager">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+      <PropertyRef Name="userCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="resourceCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="pageSize" Type="int" />
+    <Property Name="pageWidth" Type="int" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sys_WebLog">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="logDate" Type="datetime" />
+    <Property Name="logType" Type="nvarchar" MaxLength="10" />
+    <Property Name="userCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="fromIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="ipLoc" Type="nvarchar" MaxLength="50" />
+    <Property Name="fromLoc" Type="nvarchar" MaxLength="250" />
+    <Property Name="accessLoc" Type="nvarchar" MaxLength="250" />
+    <Property Name="requestType" Type="nchar" MaxLength="10" />
+    <Property Name="remark" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="wx_User">
+    <Key>
+      <PropertyRef Name="weixinUserCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="weixinUserCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nickName" Type="nvarchar" MaxLength="50" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="userSex" Type="nchar" MaxLength="1" />
+    <Property Name="headerImg" Type="nvarchar" MaxLength="500" />
+    <Property Name="isAttentive" Type="nchar" MaxLength="1" />
+    <Property Name="sourceFrom" Type="nvarchar" MaxLength="20" />
+    <Property Name="importDate" Type="datetime" />
+    <Property Name="remark" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="ruiMvcFrameworkModelStoreContainer">
+    <EntitySet Name="af_AuditFlow" EntityType="Self.af_AuditFlow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_AuditFlowDept" EntityType="Self.af_AuditFlowDept" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_AuditLog" EntityType="Self.af_AuditLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_AuditNode" EntityType="Self.af_AuditNode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_AuditPost" EntityType="Self.af_AuditPost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_AuditPostUser" EntityType="Self.af_AuditPostUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_AuditType" EntityType="Self.af_AuditType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_BillCdnField" EntityType="Self.af_BillCdnField" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_BillEditField" EntityType="Self.af_BillEditField" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="af_NodeRelation" EntityType="Self.af_NodeRelation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_Config" EntityType="Self.rbac_Config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_DataPriv" EntityType="Self.rbac_DataPriv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_Module" EntityType="Self.rbac_Module" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_Operation" EntityType="Self.rbac_Operation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_Resource" EntityType="Self.rbac_Resource" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_ResourceOp" EntityType="Self.rbac_ResourceOp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_Role" EntityType="Self.rbac_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_RolePriv" EntityType="Self.rbac_RolePriv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_RoleUser" EntityType="Self.rbac_RoleUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_User" EntityType="Self.rbac_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_UserOrg" EntityType="Self.rbac_UserOrg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rbac_UserPriv" EntityType="Self.rbac_UserPriv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sbs_Dept" EntityType="Self.sbs_Dept" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sbs_Empl" EntityType="Self.sbs_Empl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sbs_Org" EntityType="Self.sbs_Org" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_BillAttach" EntityType="Self.sys_BillAttach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_Column" EntityType="Self.sys_Column" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_DataSyncInterface" EntityType="Self.sys_DataSyncInterface" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_DataSyncInterfaceDetail" EntityType="Self.sys_DataSyncInterfaceDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_UCColumn" EntityType="Self.sys_UCColumn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_UCPager" EntityType="Self.sys_UCPager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys_WebLog" EntityType="Self.sys_WebLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="wx_User" EntityType="Self.wx_User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

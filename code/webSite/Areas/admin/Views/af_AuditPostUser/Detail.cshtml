@@ -1,0 +1,62 @@
+﻿@model db.af_AuditPostUser
+
+@{
+    ViewBag.Title = "用户任职详情";
+    //wzrui 2019-06-17
+}
+
+
+<div class="dialog">
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.rowID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.rowID)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.userCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.userCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.postCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.postCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.deptCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.deptCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.sourceFrom)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sourceFrom)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.importDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.importDate)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.remark)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.remark)
+    </div>
+
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>

@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ruiMvcFrameworkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="af_AuditFlow" EntityType="ruiMvcFrameworkModel.af_AuditFlow" />
+    <EntitySet Name="af_AuditFlowDept" EntityType="ruiMvcFrameworkModel.af_AuditFlowDept" />
+    <EntitySet Name="af_AuditLog" EntityType="ruiMvcFrameworkModel.af_AuditLog" />
+    <EntitySet Name="af_AuditNode" EntityType="ruiMvcFrameworkModel.af_AuditNode" />
+    <EntitySet Name="af_AuditPost" EntityType="ruiMvcFrameworkModel.af_AuditPost" />
+    <EntitySet Name="af_AuditPostUser" EntityType="ruiMvcFrameworkModel.af_AuditPostUser" />
+    <EntitySet Name="af_AuditType" EntityType="ruiMvcFrameworkModel.af_AuditType" />
+    <EntitySet Name="af_BillCdnField" EntityType="ruiMvcFrameworkModel.af_BillCdnField" />
+    <EntitySet Name="af_BillEditField" EntityType="ruiMvcFrameworkModel.af_BillEditField" />
+    <EntitySet Name="af_NodeRelation" EntityType="ruiMvcFrameworkModel.af_NodeRelation" />
+    <EntitySet Name="rbac_Config" EntityType="ruiMvcFrameworkModel.rbac_Config" />
+    <EntitySet Name="rbac_DataPriv" EntityType="ruiMvcFrameworkModel.rbac_DataPriv" />
+    <EntitySet Name="rbac_Module" EntityType="ruiMvcFrameworkModel.rbac_Module" />
+    <EntitySet Name="rbac_Operation" EntityType="ruiMvcFrameworkModel.rbac_Operation" />
+    <EntitySet Name="rbac_Resource" EntityType="ruiMvcFrameworkModel.rbac_Resource" />
+    <EntitySet Name="rbac_ResourceOp" EntityType="ruiMvcFrameworkModel.rbac_ResourceOp" />
+    <EntitySet Name="rbac_Role" EntityType="ruiMvcFrameworkModel.rbac_Role" />
+    <EntitySet Name="rbac_RolePriv" EntityType="ruiMvcFrameworkModel.rbac_RolePriv" />
+    <EntitySet Name="rbac_RoleUser" EntityType="ruiMvcFrameworkModel.rbac_RoleUser" />
+    <EntitySet Name="rbac_User" EntityType="ruiMvcFrameworkModel.rbac_User" />
+    <EntitySet Name="rbac_UserOrg" EntityType="ruiMvcFrameworkModel.rbac_UserOrg" />
+    <EntitySet Name="rbac_UserPriv" EntityType="ruiMvcFrameworkModel.rbac_UserPriv" />
+    <EntitySet Name="sbs_Dept" EntityType="ruiMvcFrameworkModel.sbs_Dept" />
+    <EntitySet Name="sbs_Empl" EntityType="ruiMvcFrameworkModel.sbs_Empl" />
+    <EntitySet Name="sbs_Org" EntityType="ruiMvcFrameworkModel.sbs_Org" />
+    <EntitySet Name="sys_BillAttach" EntityType="ruiMvcFrameworkModel.sys_BillAttach" />
+    <EntitySet Name="sys_Column" EntityType="ruiMvcFrameworkModel.sys_Column" />
+    <EntitySet Name="sys_DataSyncInterface" EntityType="ruiMvcFrameworkModel.sys_DataSyncInterface" />
+    <EntitySet Name="sys_DataSyncInterfaceDetail" EntityType="ruiMvcFrameworkModel.sys_DataSyncInterfaceDetail" />
+    <EntitySet Name="sys_UCColumn" EntityType="ruiMvcFrameworkModel.sys_UCColumn" />
+    <EntitySet Name="sys_UCPager" EntityType="ruiMvcFrameworkModel.sys_UCPager" />
+    <EntitySet Name="sys_WebLog" EntityType="ruiMvcFrameworkModel.sys_WebLog" />
+    <EntitySet Name="wx_User" EntityType="ruiMvcFrameworkModel.wx_User" />
+  </EntityContainer>
+  <EntityType Name="af_AuditFlow">
+    <Key>
+      <PropertyRef Name="flowCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="flowCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="flowName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="auditTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isUse" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="orgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_AuditFlowDept">
+    <Key>
+      <PropertyRef Name="flowCode" />
+      <PropertyRef Name="deptCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="flowCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deptCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_AuditLog">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="relatedRowID" Type="Int64" Nullable="false" />
+    <Property Name="relatedKeyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="relatedUserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="relatedDeptCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="auditTypeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="flowCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="startNodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nodeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="passType" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="printTag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fromType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="recordType" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="auditDate" Type="DateTime" Precision="3" />
+    <Property Name="auditResult" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="auditRemark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_AuditNode">
+    <Key>
+      <PropertyRef Name="flowCode" />
+      <PropertyRef Name="nodeCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="flowCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nodeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nodeJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="nodeDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nodeType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="printTag" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="passType" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="auditUserCodes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="auditRoleCodes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="auditPostCodes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="selectUserCodes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="selectRoleCodes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="selectPostCodes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="editFieldCodes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="isNoteInform" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="isEmailInform" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_AuditPost">
+    <Key>
+      <PropertyRef Name="postCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="postCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="postName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isDeptPost" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="sourceFrom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="importDate" Type="DateTime" Precision="3" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_AuditPostUser">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="userCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="postCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deptCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sourceFrom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="importDate" Type="DateTime" Precision="3" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_AuditType">
+    <Key>
+      <PropertyRef Name="auditTypeCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="auditTypeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="auditTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isAudit" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_BillCdnField">
+    <Key>
+      <PropertyRef Name="auditTypeCode" />
+      <PropertyRef Name="fieldCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="auditTypeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fieldCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fieldName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_BillEditField">
+    <Key>
+      <PropertyRef Name="auditTypeCode" />
+      <PropertyRef Name="fieldCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="auditTypeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fieldCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fieldName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="af_NodeRelation">
+    <Key>
+      <PropertyRef Name="flowCode" />
+      <PropertyRef Name="startNodeCode" />
+      <PropertyRef Name="endNodeCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="flowCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="startNodeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="endNodeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="passExpression" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nodeGuid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nodeJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_Config">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="keyType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="rbac_DataPriv">
+    <Key>
+      <PropertyRef Name="dataPrivCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="dataPrivCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dataPrivName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_Module">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="moduleCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="moduleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="upModuleCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="showOrder" Type="Int32" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_Operation">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="operationCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="operationName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="showOrder" Type="Int32" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_Resource">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="resourceCode" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="resourceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="moduleCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isShow" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="showOrder" Type="Int32" />
+    <Property Name="haveOperations" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="resourceUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="opControl" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="dataControl" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="pageWidth" Type="Int32" />
+    <Property Name="pagerCount" Type="Int32" />
+    <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_ResourceOp">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="resourceCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="operationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="operationName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="showOrder" Type="Int64" />
+  </EntityType>
+  <EntityType Name="rbac_Role">
+    <Key>
+      <PropertyRef Name="roleCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="roleCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="roleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_RolePriv">
+    <Key>
+      <PropertyRef Name="roleCode" />
+      <PropertyRef Name="resourceCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="roleCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="resourceCode" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="opPriv" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="dataPriv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_RoleUser">
+    <Key>
+      <PropertyRef Name="roleCode" />
+      <PropertyRef Name="userCode" />
+      <PropertyRef Name="orgCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="roleCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orgCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_User">
+    <Key>
+      <PropertyRef Name="userCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="userCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="isAdmin" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="relatedCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_UserOrg">
+    <Key>
+      <PropertyRef Name="userCode" />
+      <PropertyRef Name="orgCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="userCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orgCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deptCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isLogin" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="isAllPrj" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rbac_UserPriv">
+    <Key>
+      <PropertyRef Name="userCode" />
+      <PropertyRef Name="orgCode" />
+      <PropertyRef Name="resourceCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="userCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orgCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="resourceCode" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="opPriv" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="dataPriv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sbs_Dept">
+    <Key>
+      <PropertyRef Name="deptCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="deptCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deptName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deptType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="upDeptCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sourceFrom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="importDate" Type="DateTime" Precision="3" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sbs_Empl">
+    <Key>
+      <PropertyRef Name="emplCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="emplCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="emplName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deptCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sex" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="IDCard" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="phoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sourceFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="importDate" Type="DateTime" Precision="3" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sbs_Org">
+    <Key>
+      <PropertyRef Name="orgCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="orgCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="orgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isDefault" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="isWHOnline" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="whOnlineValue" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sourceFrom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="importDate" Type="DateTime" Precision="3" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_BillAttach">
+    <Key>
+      <PropertyRef Name="attachCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="attachCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="relatedResourceCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="relatedKeyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="relatedDetailNo" Type="Int32" />
+    <Property Name="attachUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="prieviewUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="attachName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="attachLength" Type="Int64" />
+    <Property Name="attachMIME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="attachContent" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="uploadUserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uploadDateTime" Type="DateTime" Precision="3" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_Column">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+      <PropertyRef Name="fieldCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="resourceCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fieldCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fieldName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isShow" Type="Boolean" />
+    <Property Name="showOrder" Type="Int32" />
+    <Property Name="isOrder" Type="Boolean" />
+    <Property Name="colWidth" Type="Int32" />
+    <Property Name="isResize" Type="Boolean" />
+    <Property Name="fixedValue" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="alignType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="optionValue" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_DataSyncInterface">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="sysTableName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sysInsertTableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="syskeyFieldName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sourceTableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sourceTableJoinExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="sourceTableWhereExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="sourceTableOrderExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="isPrimary" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_DataSyncInterfaceDetail">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="sysTableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sysFieldName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sourceFieldName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sourceFieldAliasName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="checkOrder" Type="Int32" />
+    <Property Name="show" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="import" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="showOrder" Type="Int32" />
+    <Property Name="filter" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_UCColumn">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+      <PropertyRef Name="userCode" />
+      <PropertyRef Name="fieldCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="resourceCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fieldCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fieldName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isShow" Type="Boolean" />
+    <Property Name="showOrder" Type="Int32" />
+    <Property Name="isOrder" Type="Boolean" />
+    <Property Name="colWidth" Type="Int32" />
+    <Property Name="isResize" Type="Boolean" />
+    <Property Name="fixedValue" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="alignType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_UCPager">
+    <Key>
+      <PropertyRef Name="resourceCode" />
+      <PropertyRef Name="userCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="resourceCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pageSize" Type="Int32" />
+    <Property Name="pageWidth" Type="Int32" />
+    <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sys_WebLog">
+    <Key>
+      <PropertyRef Name="rowNum" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="logDate" Type="DateTime" Precision="3" />
+    <Property Name="logType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="userCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fromIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ipLoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fromLoc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="accessLoc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="requestType" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="wx_User">
+    <Key>
+      <PropertyRef Name="weixinUserCode" />
+    </Key>
+    <Property Name="rowNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rowID" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="weixinUserCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nickName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userSex" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="headerImg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="isAttentive" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="sourceFrom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="importDate" Type="DateTime" Precision="3" />
+    <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

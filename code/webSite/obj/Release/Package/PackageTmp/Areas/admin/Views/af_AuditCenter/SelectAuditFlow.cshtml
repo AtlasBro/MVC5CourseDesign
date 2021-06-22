@@ -1,0 +1,48 @@
+﻿@model db.view.af_SelectAuditFlow
+
+@{
+    ViewBag.Title = "选择审批流";
+}
+
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+
+        $(document).ready(function () {
+            //送审
+            $(".showData").on("click",".sendAudit", function () {
+                if (confirm("确认送审？")) {
+                    var rowid = $(this).attr("data-rowid");
+                    var type = $(this).attr("data-type");
+                    var flowCode = $(this).attr("data-keycode");
+
+                    //提交服务器进行送审，送身后关闭对话框，并刷新父窗口
+                    ajaxPost("sendAudit", { flowCode: flowCode, type: type, relatedRowID: rowid }, function (data) {
+                        showJsonResult(data, function (data) {
+                            window.parent.refleshData(false);
+                            window.parent.closeDialog();
+                        });
+                    });
+                }
+                return false;
+            });
+        });
+    </script>
+}
+
+<div class="container"  id="container">
+    <div class="pager"></div>
+    <div class="showData">
+        @{Html.RenderPartial("_SelectShowData");}
+    </div>
+</div>

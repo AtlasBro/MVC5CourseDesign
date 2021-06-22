@@ -1,0 +1,78 @@
+﻿@model db.af_AuditPostUser
+
+@{
+    ViewBag.Title = "用户任职修改";
+    //wzrui 2019-06-17
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <div class="dialog">
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.rowNum)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.rowNum)
+            @Html.ValidationMessageFor(model => model.rowNum)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.userCode)
+            @Html.ValidationMessageFor(model => model.userCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.postCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.postCode)
+            @Html.ValidationMessageFor(model => model.postCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.deptCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.deptCode)
+            @Html.ValidationMessageFor(model => model.deptCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sourceFrom)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sourceFrom)
+            @Html.ValidationMessageFor(model => model.sourceFrom)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.importDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.importDate)
+            @Html.ValidationMessageFor(model => model.importDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.remark)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.remark)
+            @Html.ValidationMessageFor(model => model.remark)
+        </div>
+
+
+        <p class="button">
+            <a class="billSave opSave" data-close="true">保存</a>
+            <a class="opClose">关闭</a>
+        </p>
+    </div>
+
+}

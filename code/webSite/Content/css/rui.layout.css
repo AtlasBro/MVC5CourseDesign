@@ -1,0 +1,573 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-size: 12pt;
+}
+
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* 半透明的遮罩层 ajax请求用 */
+#loading {
+    background: #000;
+    filter: alpha(opacity=30); /* IE的透明度 */
+    opacity: 0.3; /* 透明度 */
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10000; /* 此处的图层要大于页面 */
+    display: none;
+}
+
+    #loading img {
+        width: 124px;
+        height: 124px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -62px;
+        margin-top: -62px;
+    }
+
+
+/* 母版页最外层的层 */
+.pageLayout {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    /* 清除子元素浮动影响 */
+    .pageLayout:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0;
+    }
+
+/* 数据列表容器 */
+.container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 3px;
+}
+
+/* --- 搜索栏 start ---*/
+.search {
+    position: relative;
+    text-align: left;
+    line-height: 26px;
+    font-size: 11pt;
+}
+    /* 清除子元素浮动影响 */
+    .search:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0;
+    }
+    /* 搜索栏内部表单的分行问题  每个表单用span包起来 */
+    .search > span {
+        display: block;
+        float: left;
+        line-height: 27px;
+        height: 27px;
+        padding-left: 3px;
+    }
+    /* 搜索栏内的文本框宽度 */
+    .search input[type='text'] {
+        width: 100px;
+    }
+    /* 搜索栏内的单选 */
+    .search input[type='radio'] {
+        vertical-align: middle;
+    }
+    /* 搜索栏内的多选 */
+    .search input[type='checkBox'] {
+        vertical-align: middle;
+    }
+    /* 搜索栏内的日期录入 */
+    .search input[onfocus] {
+        width: 80px;
+    }
+    /* 搜索栏内的下拉框宽度 */
+    .search select {
+        width: 100px;
+        margin-right: 3px;
+        height: 22px;
+    }
+    /* 工具栏放在搜索栏内部时 */
+    .search .toolbar {
+        float: right;
+        margin-top: 2px;
+    }
+/* ---搜索栏 end ---*/
+
+
+/* --- 工具栏 start---*/
+.toolbar {
+    position: relative;
+    text-align: right;
+    line-height: 28px;
+    height: 28px;
+    padding-top: 1px;
+    padding-right: 3px;
+    font-size: 11pt;
+}
+    /* 工具栏内的span,左对齐 */
+    .toolbar span {
+        text-align: left;
+    }
+    /* 工具栏内的文本框宽度 */
+    .toolbar input[type=text] {
+        width: 100px;
+        margin-right: 3px;
+    }
+    /* 工具栏内的下拉框宽度 */
+    .toolbar select {
+        width: 150px;
+        margin-right: 3px;
+        height: 22px;
+    }
+
+    .toolbar .chosen-container {
+        margin-bottom: 2px;
+        text-align: left;
+    }
+/* --- 工具栏 end ---*/
+
+
+/* --- 分页栏 start ---*/
+.pager {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 11pt;
+}
+    /* --- 分页项目 ---*/
+    .pager .pagination-link {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+        /* --- 分页项文字 ---*/
+        .pager .pagination-link .l-btn-text {
+            width: auto;
+            min-width: 20px;
+        }
+            /* --- 分页项文字鼠标样式 ---*/
+            .pager .pagination-link .l-btn-text:hover {
+                background-color: red;
+            }
+/* --- 分页栏 end ---*/
+
+
+/* --- 数据列表相关样式  start ---*/
+.showData {
+    margin-top: 1px;
+    font-size: 11pt;
+}
+/* --- 创建选择列 ---*/
+.cbxCol {
+}
+/* --- 应用layTable ---*/
+.layTable {
+}
+/* --- 应用固定表头 ---*/
+table.fixHeader {
+    position: absolute;
+    left: 0px;
+}
+/* --- 表格内部超链接 ---*/
+.showData a:link, .showData a:visited, .showData a:hover, .showData a:active {
+    color: blue;
+    text-decoration: none;
+}
+/* --- 表格行选中 ---*/
+.showData tr.cbxSelected {
+    background-color: #FF6666;
+    color: white;
+}
+/* --- 奇数行 ---*/
+.showData .odd {
+    color: #333333;
+    background-color: #F7F6F3;
+}
+/* --- 偶数行 ---*/
+.showData .even {
+    color: #284775;
+    background-color: white;
+}
+/* --- 鼠标上去 ---*/
+.showData tbody tr:hover {
+    background-color: #f6d0be;
+    font-weight:900;
+    color: black;
+}
+/* --- 数据汇总列样式 ---*/
+.showData .sumRow {
+    text-align: left;
+    padding-left: 2px;
+    background-color: #C8C8C8;
+    font-weight: 900;
+    color: black;
+}
+/* --- 表格 ---*/
+.ruiTable {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0pt solid #C0C0C0;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+    /* --- 表格行 ---*/
+    .ruiTable tr {
+        height: 35px;
+        border-bottom: 1pt dotted #C0C0C0;
+    }
+
+    /* --- 表头单元格 ---*/
+    .ruiTable th {
+        box-sizing: border-box;
+        text-align: left;
+        background-color: #FDDDDD;
+        background-repeat: repeat-x;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: #e6e6e6;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #e6e6e6;
+    }
+
+    /* --- 表体单元格 ---*/
+    .ruiTable td {
+        box-sizing: border-box;
+        text-align: left;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: #e6e6e6;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #e6e6e6;
+    }
+
+    /* --- 表头单元格不显示省略 ---*/
+    .ruiTable th div {
+        box-sizing: border-box;
+        text-overflow: clip;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 2px 3px;
+    }
+
+    /* --- 表体单元格显示省略,排除tdSelect列 ---*/
+    .ruiTable td:not(.tdSelect) div {
+        box-sizing: border-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 2px 3px;
+    }
+
+    /* --- 操作列不显示省略 ---*/
+    .ruiTable .opRow div {
+        box-sizing: border-box;
+        text-overflow: clip;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 2px 2px;
+    }
+    /* --- 选择列 ---*/
+    .ruiTable .cbxtd {
+        width: 20px;
+        text-align: center;
+    }
+
+    /* --- 排序列标题 ---*/
+    .ruiTable thead th[data-field] {
+        color: blue;
+    }
+
+/* 数据维护对话框相关样式 默认4列结构 start*/
+.dialog {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    font-size: 12pt;
+}
+    /* dialog内的每个div元素 */
+    .dialog > div {
+        box-sizing:border-box;
+        height:35px;
+        line-height:35px;
+    }
+    /* 清除子元素浮动影响 */
+    .dialog:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0;
+    }
+    /* --- 标题格子---*/
+    .dialog .display-label, .dialog .editor-label {
+        float: left;
+        width: 20%;
+        text-align: right;
+        background-color: #F7F6F3;
+        border-bottom: 1px dotted #B5E9B1;
+    }
+    /* --- 数据格子 ---*/
+    .dialog .display-field, .dialog .editor-field {
+        float: left;
+        width: 30%;
+        text-align: left;
+        border-bottom: 1px dotted #B5E9B1;
+        box-sizing: border-box;
+        padding-left: 4px;
+    }
+        /*数据格子内的文本框*/
+        .dialog .editor-field input {
+            vertical-align: middle;
+            border: 1px solid #aaa;
+            padding-left: 2px;
+            width: 80%;
+            height: 26px;
+        }
+        /*数据格子内的下拉框*/
+        .dialog .editor-field select {
+            vertical-align: middle;
+            width: 80%;
+            height: 26px;
+        }
+
+        /*数据格子内的多选*/
+        .dialog .editor-field input[type='checkbox'] {
+            border: 1px solid #aaa;
+            border-radius: 2px;
+            margin-top: 4px;
+            vertical-align: top;
+            margin-left: 2px;
+            height: 16px;
+            width: 16px;
+        }
+        /*数据格子内的单选*/
+        .dialog .editor-field input[type='radio'] {
+            vertical-align: middle;
+            border-radius: 2px;
+            margin-top: 4px;
+            vertical-align: top;
+            margin-left: 2px;
+            height: 16px;
+            width: 16px;
+        }
+
+    /* --- 跨三栏行 标题格子 默认回车开启新行 ---*/
+    .dialog .display-label.three, .dialog .editor-label.three {
+        text-align: right;
+        width: 20%;
+        float: left;
+        clear: left;
+    }
+
+    /* --- 跨三栏行 数据格子 ---*/
+    .dialog .display-field.three, .dialog .editor-field.three {
+        text-align: left;
+        width: 80%;
+        float: left;
+        clear: right;
+    }
+
+    /* --- 跨四栏行 标题格子 默认回车开启新行 ---*/
+    .dialog .display-label.four, .dialog .editor-label.four {
+        text-align: right;
+        width: 20%;
+        float: left;
+        clear: left;
+    }
+
+    /* --- 跨四栏行 数据格子 ---*/
+    .dialog .display-field.four, .dialog .editor-field.four {
+        text-align: left;
+        width: 100%;
+        float: left;
+        clear: right;
+        border-top: 1px dotted #B5E9B1;
+    }
+    /* --- 新行 ---*/
+    .dialog .newLine {
+        float: left;
+        clear: left;
+    }
+    /* --- 操作行 ---*/
+    .dialog .button {
+        padding-top: 4px;
+        text-align: center;
+        width: 100%;
+        float: left;
+        clear: left;
+        margin-bottom: 2px;
+    }
+    /* --- 操作行 居右 ---*/
+    .dialog .buttonR {
+        padding-top: 4px;
+        text-align: right;
+        width: 100%;
+        float: left;
+        clear: left;
+        margin-bottom: 2px;
+    }
+    /* --- 两栏模式（第二列跨三栏） --- */
+    .dialog.two .editor-field {
+        text-align: left;
+        width: 80%;
+        float: left;
+        clear: right;
+    }
+    /* --- 必填项目 ---*/
+    .dialog .must {
+        color: red;
+        font-weight: 600;
+    }
+
+/* 数据维护对话框相关样式 end */
+
+
+/* 对话框显示控制 start */
+
+/*元素隐藏*/
+.hide {
+    display: none;
+}
+
+
+/*元素只读*/
+.read {
+}
+    /*文本框只读*/
+    .read input {
+        cursor: default;
+        color: #6D6D6D;
+        background-color: #f0f0f0;
+    }
+    /*多行文本框只读*/
+    .read textarea {
+        cursor: default;
+        color: #6D6D6D;
+        background-color: #f0f0f0;
+    }
+    /*下拉框只读*/
+    .read select {
+        cursor: default;
+        color: #6D6D6D;
+        background-color: #f0f0f0;
+    }
+
+/* 显示控制 end */
+
+/*表单控件的样式定义*/
+input[type="checkbox"] {
+    border: 1px solid #aaa;
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+input[type="file"] {
+    border: 1px solid #aaa;
+    height: 22px;
+    border-radius: 2px;
+}
+
+/*文本框显示成Label效果*/
+input.labelShow {
+    width: 95%;
+    height: 24px;
+    border: 0px none;
+    cursor: default;
+    background-color: inherit;
+}
+
+input[onfocus="WdatePicker()"] {
+    width: 80px;
+}
+
+select {
+    border: 1px solid #aaa;
+    height: 22px;
+}
+
+/* fieldset 样式定义 */
+fieldset {
+    border: 1pt solid #aaa;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 1px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99.5%;
+}
+
+    fieldset legend {
+        margin-left: 20px;
+        padding-left: 8px;
+        padding-right: 8px;
+        font-weight: 900;
+        font-size: 10pt;
+    }
+
+
+    fieldset div {
+        box-sizing: border-box;
+    }
+
+#divSelect {
+    overflow-x: hidden;
+    border-top: 1pt solid #2C63B6;
+}
+
+#divDialog {
+    overflow-x: hidden;
+    border-top: 1pt solid #2C63B6;
+}
+
+/*审批工具栏*/
+.auditTool {
+    text-align: center;
+}
+
+/*审批批注*/
+.auditRemark {
+    width: 400px;
+    height: 100px;
+    font-size: 12pt;
+}
+
+/*已阅加粗*/
+tr[data-issee='否'] {
+    font-weight: 600;
+}

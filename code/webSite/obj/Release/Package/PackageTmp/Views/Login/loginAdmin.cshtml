@@ -1,0 +1,139 @@
+﻿@model db.view.loginAdmin
+@{
+    Layout = null;
+    //@author
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>用户登录 @ViewData["info"]</title>
+    <link href=@Url.Content("/Content/swiper/swiper.min.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("/Content/login/rui.login.css"+rui.configHelper.ctxKey) rel="stylesheet" type="text/css" />
+
+    @*jquery*@
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery-1.12.4.min.js")></script>
+    @*jquery val*@
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.validate-vsdoc.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.validate.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.validate.message.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.validate.unobtrusive.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery.metadata.js")></script>
+    @*layui*@
+    <link href="@Url.Content("~/content/layui/css/layui.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/content/layui/layui.js")"></script>
+    @*md5 swipter*@
+    <script type="text/javascript" src="@Url.Content("~/Content/scripts/jquery.md5.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/swiper/swiper.jquery.min.js")"></script>
+    @*自己定义*@
+    <script type="text/javascript" src="@Url.Content("~/Content/scripts/rui.tools.js"+rui.configHelper.ctxKey)"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/scripts/rui.dropDownList.js"+rui.configHelper.ctxKey)"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //变更用户名时,获取能够登录的组织
+            $("input[name='tbxUserName']").change(function () {
+                var userCode = $(this).val();
+                if (isNull(userCode) == false) {
+                    ajaxPost("/login/getLoginOrg", { userCode: userCode }, function (data) {
+                        showJsonResult(data, function () {
+                            updateDdl($(".ddlOrg"), parseJSON(data.orgList), false);
+                        });
+                    });
+                }
+            });
+
+            //登录提交按钮
+            $("input[name='submit']").click(function () {
+                $("#loading").css("height", $(document).height());
+                $("#loading").show();
+                var tbxUserName = $(".tbxUserName").val();
+                var tbxPassword = md5($(".tbxPassword").val());
+                var ddlOrgCode = $(".ddlOrg").val();
+                ajaxPost("/Login/loginAdmin", { tbxUserName: tbxUserName, tbxPassword: tbxPassword, orgCode: ddlOrgCode }, function (data) {
+                    info(data);
+                    $("#loading").hide();
+                    if (data.result == "True") {
+                        top.location.href = "/admin/sys_Home/index";
+                    } else {
+                        showError(data.message);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="UserLogin_container">
+        <div id="Logo">@rui.configHelper.prjName</div>
+        <!--Logo-->
+        <div id="UserLogin_BlankBg">
+            <div id="UserLogin_left">
+                <div id="UserLogin_slide" style="position:relative">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @foreach (var key in ViewBag.img as Dictionary<string, string>)
+                            {
+                                <div class="swiper-slide">
+                                    <img src="/content/login/showImg/@key.Key" />
+                                    <p style="position:absolute;left:10px; bottom:5px;">@key.Value</p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <script>
+                        var swiper = new Swiper('.swiper-container', {
+                            autoplay: 3000,
+                            speed: 800,
+                            effect: 'fade'
+                        });
+                    </script>
+                </div>
+            </div>
+            <form id="UserLogin_form"  method="post">
+                <table>
+                    <tr>
+                        <td class="formLeft">
+                            <label>用户</label>
+                        </td>
+                        <td class="formRight">
+                            @Html.TextBoxFor(a => a.tbxUserName, new { @class = "required tbxUserName" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="formLeft">
+                            <label>密码</label>
+                        </td>
+                        <td class="formRight">
+                            @Html.PasswordFor(a => a.tbxPassword, new { @class = "required  tbxPassword" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="formLeft">
+                            <label>组织</label>
+                        </td>
+                        <td class="formRight">
+                            @Html.DropDownListFor(a => a.orgCode, db.bll.sbs_Org.bindDdl(false), new { @class = "ddlOrg" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="LoginBtn">
+                            <input type="submit" name="submit" style="background-image:url(/Content/login/image/LoginBtn.png);width: 325px; height: 44px;" value="" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id="loading">
+        <img style="width: 124px; height: 124px; position: absolute; top: 50%; left: 50%; margin-left: -62px; margin-top: -62px;" src="/Content/images/loading.gif" />
+    </div>
+    <div id="footer">
+        技术支持：南京云宝网络有限公司   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 技术热线：15345187578 &nbsp; &nbsp; &nbsp; &nbsp;
+    </div>
+</body>
+</html>

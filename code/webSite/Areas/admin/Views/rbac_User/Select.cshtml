@@ -1,0 +1,57 @@
+﻿@model db.view.rbac_User
+
+@{
+    ViewBag.Title = "用户维护";
+}
+
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+
+       $(document).ready(function () {
+            $(".listBatchOpPost").click(function () {
+                var postCode = $(".postCode").val();
+                if (isNull(postCode) == false) {
+                    listBatchOp($(this), "postCode=" + postCode);
+                } else {
+                    showInfo("请选择任职职务");
+                }
+                return false;
+            });
+        });
+    </script>
+}
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+<div class="container" id="container" data-width="@Model.PageWidth" data-url="/admin/rbac_User/select">
+    <div class="search">
+        <span>所属部门：@Html.DropDownListFor(a => a.deptCode, db.bll.sbs_Dept.bindDdl(true, true))</span>
+        <span>用户编码：@Html.TextBoxFor(a => a.userCode)</span>
+        <span>用户名称：@Html.TextBoxFor(a => a.userName)</span>
+        <span>可登录：@Html.DropDownListFor(a => a.isLogin, rui.listHelper.bind是否(true))</span>
+    </div>
+    <div class="toolbar">
+        <a class="opSearch">查询</a>
+        @Html.ActionLink("新增", "Insert", new { }, new { @class = "showDialogR opInsert", data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Insert) })
+        <span>
+            选择职务:@Html.DropDownList("postCode", db.bll.af_AuditPost.bindDdl(false), new { @class = "postCode" })
+            @Html.ActionLink("审批职务任职", "userBatchPost", "af_AuditPostUser", new { }, new { @class = "listBatchOpPost opBtn", data_show = rui.privCtl.isPriv(ctrl, "userBatchPost"), data_msg = "确认批量设定任职？" })
+        </span>
+        @Html.ActionLink("允许登录", "allowLogin", new { }, new { @class = "listBatchOp opBtn", data_show = rui.privCtl.isPriv(ctrl, "allowLogin"), data_msg = "确认允许登录？" })
+        @Html.ActionLink("取消登录", "cancelLogin", new { }, new { @class = "listBatchOp opBtn", data_show = rui.privCtl.isPriv(ctrl, "cancelLogin"), data_msg = "确认取消登录？" })
+    </div>
+
+    <div class="pager"></div>
+    <div class="showData cbxCol">
+        @{Html.RenderPartial("_ShowData");}
+    </div>
+</div>

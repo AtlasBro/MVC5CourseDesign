@@ -1,0 +1,30 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "auditReject";
+}
+
+<div class="container">
+<div class="showData" style="width:600px; margin-left:auto; margin-right:auto;">
+    <table>
+        <thead>
+            <tr>
+                <th style="width:20px;"></th>
+                <th>记录类型</th>
+                <th>通过类型</th>
+                <th>参与人员</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Rows.Count; i++)
+            {
+            <tr>
+                <td style="width:20px; text-align:center;"><input type="radio" name="rejectItem" value="@Model.Rows[i]["节点编号"]" /></td>
+                <td>@Model.Rows[i]["记录类型"]</td>
+                <td>@Model.Rows[i]["通过类型"]</td>
+                <td>@Model.Rows[i]["参与人员"]</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</div>

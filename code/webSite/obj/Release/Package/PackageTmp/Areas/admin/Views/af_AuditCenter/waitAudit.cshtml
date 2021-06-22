@@ -1,0 +1,19 @@
+﻿@model db.view.af_AuditCenter
+
+<div class="container" id="containerWaitAudit" data-url="/admin/waitAudit/af_AuditCenter">
+    <div class="search">
+        <span>单据类型：@Html.DropDownListFor(a => a.auditTypeCode, db.bll.af_AuditType.bindDdl(true))</span>
+        <span>所属部门：@Html.DropDownListFor(a => a.deptCode, db.bll.sbs_Dept.bindDdl(true))</span>
+        <span>单据编号：@Html.TextBoxFor(a => a.relatedKeyCode)</span>
+        <span>送审时间：@Html.TextBoxDateFor(a=>a.createDateStart)~@Html.TextBoxDateFor(a=>a.createDataEnd)</span>
+        <span>审批时间：@Html.TextBoxDateFor(a=>a.auditDateStart)~@Html.TextBoxDateFor(a=>a.auditDataEnd)</span>
+    </div>
+    <div class="toolbar">
+        <a class="opSearch">查询</a>
+    </div>
+
+    <div class="pager"></div>
+    <div class="showData">
+        @{Html.RenderPartial("_ShowData");}
+    </div>
+</div>

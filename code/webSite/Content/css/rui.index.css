@@ -1,0 +1,82 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+/* 清除子元素浮动影响 */
+.f_north:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+/* 页面顶部 */
+.f_north {
+    overflow: hidden;
+    height: 40px;
+    color: white;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 900;
+    background-color: #FE5C13;
+}
+
+/* 页面左侧 */
+.f_left {
+    width: 160px;
+}
+
+    /* 左侧模块 */
+    .f_left .ul_module > div {
+        box-sizing: border-box;
+        line-height: 34px;
+        height: 34px;
+        font-size: 12pt;
+        font-weight: 600;
+        padding-left: 15px;
+        background-color: #F2F2F2;
+        border-top: 1pt dotted #02F2F2;
+    }
+
+    /* 左侧模块图标 */
+    .f_left .ul_module .arrow {
+        float: right;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        margin-top: 7px;
+        background-image: url(/Content/easyui/bootstrap/images/accordion_arrows.png);
+        background-position: -17px 0px;
+        background-repeat: no-repeat;
+    }
+
+    /* 左侧模块选中 */
+    .f_left .active > div {
+        background-color: #FE5C13;
+        color: white;
+        font-weight: 900;
+    }
+
+    /* 左侧模块选中图标 */
+    .f_left .active .arrow {
+        background-position: 0px 0px;
+    }
+
+    /* 左侧资源 */
+    .f_left .ul_resource {
+        overflow: auto;
+    }
+
+        /* 左侧资源列表项目 */
+        .f_left .ul_resource li {
+            padding-left: 15px;
+            line-height: 28px;
+            font-size: 11pt;
+        }

@@ -1,0 +1,167 @@
+﻿@model db.af_AuditNode
+
+@{
+    ViewBag.Title = "选中节点";
+}
+
+@using (Html.BeginForm("SelectNode", "af_AuditFlow",FormMethod.Post,new {  id = "nodeForm"}))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="dialog two">
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.rowID)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.rowID)
+            @Html.ValidationMessageFor(model => model.rowID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.flowCode)
+        </div>
+        <div class="editor-field">
+            @db.bll.af_AuditFlow.getNameByCode(Model.flowCode,null)
+            @Html.HiddenFor(model => model.flowCode)
+            @Html.ValidationMessageFor(model => model.flowCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nodeCode)
+        </div>
+        <div class="editor-field read">
+            @Html.EditorFor(model => model.nodeCode)
+            @Html.ValidationMessageFor(model => model.nodeCode)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.nodeJson)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.nodeJson)
+            @Html.ValidationMessageFor(model => model.nodeJson)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nodeDesc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nodeDesc)
+            @Html.ValidationMessageFor(model => model.nodeDesc)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.nodeType)
+        </div>
+        <div class="editor-field hide">
+            @db.bll.af_AuditNode.tranfer("nodeType",Model.nodeType)
+            @Html.HiddenFor(model=>model.nodeType)
+            @Html.ValidationMessageFor(model => model.nodeType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.passType)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(a => a.passType, rui.listHelper.bind审批通过方式())
+            @Html.ValidationMessageFor(model => model.passType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.printTag)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(a=>a.printTag,db.bll.af_AuditPost.bindDdlForPrintTag())
+            @Html.ValidationMessageFor(model => model.printTag)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.auditUserCodes)
+        </div>
+        <div class="editor-field">
+            <span id="auditUserName">@db.bll.rbac_User.getNamesByCodes(Model.auditUserCodes,db.efHelper.newDc())</span>
+            @Html.HiddenFor(a => a.auditUserCodes, new { id="auditUserCode" })
+            @Html.ValidationMessageFor(model => model.auditUserCodes)
+            <span class="btn" id="selectUser">选择用户</span>
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.auditRoleCodes)
+        </div>
+        <div class="editor-field hide">
+            @Html.DropDownListFor(model => model.auditRoleCodes,db.bll.rbac_Role.bindDdl(true))
+            @Html.ValidationMessageFor(model => model.auditRoleCodes)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.auditPostCodes)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(a => a.auditPostCodes, db.bll.af_AuditPost.bindDdl(true))
+            @Html.ValidationMessageFor(model => model.auditPostCodes)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.selectUserCodes)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.selectUserCodes)
+            @Html.ValidationMessageFor(model => model.selectUserCodes)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.selectRoleCodes)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.selectRoleCodes)
+            @Html.ValidationMessageFor(model => model.selectRoleCodes)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.selectPostCodes)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.selectPostCodes)
+            @Html.ValidationMessageFor(model => model.selectPostCodes)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.isNoteInform)
+        </div>
+        <div class="editor-field hide">
+            @Html.DropDownListFor(a => a.isNoteInform, rui.listHelper.bind是否(false, "否"))
+            @Html.ValidationMessageFor(model => model.isNoteInform)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.isEmailInform)
+        </div>
+        <div class="editor-field hide">
+            @Html.DropDownListFor(a => a.isEmailInform, rui.listHelper.bind是否(false, "否"))
+            @Html.ValidationMessageFor(model => model.isEmailInform)
+        </div>
+
+        <p class="button">
+            <a class="billSave btn" data-close="true"><i class='fa fa-asterisk'></i>&nbsp;保存</a>
+        </p>
+    </div>
+}
+
+<script type="text/javascript">
+    $(".billSave").click(function () {
+        console.info($("#nodeForm").serialize());
+        var value = getDisabledValue($("#nodeForm"));
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: "/admin/af_AuditFlow/SelectNode",
+            data: $("#nodeForm").serialize() + value,
+            success: function (data) {
+                showInfo("保存成功");
+            },
+            error: function (data) {
+                alert("ajax请求出错" + data);
+            }
+        })
+    });
+</script>    

@@ -1,0 +1,141 @@
+﻿@model db.view.af_AuditFlowDesign
+@{
+    ViewBag.Title = "审批流设计";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="@Url.Content("~/content/layui/css/layui.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/content/css/rui.layout.css")" rel="stylesheet" type="text/css" />
+
+    <link href="@Url.Content("~/content/fontawesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/content/fontawesome/css/rui.button.css")" rel="stylesheet" type="text/css" />
+
+    @*jquery*@
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery-1.12.4.min.js"+rui.configHelper.ctxKey)></script>
+    @*easyUI*@
+    <link href="@Url.Content("~/content/easyui/icon.css"+rui.configHelper.ctxKey)" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/content/easyui/bootstrap/easyui.css"+rui.configHelper.ctxKey)" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/content/easyui/jquery.easyui.js"+rui.configHelper.ctxKey)"></script>
+    @*layui*@
+    <script type="text/javascript" src="@Url.Content("~/content/layui/layui.js"+rui.configHelper.ctxKey)"></script>
+    <script type="text/javascript" src="@Url.Content("~/content/scripts/jquery.wfdesigner.js"+rui.configHelper.ctxKey)"></script>
+    @*自定义的js*@
+    <script type="text/javascript" src="@Url.Content("~/content/scripts/rui.tools.js"+rui.configHelper.ctxKey)"></script>
+    <script type="text/javascript" src="@Url.Content("~/content/fontawesome/rui.button.js"+rui.configHelper.ctxKey)"></script>
+    <script type="text/javascript" src="@Url.Content("~/content/scripts/rui.modelDialog.js"+rui.configHelper.ctxKey)"></script>
+
+    <script type="text/javascript">
+        var opMode = '@Model.opMode';
+        var rowID = '@Model.rowID';
+
+        //绘制审批流 -- 修改模式下调用
+        function showWF() {
+            //info("showWF");
+            var jsondata = function (begin, actives, routes, end) {
+                this.begin = begin;
+                this.activeArray = actives;
+                this.routeArray = routes;
+                this.end = end;
+            }
+            var begin = '@Html.Raw(Model.begin)';
+            var end = '@Html.Raw(Model.end)';
+            var ats = '@Html.Raw(Model.actives)';
+            var atArray = ats.split("*");
+            var ro = '@Html.Raw(Model.routes)';
+            var rtArray = ro.split("*");
+            var jsdata = new jsondata(begin, atArray, rtArray, end);
+            $("#wf").draw({ dbmousefunction: "select", jsondata: jsdata, rowID: rowID });
+        }
+
+        //保存JSon数据
+        function saveJson(reflesh) {
+           //info("saveJson");
+            //获取数据
+            var wfjson = $("#wf").getJson();
+            if (wfjson) {
+                //------------遍历活动节点
+                var acts = "";
+                for (var i = 0; i < wfjson.activeArray.length; i++) {
+                    acts += wfjson.activeArray[i] + "*";
+                }
+                if (acts.length > 0)
+                    acts = acts.substr(0, acts.length - 1);
+                //------------遍历路由节点
+                var routes = "";
+                for (var i = 0; i < wfjson.routeArray.length; i++) {
+                    routes += wfjson.routeArray[i] + "*";
+                }
+                if (routes.length > 0)
+                    routes = routes.substr(0, routes.length - 1);
+
+                //展示数据
+                //info("起始点的json数据：" + wfjson.begin + "\n\r活动节点数据：" + acts + "\n\r路由数据：" + routes + "\n\r终结点的json数据：" + wfjson.end);
+            }
+            //提交服务器
+            ajaxPost("saveJson", { rowID: rowID, startJson: wfjson.begin, activeJsons: acts, routeJsons: routes, endJson: wfjson.end }, function (data) {
+                showJsonResult(data, function () {
+                    if (reflesh == true)
+                        location.reload();
+                });
+            });
+            $("#wf").buildJson();
+        }
+
+        //文档加载完毕
+        $(document).ready(function () {
+            //设置wf的高度
+            var height = $(document).height();
+            $("#wf").height(height - 38);
+            if (opMode == "insert") {
+                //绘制流程图(传入rowID信息)
+                $("#wf").draw({ dbmousefunction: "select", rowID: rowID });
+            }
+            if (opMode == "update") {
+                showWF(rowID);
+            }
+            //新增节点
+            $("#addBtn").click(function () {
+                $("#wf").createActive();
+                return false;
+            });
+            //删除元素
+            $("#delBtn").click(function () {
+                $("#wf").deleteElement();
+                $("#wfEdit").html("");
+                return false;
+            });
+            //保存，获取所有元素的json数据
+            $("#saveBtn").click(function () {
+               //info("1");
+                saveJson(false);
+                return false;
+            });
+            //刷新工作流
+            $("#refleshBtn").click(function () {
+                saveJson(true);
+                return false;
+            });
+            //选择用户
+            $("#wfEdit").on("click", "#selectUser", function () {
+                console.info("wwww");
+                var selected = $("#auditUserCode").val();
+                openDialog("选择用户", "/admin/af_AuditFlow/LinkUsers?upCode=auditUserCode&upName=auditUserName&selected=" + selected,window,"type1",false);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="height: 25px; line-height: 25px; margin-bottom: 2px;">
+        <a id="addBtn" class="opBtn">新增活动节点</a>
+        <a id="delBtn" class="opBtn">删除选择项</a>
+        <a id="saveBtn" class="opBtn">保存工作流</a>
+        <a id="refleshBtn" class="opBtn">刷新节点名</a>
+    </div>
+    <div>
+        <div id="wf" style="width: 49%; float: left; position: relative;"></div>
+        <div id="wfEdit" style="width: 49%; float: right;"></div>
+    </div>
+</body>
+</html>

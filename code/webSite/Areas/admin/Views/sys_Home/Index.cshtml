@@ -1,0 +1,64 @@
+﻿@model db.view.adminIndex
+<!DOCTYPE html>
+@*后台框架页面*@
+@{Layout = null;}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@rui.configHelper.prjName</title>
+
+    @*jquery*@
+    <script type="text/javascript" src=@Url.Content("~/Content/scripts/jquery-1.12.4.min.js")></script>
+    @*easyUI*@
+    <link href="@Url.Content("~/content/easyui/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/content/easyui/bootstrap/easyui.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/content/easyui/jquery.easyui.js")"></script>
+    @*本页面*@
+    <link href="@Url.Content("~/content/css/rui.index.css"+rui.configHelper.ctxKey)" rel="stylesheet" type="text/css" />
+    @*自己定义的js*@
+    <script type="text/javascript" src="@Url.Content("~/Content/scripts/rui.tools.js"+rui.configHelper.ctxKey)"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/scripts/rui.frame.js"+rui.configHelper.ctxKey)"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/scripts/rui.index.js"+rui.configHelper.ctxKey)"></script>
+</head>
+<body class="easyui-layout layout panel-noscroll">
+    <form id="form1">
+        <div data-options="region:'north'" class="f_north">
+            <div style="float: left;">
+                <span style="float: left; padding-left: 10px; font-size: 13pt; letter-spacing: 1px;">@rui.configHelper.prjName @*-@db.bll.loginAdminHelper.getOrgName()-<span id="deptName">@Model.loginDeptName</span>*@</span>
+            </div>
+            <div style="float: right; padding-top: 0px; margin-top: 0px;">
+                <span style="float: right; font-size: 11pt; height: 30px; padding-right: 8px;">
+                    今天是<span id="time"></span>，@db.bll.loginAdminHelper.getOrgDeptName(db.efHelper.newDc())&nbsp;@Model.loginUserName (@Model.loginUserCode)&nbsp;
+                    <a href="@Url.Action("changePW")" class="changePW" style="color: white;">修改密码</a>&nbsp;&nbsp;
+                    <a href="@Url.Action("exit")" style="color: white;">退出</a>
+                </span>
+            </div>
+        </div>
+        <div data-options="region:'west'" title="功能栏" class="f_left">
+            @foreach (System.Data.DataRow row in Model.moduleDt.Rows)
+            {
+                <div class="ul_module">
+                    <div>@row["moduleName"]<div class="arrow"></div></div>
+                    <ul class="ul_resource">
+                        @foreach (System.Data.DataRow subRow in Model.resourceDt.Select("moduleCode='" + row["moduleCode"].ToString() + "'"))
+                        {
+                            <li><a href="@subRow["resourceUrl"]" class="addTab">@subRow["resourceName"]</a></li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+        <div data-options="region:'center'">
+            <div id="tabs" class="easyui-tabs">
+
+            </div>
+        </div>
+        <div id="tabsMenu" class="easyui-menu" style="width: 120px;">
+            <div name="close">关闭</div>
+            <div name="other">关闭其他</div>
+            <div name="all">关闭所有</div>
+        </div>
+    </form>
+</body>
+</html>

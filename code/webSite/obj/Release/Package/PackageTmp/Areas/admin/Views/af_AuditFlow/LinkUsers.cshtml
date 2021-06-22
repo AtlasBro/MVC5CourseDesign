@@ -1,0 +1,138 @@
+﻿@model db.view.af_AuditFlowUser
+@{
+    ViewBag.Title = "审批流选择参审用户";
+}
+
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#containerLink").pager("reflesh", exeCountSql);
+            $("#containerNoLink").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#containerLink").pager();
+            $("#containerNoLink").pager();
+        });
+        //选择完毕,值回传给主页面
+        function selectedComplete() {
+            //获取选中项目
+            var selectedValues = $(".selected").val();
+            //获取父页面的元素
+            var upCode = $("#upCode").val();
+            var upName = $("#upName").val();
+
+            //异步获取对应的Name值，并赋值给父元素
+            ajaxPost("/admin/rbac_User/getShowNames", { userCodes: selectedValues }, function (data) {
+                showJsonResult(data, function () {
+                    $("#" + upCode, window.parent.document).val(selectedValues);
+                    $("#" + upName, window.parent.document).html(data.showName);
+                });
+            });
+            //关闭对话框
+            window.parent.closeDialog();
+        }
+        $(document).ready(function () {
+            //创建tab
+            $("#tabsSub").tabs({
+                border: false,
+                plain: true,
+                onSelect: function (title, index) {
+
+                }
+            });
+            //添加选中 - 更改已选中项目，并刷新页面
+            $("#addSelected").click(function () {
+                showConfirm("确认添加选中", function () {
+                    //获取选中内容
+                    var result = getCbxSelect("#containerNoLink");
+                    if (result == "")
+                        return false;
+                    var selected = $(".selected").val();
+                    selected = stringMerge(selected, result);
+                    $(".selected").val(selected);
+                    clearCbxSelected("#containerNoLink");
+                    refleshData(true);
+                });
+            });
+            //移除选中 - 删除已选中项目，并刷新页面
+            $("#deleteSelected").click(function () {
+                showConfirm("确认移除选中", function () {
+                    //获取选中内容
+                    var result = getCbxSelect("#containerLink");
+                    if (result == "")
+                        return false;
+                    var selected = $(".selected").val();
+                    selected = stringRemove(selected, result);
+                    $(".selected").val(selected);
+                    clearCbxSelected("#containerLink");
+                    refleshData(true);
+                });
+            });
+            //清除选择
+            $("#opClear").click(function () {
+                showConfirm("确认清空选择？", function () {
+                    $(".selected").val("");
+                    refleshData(true);
+                });
+            });
+            //确认选择 - 将已选项目更新到父页面，并获取对应的展示名称
+            $("#opSelected").click(function () {
+                showConfirm("确认当前选择？", function () {
+                    selectedComplete();
+                });
+            });
+        });
+    </script>
+}
+<div id="tabsSub" class="easyui-tabs">
+    <!-- 父窗口的Code元素选择符 -->
+    <input type="hidden" id="upCode" value="@rui.requestHelper.getValue("upCode")" />
+    <!-- 父窗口的Name元素选择符 -->
+    <input type="hidden" id="upName" value="@rui.requestHelper.getValue("upName")" />
+
+    <div title="未选择账户" style="padding: 0px;">
+        <div class="container" id="containerNoLink" data-url="/admin/af_AuditFlow/SelectNoLinkUsers">
+            <div class="search">
+                <!-- 保存选中用户的编号 -->
+                <input type="hidden" class="selected" name="selected" value="@rui.requestHelper.getValue("selected")" />
+                <span>所属部门：@Html.DropDownListFor(a => a.deptCode, db.bll.sbs_Dept.bindDdl(true))</span>
+                <span>用户编号：@Html.TextBoxFor(a => a.userCode)</span>
+                <span>用户名称：@Html.TextBoxFor(a => a.userName)</span>
+            </div>
+            <div class="toolbar">
+                <a class="opSearch">查询</a>
+                <a id="addSelected" class="opBtn">添加选择项</a>
+            </div>
+            <div class="pager"></div>
+            <div class="showData cbxCol">
+                @Html.Action("SelectNoLinkUsers")
+            </div>
+        </div>
+    </div>
+    <div title="已选择账户" style="padding: 0px;">
+        <div class="container" id="containerLink" data-url="/admin/af_AuditFlow/SelectLinkUsers">
+            <div class="search">
+                <!-- 保存选中用户的编号 -->
+                <input type="hidden" class="selected" name="selected" value="@rui.requestHelper.getValue("selected")" />
+                <span>所属部门：@Html.DropDownListFor(a => a.deptCode, db.bll.sbs_Dept.bindDdl(true))</span>
+                <span>用户编号：@Html.TextBoxFor(a => a.userCode)</span>
+                <span>用户名称：@Html.TextBoxFor(a => a.userName)</span>
+            </div>
+            <div class="toolbar">
+                <a class="opSearch">查询</a>
+                <a id="deleteSelected" class="opBtn" data-title="确认删除?">删除选择项</a>
+                <a id="opClear" class="opBtn" data-title="确认删除?">清空选择</a>
+                <a id="opSelected" class="opBtn">确认选择</a>
+            </div>
+            <div class="pager"></div>
+            <div class="showData cbxCol">
+                @Html.Action("SelectLinkUsers")
+            </div>
+        </div>
+    </div>
+</div>

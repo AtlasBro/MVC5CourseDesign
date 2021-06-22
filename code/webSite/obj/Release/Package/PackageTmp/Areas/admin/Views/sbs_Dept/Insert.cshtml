@@ -1,0 +1,85 @@
+﻿@model db.sbs_Dept
+
+@{
+    ViewBag.Title = "Insert";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="dialog">
+        <div class="editor-label hide">
+            @Html.LabelFor(model=>model.rowID)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.rowID)
+            @Html.ValidationMessageFor(model => model.rowID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.deptCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.deptCode)
+            @Html.ValidationMessageFor(model => model.deptCode)
+        </div>
+
+        <div class="editor-label must">
+            @Html.LabelFor(model => model.deptName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.deptName)
+            @Html.ValidationMessageFor(model => model.deptName)
+        </div>
+
+        <div class="editor-label must">
+            @Html.LabelFor(model => model.orgCode)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.orgCode, db.bll.sbs_Org.bindDdlForLogin(false))
+            @Html.ValidationMessageFor(model => model.orgCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.upDeptCode)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.upDeptCode, db.bll.sbs_Dept.bindDdl(true,true))
+            @Html.ValidationMessageFor(model => model.upDeptCode)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.sourceFrom)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.sourceFrom)
+            @Html.ValidationMessageFor(model => model.sourceFrom)
+        </div>
+       
+        <div class="editor-label hide" >
+            
+            @Html.LabelFor(model => model.importDate)
+        </div>
+        <div class="editor-field  hide" >
+          
+            @Html.EditorFor(model => model.importDate)
+            @Html.ValidationMessageFor(model => model.importDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.remark)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.remark)
+            @Html.ValidationMessageFor(model => model.remark)
+        </div>
+
+        <p class="button">
+            <a class="billSave opSave" data-close="true">保存</a>
+            <a class="opClose">关闭</a>
+        </p>
+    </div>
+}
+

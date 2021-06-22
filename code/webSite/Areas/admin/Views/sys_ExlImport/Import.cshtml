@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "批量导入学生";
+    string tableName = ViewBag.TableName;
+}
+@section header{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#fileupload").click(function () {
+                var file = $("#Upload").val();
+                if (isNull(file) == true) {
+                    alert("请选择要上传的文件");
+                    return false;
+                } else {
+                    if (checkFileType(file, ".xlsx")) {
+                        var url = "/admin/sys_ExlImport/ImportUpload?tableName=@tableName";
+                        fileUpload(url, "Upload", function (data) {
+                            showJsonResult(data);
+                            getTableAjax();
+                        });
+                    }
+                }
+            });
+        });
+
+        function getTableAjax() {
+            ajaxHtml("/admin/sys_ExlImport/disPlayImport", {}, function (data) {
+                $(".showData").html(data);
+            });
+        }
+    </script>
+}
+
+@using (Html.BeginForm("ImportSave", "sys_ExlImport", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <form id="ajaxForms" enctype="multipart/form-data" method="post">
+        <div class="container">
+            <div class="search">
+                <input type="file" name="Upload" id="Upload" />
+                <a id="fileupload" class="opExlImport">上传并展示</a>
+                @Html.ActionLink("保存到数据库", "SaveData", new { tableName=tableName }, new { @class = "billOp opSave", data_msg="确认保存？" })
+                <a id="downfile" class="opExlExport" href='@string.Format("/upload/excelTemplate/{0}.xlsx",tableName)'>下载模板</a>
+            </div>
+            <div class="showData ruiTable">
+            </div>
+        </div>
+    </form>
+}

@@ -1,0 +1,138 @@
+﻿@model db.bks_Book
+
+@{
+    ViewBag.Title = "Detail";
+}
+<script type="text/javascript" charset="utf-8" src="/uEditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/uEditor/ueditor.all.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/uEditor/lang/zh-cn/zh-cn.js"></script>
+
+<div class="dialog">
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.bookCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bookCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.bookName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bookName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.isbnNO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.isbnNO)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.price)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.authorName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.authorName)
+    </div>
+
+    <fieldset>
+        <legend>
+            @Html.DisplayNameFor(model => model.authorIntroduce)
+        </legend>
+        <div style="padding:3px; text-indent:2em;line-height:3ex;">
+            @Html.Raw(Model.authorIntroduce)
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            @Html.DisplayNameFor(model => model.bookIntroduce)
+        </legend>
+        <div style="padding:3px; text-indent:2em;line-height:3ex;">
+            @Html.Raw(Model.bookIntroduce)
+        </div>
+    </fieldset>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.bookDirectory)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bookDirectory)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.bookTypeCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bookTypeCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.pressCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pressCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.pressDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pressDate)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.release)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.release)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.surfacePic)
+    </div>
+    <div class="display-field" style="height:200px">
+        <img src="@Model.surfacePic" style="width:200px" />
+    </div>
+    @*<div class="display-label">
+            @Html.DisplayNameFor(model => model.isSell)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.isSell)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.stockSum)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.stockSum)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.sellSum)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.sellSum)
+        </div>*@
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.remark)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.remark)
+    </div>
+
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>
+
+

@@ -1,0 +1,63 @@
+﻿@model db.view.bks_Book
+
+@{
+    ViewBag.Title = "图书维护";
+}
+
+@section header
+{
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+
+        $(document).ready(function () {
+            //文档加载后绑定批量修改操作
+            $(".batchChangeBookType").click(function () {
+                //获取修改后的图书类别编码
+                var bookTypeCode = $(".bookTypeCode").val();
+                if (isNotNull(bookTypeCode)) {
+                    listBatchOp($(this), "bookTypeCode=" + bookTypeCode);
+                }
+                else {
+                    showInfo("必须录入变更的图书类别")
+                }
+                return false;
+            });
+        });
+    </script>
+}
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+<div class="container" id="container" data-width="@Model.PageWidth" data-url="/admin/bks_Book/select">
+    <div class="search">
+        <span>图书类型：@Html.DropDownListFor(a => a.bookTypeCode, db.bll.bks_BookType.bindDdl(true), new { @class = ".inputSelect" })</span>
+        <span>出版社：@Html.DropDownListFor(a => a.pressCode, db.bll.bks_Press.bindDdl(true))</span>
+        <span>图书名称：@Html.TextBoxFor(a => a.bookName)</span>
+        <span>出版日期：@Html.TextBoxDateFor(a => a.pressDateStart)~@Html.TextBoxDateFor(a => a.pressDateEnd)</span>
+        <span>是否在售：@Html.DropDownListFor(a=>a.isSell,rui.listHelper.bind是否(true))</span>
+    </div>
+    <div class="toolbar">
+        <a class="opSearch">查询</a>
+        @Html.ActionLink("新增", "Insert", new { }, new { data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Insert), @class = "showDialogR opInsert" })
+        @Html.ActionLink("批量保存", "batchSave", new { }, new { @class = "listBatchSave opBtn", data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.BatchSave), data_formid = "form" })
+        @Html.ActionLink("批量上架", "batchSell", new { }, new { data_show = rui.privCtl.isPriv(ctrl, "batchSell"), @class = "listBatchOp opBtn", data_msg = "确认批量上架?" })
+        @Html.ActionLink("批量下架", "batchNoSell", new { }, new { data_show = rui.privCtl.isPriv(ctrl, "batchNoSell"), @class = "listBatchOp opBtn", data_msg = "确认批量下架?" })
+        @Html.TextBox("bookTypeCode", "", new { @class = "bookTypeCode" })
+        @Html.ActionLink("批量变更图书类别", "batchChangeBookType", new { }, new { data_show = rui.privCtl.isPriv(ctrl, "batchChangeBookType"), @class = "batchChangeBookType opBtn", data_msg = "确认批量变更图书类型?" })
+        @Html.ActionLink("Excel导出", "SelectExport", null, new { @class = "opExlExport" })
+    </div>
+    <div class="pager"></div>
+    <form id="form">
+        <div class="showData cbxCol">
+            @{Html.RenderPartial("_ShowData");}
+        </div>
+    </form>
+</div>
+

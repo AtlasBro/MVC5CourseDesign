@@ -1,0 +1,28 @@
+﻿@{
+    System.Data.DataTable table = rui.sessionHelper.getValue<System.Data.DataTable>("importTable");
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <table style="width:100%;" id="showStudent">
+        <thead>
+            <tr class="even">
+                @foreach (System.Data.DataColumn col in table.Columns)
+                {
+                    <th>@col.ColumnName</th>
+                }
+            </tr>
+        </thead>
+        @for (int i = 0; i < table.Rows.Count; i++)
+        {
+            <tr>
+                @foreach (System.Data.DataColumn col in table.Columns)
+                {
+                    <td>@table.Rows[i][col.ColumnName]</td>
+                }
+            </tr>
+        }
+    </table>
+}

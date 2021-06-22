@@ -1,0 +1,99 @@
+﻿@model db.af_NodeRelation
+
+@{
+    ViewBag.Title = "SelectRoute";
+}
+
+@using (Html.BeginForm("SelectRoute", "af_AuditFlow", FormMethod.Post, new { id = "nodeForm" }))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="dialog two">
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.rowID)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.rowID)
+            @Html.ValidationMessageFor(model => model.rowID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.flowCode)
+        </div>
+        <div class="editor-field">
+            @db.bll.af_AuditFlow.getNameByCode(Model.flowCode, db.efHelper.newDc())
+            @Html.HiddenFor(model => model.flowCode)
+            @Html.ValidationMessageFor(model => model.flowCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.startNodeCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.startNodeCode)
+            @Html.ValidationMessageFor(model => model.startNodeCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.endNodeCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.endNodeCode)
+            @Html.ValidationMessageFor(model => model.endNodeCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.passExpression)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.passExpression)
+            @Html.ValidationMessageFor(model => model.passExpression)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.nodeGuid)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.nodeGuid)
+            @Html.ValidationMessageFor(model => model.nodeGuid)
+        </div>
+
+        <div class="editor-label hide">
+            @Html.LabelFor(model => model.nodeJson)
+        </div>
+        <div class="editor-field hide">
+            @Html.EditorFor(model => model.nodeJson)
+            @Html.ValidationMessageFor(model => model.nodeJson)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.remark)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.remark)
+            @Html.ValidationMessageFor(model => model.remark)
+        </div>
+
+        <p class="button">
+            <a class="billSave btn" data-close="true"><i class='fa fa-asterisk'></i>&nbsp;保存</a>
+        </p>
+    </div>
+}
+
+<script type="text/javascript">
+    $(".billSave").click(function () {
+        var value = getDisabledValue($("#nodeForm"));
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: "/admin/af_AuditFlow/SelectRoute",
+            data: $("#nodeForm").serialize() + value,
+            success: function (data) {
+                showInfo("保存成功");
+            },
+            error: function (data) {
+                alert("ajax请求出错" + data);
+            }
+        })
+    });
+</script>
