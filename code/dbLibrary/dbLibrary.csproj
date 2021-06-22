@@ -82,67 +82,67 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="af_AuditFlow.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_AuditFlowDept.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_AuditLog.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_AuditNode.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_AuditPost.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_AuditPostUser.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_AuditType.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_BillCdnField.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_BillEditField.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="af_NodeRelation.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_Book.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_BookStock.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_BookStockDetail.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_BookType.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_Customer.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_CustomerAddress.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_OrderDetail.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_OrderInfo.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_Press.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_ShoppingTrolley.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bks_Supplier.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bll\audit\af_AuditFlow.cs" />
     <Compile Include="bll\audit\af_AuditLog.cs" />
@@ -176,21 +176,6 @@
     <Compile Include="bll\system\sys_BillAttach.Df.cs" />
     <Compile Include="bll\system\sys_UCPage.cs" />
     <Compile Include="bll\system\sys_WebLog.Df.cs" />
-    <Compile Include="dbModel1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbModel1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbModel1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbModel1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbModel1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbModel1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="lib\db\ruiDbContext.cs" />
     <Compile Include="lib\db\efHelper.cs" />
     <Compile Include="meta\Book\bks_Book.cs" />
@@ -199,6 +184,21 @@
     <Compile Include="meta\Book\bks_BookType.cs" />
     <Compile Include="meta\Book\bks_Press.cs" />
     <Compile Include="meta\Book\bks_Supplier.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="prj\appReturnResult.cs" />
     <Compile Include="prj\dataCheck.cs" />
     <Compile Include="prj\enumHelperPrj.cs" />
@@ -228,103 +228,109 @@
     <Compile Include="lib\sys\privCtl.cs" />
     <Compile Include="bll\rbac\privRbacHelper.cs" />
     <Compile Include="rbac_Config.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_DataPriv.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_Module.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_Operation.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_Resource.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_ResourceOp.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_Role.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_RolePriv.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_RoleUser.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_User.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_UserOrg.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="rbac_UserPriv.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sbs_Dept.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sbs_Empl.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sbs_Org.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_af_AuditCenter.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_af_AuditFlow.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_af_AuditPostUser.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_bks_Book.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_bks_BookStock.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_bks_BookStockDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_bks_BookType.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_rbac_Resource.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_rbac_User.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_rbac_UserOrg.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_sbs_Dept.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_sbs_Empl.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_sys_BillAttach.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sys_BillAttach.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sys_Column.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sys_DataSyncInterface.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sys_DataSyncInterfaceDetail.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sys_UCColumn.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sys_UCPager.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sys_WebLog.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="view\audit\af_AuditCenter.cs" />
     <Compile Include="view\audit\af_AuditFlow.cs" />
@@ -360,32 +366,32 @@
     <Compile Include="view\system\pageConfig.cs" />
     <Compile Include="view\system\sys_BillAttach.cs" />
     <Compile Include="wx_User.cs">
-      <DependentUpon>dbModel1.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="dbModel1.edmx">
+    <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>dbModel1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="dbModel1.edmx.diagram">
-      <DependentUpon>dbModel1.edmx</DependentUpon>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\dbLibrary.dll" />
     <Content Include="bin\Debug\dbLibrary.pdb" />
-    <Content Include="dbModel1.Context.tt">
+    <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>dbModel1.edmx</DependentUpon>
-      <LastGenOutput>dbModel1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="dbModel1.tt">
+    <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>dbModel1.edmx</DependentUpon>
-      <LastGenOutput>dbModel1.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

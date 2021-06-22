@@ -117,7 +117,7 @@ namespace web.Areas.admin.Controllers
             db.bks_Book model = db.bll.bks_Book.getEntryByRowID(rowID, dc);
             model.bookTypeCode = db.bll.bks_BookType.getNameByCode(model.bookTypeCode, dc);
             model.pressCode = db.bll.bks_Press.getNameByCode(model.pressCode, dc);
-            model.supplierCode = db.bll.bks_Press.getNameByCode(model.supplierCode, dc);
+            //model.supplierCode = db.bll.bks_Press.getNameByCode(model.supplierCode, dc);
             return View(model);
         }
 

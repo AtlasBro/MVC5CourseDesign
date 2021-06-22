@@ -73,6 +73,8 @@ namespace db
         public virtual DbSet<sv_af_AuditFlow> sv_af_AuditFlow { get; set; }
         public virtual DbSet<sv_af_AuditPostUser> sv_af_AuditPostUser { get; set; }
         public virtual DbSet<sv_bks_Book> sv_bks_Book { get; set; }
+        public virtual DbSet<sv_bks_BookStock> sv_bks_BookStock { get; set; }
+        public virtual DbSet<sv_bks_BookStockDetail> sv_bks_BookStockDetail { get; set; }
         public virtual DbSet<sv_bks_BookType> sv_bks_BookType { get; set; }
         public virtual DbSet<sv_rbac_Resource> sv_rbac_Resource { get; set; }
         public virtual DbSet<sv_rbac_User> sv_rbac_User { get; set; }

@@ -33,6 +33,5 @@ namespace db
         public Nullable<int> stockSum { get; set; }
         public Nullable<int> sellSum { get; set; }
         public string remark { get; set; }
-        public string supplierCode { get; set; }
     }
 }
