@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BookSaleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="ruiBookSaleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="af_AuditFlow">
     <Key>
       <PropertyRef Name="flowCode" />
@@ -646,7 +646,7 @@
     <Property Name="remark" Type="nvarchar(max)" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditCenter”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditCenter”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_af_AuditCenter">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -684,7 +684,7 @@
     <Property Name="sendUserName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditFlow”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditFlow”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_af_AuditFlow">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -703,7 +703,7 @@
     <Property Name="auditTypeName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditPostUser”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditPostUser”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_af_AuditPostUser">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -724,7 +724,7 @@
     <Property Name="isDeptPost" Type="nchar" MaxLength="1" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_Book”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_Book”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_bks_Book">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -753,7 +753,7 @@
     <Property Name="bookTypeName" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookStock”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookStock”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_bks_BookStock">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -769,7 +769,7 @@
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookStockDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookStockDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_bks_BookStockDetail">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -788,7 +788,7 @@
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_bks_BookType">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -802,7 +802,7 @@
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_Resource”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_Resource”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_rbac_Resource">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -826,7 +826,7 @@
     <Property Name="moduleName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_User”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_User”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_rbac_User">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -847,7 +847,7 @@
     <Property Name="isLogin" Type="nchar" MaxLength="1" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_UserOrg”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_UserOrg”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_rbac_UserOrg">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -867,7 +867,7 @@
     <Property Name="deptName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sbs_Dept”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sbs_Dept”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_sbs_Dept">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -888,7 +888,7 @@
     <Property Name="orgName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sbs_Empl”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sbs_Empl”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_sbs_Empl">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -913,7 +913,7 @@
     <Property Name="isLogin" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sys_BillAttach”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sys_BillAttach”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_sys_BillAttach">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -937,7 +937,7 @@
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
     <Property Name="uploadUserName" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityContainer Name="BookSaleModelStoreContainer">
+  <EntityContainer Name="ruiBookSaleModelStoreContainer">
     <EntitySet Name="af_AuditFlow" EntityType="Self.af_AuditFlow" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="af_AuditFlowDept" EntityType="Self.af_AuditFlowDept" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="af_AuditLog" EntityType="Self.af_AuditLog" Schema="dbo" store:Type="Tables" />

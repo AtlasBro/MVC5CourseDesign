@@ -1,0 +1,48 @@
+﻿@model db.bks_Supplier
+
+@{
+	ViewBag.Title = "Detail";
+}
+
+
+<div class="dialog">
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.supplierCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.supplierCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.supplierName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.supplierName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.contactUser)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contactUser)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.contactPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contactPhone)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.remark)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.remark)
+    </div>
+
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>
+

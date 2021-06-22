@@ -47,8 +47,7 @@
       <HintPath>..\packages\Dapper.1.50.0\lib\net45\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
@@ -132,6 +131,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\source\" />
+    <Folder Include="images\" />
     <Folder Include="Models\" />
     <Folder Include="uEditor\net\upload\image\" />
     <Folder Include="uEditor\upload\" />
@@ -173,6 +173,7 @@
     <Compile Include="Areas\admin\Controllers\sys_HomeController.cs" />
     <Compile Include="Areas\admin\Controllers\sys_PageController.cs" />
     <Compile Include="Controllers\baseController.cs" />
+    <Compile Include="Controllers\Client\BookController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Filters\checkLoginAttribute.cs" />
     <Compile Include="Filters\HandleExceptionAttribute.cs" />
@@ -820,6 +821,12 @@
     <Content Include="Areas\admin\Views\bks_Press\Select.cshtml" />
     <Content Include="Areas\admin\Views\bks_BookType\bookTypeNav.cshtml" />
     <Content Include="Areas\admin\Views\bks_Supplier\Select.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Supplier\Detail.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Supplier\Insert.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Supplier\Update.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Press\Detail.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Press\Insert.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Press\Update.cshtml" />
     <None Include="Content\scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Content\scripts\jquery-1.12.4.js" />
     <Content Include="Content\scripts\jquery-1.12.4.min.js" />
@@ -1173,6 +1180,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\weixin\test.cshtml" />
     <Content Include="Views\Shared\_ShowData.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap\css\bootstrap-theme.css.map" />

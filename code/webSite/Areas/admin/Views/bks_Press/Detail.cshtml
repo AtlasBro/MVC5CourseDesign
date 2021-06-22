@@ -1,0 +1,41 @@
+﻿@model db.bks_Press
+
+@{
+	ViewBag.Title = "Detail";
+}
+
+
+<div class="dialog">
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.pressCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pressCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.pressName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pressName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.showOrder)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.showOrder)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.remark)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.remark)
+    </div>
+
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>
+

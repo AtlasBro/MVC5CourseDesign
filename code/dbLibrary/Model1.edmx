@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BookSaleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ruiBookSaleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="af_AuditFlow">
           <Key>
             <PropertyRef Name="flowCode" />
@@ -651,7 +651,7 @@
           <Property Name="remark" Type="nvarchar(max)" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditCenter”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditCenter”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_af_AuditCenter">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -689,7 +689,7 @@
           <Property Name="sendUserName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditFlow”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditFlow”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_af_AuditFlow">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -708,7 +708,7 @@
           <Property Name="auditTypeName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditPostUser”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditPostUser”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_af_AuditPostUser">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -729,7 +729,7 @@
           <Property Name="isDeptPost" Type="nchar" MaxLength="1" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_Book”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_Book”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_bks_Book">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -758,7 +758,7 @@
           <Property Name="bookTypeName" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookStock”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookStock”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_bks_BookStock">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -774,7 +774,7 @@
           <Property Name="remark" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookStockDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookStockDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_bks_BookStockDetail">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -793,7 +793,7 @@
           <Property Name="remark" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_bks_BookType">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -807,7 +807,7 @@
           <Property Name="remark" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_Resource”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_Resource”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_rbac_Resource">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -831,7 +831,7 @@
           <Property Name="moduleName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_User”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_User”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_rbac_User">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -852,7 +852,7 @@
           <Property Name="isLogin" Type="nchar" MaxLength="1" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_UserOrg”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_UserOrg”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_rbac_UserOrg">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -872,7 +872,7 @@
           <Property Name="deptName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sbs_Dept”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sbs_Dept”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_sbs_Dept">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -893,7 +893,7 @@
           <Property Name="orgName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sbs_Empl”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sbs_Empl”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_sbs_Empl">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -918,7 +918,7 @@
           <Property Name="isLogin" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sys_BillAttach”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sys_BillAttach”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="sv_sys_BillAttach">
           <Key>
             <PropertyRef Name="rowNum" />
@@ -942,7 +942,7 @@
           <Property Name="remark" Type="nvarchar" MaxLength="500" />
           <Property Name="uploadUserName" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityContainer Name="BookSaleModelStoreContainer">
+        <EntityContainer Name="ruiBookSaleModelStoreContainer">
           <EntitySet Name="af_AuditFlow" EntityType="Self.af_AuditFlow" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="af_AuditFlowDept" EntityType="Self.af_AuditFlowDept" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="af_AuditLog" EntityType="Self.af_AuditLog" Schema="dbo" store:Type="Tables" />
@@ -1216,7 +1216,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BookSaleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ruiBookSaleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="af_AuditFlow">
           <Key>
             <PropertyRef Name="flowCode" />
@@ -2192,9 +2192,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BookSaleModelStoreContainer" CdmEntityContainer="dbEntities">
+        <EntityContainerMapping StorageEntityContainer="ruiBookSaleModelStoreContainer" CdmEntityContainer="dbEntities">
           <EntitySetMapping Name="af_AuditFlow">
-            <EntityTypeMapping TypeName="BookSaleModel.af_AuditFlow">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_AuditFlow">
               <MappingFragment StoreEntitySet="af_AuditFlow">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2208,7 +2208,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_AuditFlowDept">
-            <EntityTypeMapping TypeName="BookSaleModel.af_AuditFlowDept">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_AuditFlowDept">
               <MappingFragment StoreEntitySet="af_AuditFlowDept">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2219,7 +2219,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_AuditLog">
-            <EntityTypeMapping TypeName="BookSaleModel.af_AuditLog">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_AuditLog">
               <MappingFragment StoreEntitySet="af_AuditLog">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2245,7 +2245,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_AuditNode">
-            <EntityTypeMapping TypeName="BookSaleModel.af_AuditNode">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_AuditNode">
               <MappingFragment StoreEntitySet="af_AuditNode">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2270,7 +2270,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_AuditPost">
-            <EntityTypeMapping TypeName="BookSaleModel.af_AuditPost">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_AuditPost">
               <MappingFragment StoreEntitySet="af_AuditPost">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2284,7 +2284,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_AuditPostUser">
-            <EntityTypeMapping TypeName="BookSaleModel.af_AuditPostUser">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_AuditPostUser">
               <MappingFragment StoreEntitySet="af_AuditPostUser">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2299,7 +2299,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_AuditType">
-            <EntityTypeMapping TypeName="BookSaleModel.af_AuditType">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_AuditType">
               <MappingFragment StoreEntitySet="af_AuditType">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2311,7 +2311,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_BillCdnField">
-            <EntityTypeMapping TypeName="BookSaleModel.af_BillCdnField">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_BillCdnField">
               <MappingFragment StoreEntitySet="af_BillCdnField">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2323,7 +2323,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_BillEditField">
-            <EntityTypeMapping TypeName="BookSaleModel.af_BillEditField">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_BillEditField">
               <MappingFragment StoreEntitySet="af_BillEditField">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2335,7 +2335,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="af_NodeRelation">
-            <EntityTypeMapping TypeName="BookSaleModel.af_NodeRelation">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.af_NodeRelation">
               <MappingFragment StoreEntitySet="af_NodeRelation">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2350,7 +2350,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_Book">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_Book">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_Book">
               <MappingFragment StoreEntitySet="bks_Book">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2375,7 +2375,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_BookStock">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_BookStock">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_BookStock">
               <MappingFragment StoreEntitySet="bks_BookStock">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2389,7 +2389,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_BookStockDetail">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_BookStockDetail">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_BookStockDetail">
               <MappingFragment StoreEntitySet="bks_BookStockDetail">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2404,7 +2404,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_BookType">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_BookType">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_BookType">
               <MappingFragment StoreEntitySet="bks_BookType">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2416,7 +2416,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_Customer">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_Customer">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_Customer">
               <MappingFragment StoreEntitySet="bks_Customer">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2430,7 +2430,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_CustomerAddress">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_CustomerAddress">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_CustomerAddress">
               <MappingFragment StoreEntitySet="bks_CustomerAddress">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2443,7 +2443,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_OrderDetail">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_OrderDetail">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_OrderDetail">
               <MappingFragment StoreEntitySet="bks_OrderDetail">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2460,7 +2460,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_OrderInfo">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_OrderInfo">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_OrderInfo">
               <MappingFragment StoreEntitySet="bks_OrderInfo">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2476,7 +2476,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_Press">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_Press">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_Press">
               <MappingFragment StoreEntitySet="bks_Press">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2488,7 +2488,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_ShoppingTrolley">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_ShoppingTrolley">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_ShoppingTrolley">
               <MappingFragment StoreEntitySet="bks_ShoppingTrolley">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2500,7 +2500,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="bks_Supplier">
-            <EntityTypeMapping TypeName="BookSaleModel.bks_Supplier">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.bks_Supplier">
               <MappingFragment StoreEntitySet="bks_Supplier">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2513,7 +2513,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_Config">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_Config">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_Config">
               <MappingFragment StoreEntitySet="rbac_Config">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2522,7 +2522,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_DataPriv">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_DataPriv">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_DataPriv">
               <MappingFragment StoreEntitySet="rbac_DataPriv">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2533,7 +2533,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_Module">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_Module">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_Module">
               <MappingFragment StoreEntitySet="rbac_Module">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2547,7 +2547,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_Operation">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_Operation">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_Operation">
               <MappingFragment StoreEntitySet="rbac_Operation">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2559,7 +2559,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_Resource">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_Resource">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_Resource">
               <MappingFragment StoreEntitySet="rbac_Resource">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2579,7 +2579,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_ResourceOp">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_ResourceOp">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_ResourceOp">
               <MappingFragment StoreEntitySet="rbac_ResourceOp">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2591,7 +2591,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_Role">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_Role">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_Role">
               <MappingFragment StoreEntitySet="rbac_Role">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2603,7 +2603,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_RolePriv">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_RolePriv">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_RolePriv">
               <MappingFragment StoreEntitySet="rbac_RolePriv">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2616,7 +2616,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_RoleUser">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_RoleUser">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_RoleUser">
               <MappingFragment StoreEntitySet="rbac_RoleUser">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2628,7 +2628,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_User">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_User">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_User">
               <MappingFragment StoreEntitySet="rbac_User">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2642,7 +2642,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_UserOrg">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_UserOrg">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_UserOrg">
               <MappingFragment StoreEntitySet="rbac_UserOrg">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2656,7 +2656,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="rbac_UserPriv">
-            <EntityTypeMapping TypeName="BookSaleModel.rbac_UserPriv">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.rbac_UserPriv">
               <MappingFragment StoreEntitySet="rbac_UserPriv">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2670,7 +2670,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sbs_Dept">
-            <EntityTypeMapping TypeName="BookSaleModel.sbs_Dept">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sbs_Dept">
               <MappingFragment StoreEntitySet="sbs_Dept">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2686,7 +2686,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sbs_Empl">
-            <EntityTypeMapping TypeName="BookSaleModel.sbs_Empl">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sbs_Empl">
               <MappingFragment StoreEntitySet="sbs_Empl">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2705,7 +2705,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sbs_Org">
-            <EntityTypeMapping TypeName="BookSaleModel.sbs_Org">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sbs_Org">
               <MappingFragment StoreEntitySet="sbs_Org">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2721,7 +2721,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sys_BillAttach">
-            <EntityTypeMapping TypeName="BookSaleModel.sys_BillAttach">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sys_BillAttach">
               <MappingFragment StoreEntitySet="sys_BillAttach">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2742,7 +2742,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sys_Column">
-            <EntityTypeMapping TypeName="BookSaleModel.sys_Column">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sys_Column">
               <MappingFragment StoreEntitySet="sys_Column">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2762,7 +2762,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sys_DataSyncInterface">
-            <EntityTypeMapping TypeName="BookSaleModel.sys_DataSyncInterface">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sys_DataSyncInterface">
               <MappingFragment StoreEntitySet="sys_DataSyncInterface">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2779,7 +2779,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sys_DataSyncInterfaceDetail">
-            <EntityTypeMapping TypeName="BookSaleModel.sys_DataSyncInterfaceDetail">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sys_DataSyncInterfaceDetail">
               <MappingFragment StoreEntitySet="sys_DataSyncInterfaceDetail">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2797,7 +2797,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sys_UCColumn">
-            <EntityTypeMapping TypeName="BookSaleModel.sys_UCColumn">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sys_UCColumn">
               <MappingFragment StoreEntitySet="sys_UCColumn">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2817,7 +2817,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sys_UCPager">
-            <EntityTypeMapping TypeName="BookSaleModel.sys_UCPager">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sys_UCPager">
               <MappingFragment StoreEntitySet="sys_UCPager">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2830,7 +2830,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sys_WebLog">
-            <EntityTypeMapping TypeName="BookSaleModel.sys_WebLog">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sys_WebLog">
               <MappingFragment StoreEntitySet="sys_WebLog">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2847,7 +2847,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="wx_User">
-            <EntityTypeMapping TypeName="BookSaleModel.wx_User">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.wx_User">
               <MappingFragment StoreEntitySet="wx_User">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2864,7 +2864,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_af_AuditCenter">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_af_AuditCenter">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_af_AuditCenter">
               <MappingFragment StoreEntitySet="sv_af_AuditCenter">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2894,7 +2894,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_af_AuditFlow">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_af_AuditFlow">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_af_AuditFlow">
               <MappingFragment StoreEntitySet="sv_af_AuditFlow">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2910,7 +2910,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_af_AuditPostUser">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_af_AuditPostUser">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_af_AuditPostUser">
               <MappingFragment StoreEntitySet="sv_af_AuditPostUser">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2929,7 +2929,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_bks_Book">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_bks_Book">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_bks_Book">
               <MappingFragment StoreEntitySet="sv_bks_Book">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2956,7 +2956,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_bks_BookStock">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_bks_BookStock">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_bks_BookStock">
               <MappingFragment StoreEntitySet="sv_bks_BookStock">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2970,7 +2970,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_bks_BookStockDetail">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_bks_BookStockDetail">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_bks_BookStockDetail">
               <MappingFragment StoreEntitySet="sv_bks_BookStockDetail">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2985,7 +2985,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_bks_BookType">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_bks_BookType">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_bks_BookType">
               <MappingFragment StoreEntitySet="sv_bks_BookType">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -2997,7 +2997,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_rbac_Resource">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_rbac_Resource">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_rbac_Resource">
               <MappingFragment StoreEntitySet="sv_rbac_Resource">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -3018,7 +3018,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_rbac_User">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_rbac_User">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_rbac_User">
               <MappingFragment StoreEntitySet="sv_rbac_User">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -3036,7 +3036,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_rbac_UserOrg">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_rbac_UserOrg">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_rbac_UserOrg">
               <MappingFragment StoreEntitySet="sv_rbac_UserOrg">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -3052,7 +3052,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_sbs_Dept">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_sbs_Dept">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_sbs_Dept">
               <MappingFragment StoreEntitySet="sv_sbs_Dept">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -3070,7 +3070,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_sbs_Empl">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_sbs_Empl">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_sbs_Empl">
               <MappingFragment StoreEntitySet="sv_sbs_Empl">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />
@@ -3092,7 +3092,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sv_sys_BillAttach">
-            <EntityTypeMapping TypeName="BookSaleModel.sv_sys_BillAttach">
+            <EntityTypeMapping TypeName="ruiBookSaleModel.sv_sys_BillAttach">
               <MappingFragment StoreEntitySet="sv_sys_BillAttach">
                 <ScalarProperty Name="rowNum" ColumnName="rowNum" />
                 <ScalarProperty Name="rowID" ColumnName="rowID" />

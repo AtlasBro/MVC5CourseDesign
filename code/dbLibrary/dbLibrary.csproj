@@ -156,6 +156,7 @@
     <Compile Include="bll\book\bks_Press.cs" />
     <Compile Include="bll\book\bks_Supplier.cs" />
     <Compile Include="bll\client\bks_BookType.cs" />
+    <Compile Include="bll\client\books.cs" />
     <Compile Include="bll\rbac\rbac_DataPriv.cs" />
     <Compile Include="bll\rbac\rbac_Module.cs" />
     <Compile Include="bll\rbac\rbac_Operation.cs" />
