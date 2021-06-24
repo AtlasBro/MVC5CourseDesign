@@ -4,11 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>商城主页</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
         @*<th>
@@ -44,9 +44,9 @@
         <th>
             @Html.DisplayNameFor(model => model.pressCode)
         </th>*@
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.pressDate)
-        </th>
+        </th>*@
         @*<th>
             @Html.DisplayNameFor(model => model.release)
         </th>*@
@@ -56,16 +56,18 @@
         @*<th>
             @Html.DisplayNameFor(model => model.isSell)
         </th>*@
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.stockSum)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.sellSum)
-        </th>
+        </th>*@
         @*<th>
             @Html.DisplayNameFor(model => model.remark)
         </th>*@
-        <th></th>
+        <th>
+            
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -103,12 +105,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.pressCode)
         </td>*@
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.pressDate)
-        </td>
-        <td>
+        </td>*@
+        @*<td>
             @Html.DisplayFor(modelItem => item.release)
-        </td>
+        </td>*@
         <td>
             <img src="@item.bookDirectory" style="height:100px" />
         </td>
@@ -124,11 +126,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.remark)
         </td>*@
-        <td>
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { id=item.bookCode }) |
             @Html.ActionLink("Details", "Details", new { id=item.bookCode }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.bookCode })
-        </td>
+        </td>*@
+    <td>
+        <@Html.ActionLink("添加到购物车", "TrolleyAdd")>
+    </td>
     </tr>
 }
 

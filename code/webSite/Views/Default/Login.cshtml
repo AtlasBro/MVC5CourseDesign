@@ -1,0 +1,21 @@
+﻿@section header
+{
+    <style type="text/css">
+        .login{
+            width:300px;
+            margin-left:auto;
+            margin-right:auto;
+            font-size:16pt;
+            padding-top:40px;
+        }
+    </style>
+    }
+<div class="login">
+    @using (Html.BeginForm())
+    {
+        <div>用户账户 @Html.TextBox("userCode")</div>
+        <div>用户账户 @Html.TextBox("userPassword")</div>
+        <div style="margin-top:5px;"><input type="submit" value="登录"/></div>
+        <div>|@ViewData["msg"]</div>
+    }
+</div>

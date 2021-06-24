@@ -1,0 +1,37 @@
+﻿@model db.view.client.userinfo
+
+@{
+    ViewBag.Title = "register";
+}
+<h2>注册</h2>
+
+
+@using (Html.BeginForm("submit", "register", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true, "乐乐")
+    <div>
+        用户名:@Html.TextBoxFor(a => a.CustomerName)
+        @Html.ValidationMessageFor(a => a.CustomerName)
+    </div>
+    <div>
+        密码:@Html.TextBoxFor(a => a.password)
+        @Html.ValidationMessageFor(a=>a.password)
+    </div>
+    <div>
+        用户编号:@Html.TextBoxFor(a => a.CustomerCode)
+        @Html.ValidationMessageFor(a => a.CustomerCode)
+    </div>
+    <div>
+        电话:@Html.TextBoxFor(a => a.telephone)
+        @Html.ValidationMessageFor(a => a.telephone)
+    </div>
+    <div>
+        邮箱:@Html.TextBoxFor(a => a.email)
+        @Html.ValidationMessageFor(a => a.email)
+    </div>
+    <input type="submit" value="提交" />
+}
+
+<div>
+    @Html.ActionLink("返回登陆界面", "Index", "clientLogin")
+</div>

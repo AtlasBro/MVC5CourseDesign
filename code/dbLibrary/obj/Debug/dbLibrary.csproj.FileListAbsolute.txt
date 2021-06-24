@@ -394,3 +394,30 @@ G:\CS Courses\MVC课设\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.cspr
 G:\CS Courses\MVC课设\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.csproj.CopyComplete
 G:\CS Courses\MVC课设\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.dll
 G:\CS Courses\MVC课设\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.pdb
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\dbLibrary.dll.config
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\dbLibrary.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\dbLibrary.pdb
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\Aspose.Cells.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\Aspose.Words.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\Dapper.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\LitJson.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\NLog.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\System.Web.Mvc.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\Aspose.Cells.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\Aspose.Words.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\Dapper.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\System.Web.Mvc.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.csproj.CopyComplete
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.pdb
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\obj\Debug\dbLibrary.csprojAssemblyReference.cache

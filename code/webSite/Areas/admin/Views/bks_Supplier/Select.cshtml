@@ -22,7 +22,8 @@
 @{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
 <div class="container" id="container" data-width="@Model.PageWidth" data-url="/admin/xxx/select">
     <div class="search">
-
+        <span>供货商编号：@Html.TextBoxFor(a => a.supplierCode)</span>
+        <span>供货商名称：@Html.TextBoxFor(a => a.supplierName)</span>
     </div>
     <div class="toolbar">
         <a class="opSearch">查询</a>

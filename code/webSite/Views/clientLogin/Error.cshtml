@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "异常";
+}
+
+<h2>系统出错啦！</h2>
+
+<div>@HttpContext.Current.Session["errorMsg"]</div>

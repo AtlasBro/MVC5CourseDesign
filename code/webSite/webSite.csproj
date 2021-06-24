@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Client\img\" />
     <Folder Include="Content\images\source\" />
     <Folder Include="images\" />
     <Folder Include="Models\" />
@@ -139,6 +140,10 @@
     <Folder Include="upload\bill\rbac_Resource\2019\3\" />
     <Folder Include="upload\excelImport\" />
     <Folder Include="upload\excelTemplate\" />
+    <Folder Include="Views\bks_bookPress\" />
+    <Folder Include="Views\bks_bookType\" />
+    <Folder Include="Views\bks_CustomerAddress\" />
+    <Folder Include="Views\myInfo\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -173,8 +178,16 @@
     <Compile Include="Areas\admin\Controllers\sys_HomeController.cs" />
     <Compile Include="Areas\admin\Controllers\sys_PageController.cs" />
     <Compile Include="Controllers\baseController.cs" />
-    <Compile Include="Controllers\Client\BookController.cs" />
+    <Compile Include="Controllers\OnlineSell\bks_bookPressController.cs" />
+    <Compile Include="Controllers\OnlineSell\bks_bookTypeController.cs" />
+    <Compile Include="Controllers\OnlineSell\bks_CustomerAddressController.cs" />
+    <Compile Include="Controllers\OnlineSell\BookController.cs" />
+    <Compile Include="Controllers\OnlineSell\clientLoginController.cs" />
+    <Compile Include="Controllers\OnlineSell\DefaultController.cs" />
+    <Compile Include="Controllers\OnlineSell\myInfoController.cs" />
+    <Compile Include="Controllers\OnlineSell\registerController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Filters\checkClientLoginAttribute.cs" />
     <Compile Include="Filters\checkLoginAttribute.cs" />
     <Compile Include="Filters\HandleExceptionAttribute.cs" />
     <Compile Include="Filters\NoCacheAttribute.cs" />
@@ -1181,6 +1194,13 @@
     <Content Include="Views\weixin\test.cshtml" />
     <Content Include="Views\Shared\_ShowData.cshtml" />
     <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\register\register.cshtml" />
+    <Content Include="Views\register\show.cshtml" />
+    <Content Include="Views\clientLogin\Index.cshtml" />
+    <Content Include="Views\clientLogin\Error.cshtml" />
+    <Content Include="Views\Book\TrolleyAdd.cshtml" />
+    <Content Include="Views\Default\Login.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap\css\bootstrap-theme.css.map" />

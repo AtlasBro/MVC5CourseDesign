@@ -499,3 +499,37 @@ G:\CS Courses\MVC课设\MVC5CourseDesign\code\WebSite\obj\Debug\webSite.dll
 G:\CS Courses\MVC课设\MVC5CourseDesign\code\WebSite\obj\Debug\webSite.pdb
 G:\CS Courses\MVC课设\MVC5CourseDesign\code\WebSite\bin\EntityFramework.SqlServer.dll
 G:\CS Courses\MVC课设\MVC5CourseDesign\code\WebSite\bin\EntityFramework.SqlServer.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\webSite.dll.config
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\webSite.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\webSite.pdb
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Antlr3.Runtime.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Dapper.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\dbLibrary.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\EntityFramework.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\EntityFramework.SqlServer.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\IntelliLock.Licensing.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Newtonsoft.Json.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\NLog.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\System.Web.Mvc.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\System.Web.Optimization.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\WebGrease.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\LitJson.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Aspose.Words.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Aspose.Cells.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\dbLibrary.pdb
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\dbLibrary.dll.config
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Dapper.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\EntityFramework.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\EntityFramework.SqlServer.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\System.Web.Mvc.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\System.Web.Optimization.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Aspose.Words.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\Aspose.Cells.xml
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\obj\Debug\webSite.csprojAssemblyReference.cache
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\obj\Debug\webSite.csproj.CoreCompileInputs.cache
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\obj\Debug\webSite.csproj.CopyComplete
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\obj\Debug\webSite.dll
+C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\obj\Debug\webSite.pdb

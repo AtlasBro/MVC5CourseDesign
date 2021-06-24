@@ -9,6 +9,7 @@ namespace db.bll.client
 {
     public class bks_BookType
     {
+        //返回所有的图书类型信息
         public static DataTable getTable(db.dbEntities dc)
         {
             efHelper ef = new efHelper(ref dc);

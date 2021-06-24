@@ -12,14 +12,14 @@ namespace web
             //bundles.Add(new ScriptBundle("~/jquery").Include(
             //            "~/content/scripts/jquery-1.12.4.js"));
 
-            ////jquery val
-            //bundles.Add(new ScriptBundle("~/jqueryval").Include(
-            //            "~/content/scripts/jquery.validate-vsdoc.js",
-            //            "~/content/scripts/jquery.validate.js",
-            //            "~/content/scripts/jquery.validate.message.js",
-            //            "~/content/scripts/jquery.validate.unobtrusive.js",
-            //            "~/content/scripts/jquery.unobtrusive-ajax.js",
-            //            "~/content/scripts/jquery.metadata.js"));
+            //jquery val
+            bundles.Add(new ScriptBundle("~/jqueryval").Include(
+                        "~/content/scripts/jquery.validate-vsdoc.js",
+                        "~/content/scripts/jquery.validate.js",
+                        "~/content/scripts/jquery.validate.message.js",
+                        "~/content/scripts/jquery.validate.unobtrusive.js",
+                        "~/content/scripts/jquery.unobtrusive-ajax.js",
+                        "~/content/scripts/jquery.metadata.js"));
 
             //html5+css3功能检测
             // 使用要用于开发和学习的 Modernizr 的开发版本。然后，当你做好
