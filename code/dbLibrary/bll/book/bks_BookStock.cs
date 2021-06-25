@@ -87,6 +87,36 @@ namespace db.bll
         /// </summary>
         /// <param name="rowID"></param>
         /// <param name="dc"></param>
+        /// public static void update(db.bks_BookStock entry, db.dbEntities dc)
+        /// 
+        public static void Print(string rowID, db.dbEntities dc)
+        {
+             
+            
+            efHelper ef = new efHelper(ref dc);
+            try
+            {
+                //删除前检查
+
+
+                //删除
+                ef.Execute(" Update bks_BookStock set status='发布' where rowID=@rowID ", new { rowID });
+                dc.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                rui.logHelper.log(ex, true);
+            }
+        }
+
+        /// <summary>
+        /// 发布
+        /// </summary>
+        /// <param name="rowID"></param>
+        /// <param name="dc"></param>
+        /// public static void update(db.bks_BookStock entry, db.dbEntities dc)
+        /// 
+        
         public static void delete(string rowID,db.dbEntities dc)
         {
             efHelper ef = new efHelper(ref dc); 
@@ -180,6 +210,64 @@ namespace db.bll
             DataTable table = ef.ExecuteDataTable(sql);
             List<SelectListItem> list = rui.listHelper.dataTableToDdlList(table, has请选择, "");
             return list;
+        }
+        public static void SaveData(db.dbEntities dc)
+        {
+            efHelper ef = new efHelper(ref dc);
+            try
+            {
+
+                //获取要导入的数据
+                DataTable table = rui.sessionHelper.getValue<DataTable>("importTable");
+                  if (table == null || table.Rows.Count == 0)
+                    rui.excptHelper.throwEx("文件内容为空！");
+
+                ef.beginTran();
+
+                //入库编号
+                string stockCode = _createCode(dc);
+
+                //新增主表
+                db.bks_BookStock entry = new db.bks_BookStock();
+
+                entry.rowID = ef.newGuid();
+                entry.stockCode = stockCode;
+                entry.stockDate = DateTime.Now;
+                entry.userCode = db.bll.loginAdminHelper.getUserCode();
+                entry.status = "初始";
+                entry.rowID = ef.newGuid();
+                dc.bks_BookStock.Add(entry);
+                dc.SaveChanges();
+
+                //新增明细表
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    string bookCode = rui.typeHelper.toString(table.Rows[i]["图书编号"]);
+                    int quantity = rui.typeHelper.toInt(table.Rows[i]["进货数量"]);
+                    decimal price = rui.typeHelper.toDecimal(table.Rows[i]["进货价"]);
+
+                    db.bks_BookStockDetail entryDetail = new db.bks_BookStockDetail();
+                     
+                    entryDetail.stockCode = stockCode;
+                    entryDetail.detailNo = i + 1;
+                    entryDetail.bookCode = bookCode;
+                    entryDetail.quantity = quantity;
+                    entryDetail.price = price;
+                    entryDetail.sellQuantity = 0;
+
+                    entryDetail.rowID = ef.newGuid();
+                    dc.bks_BookStockDetail.Add(entryDetail);
+                }
+               
+                dc.SaveChanges();
+                ef.commit();
+            }
+            catch (Exception ex)
+            {
+                ef.rollBack();
+                rui.logHelper.log("导入出错", ex, true);
+                throw ex;
+            }
         }
     }
 }

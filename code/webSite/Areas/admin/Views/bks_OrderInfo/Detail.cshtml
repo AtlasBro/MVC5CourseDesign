@@ -1,0 +1,72 @@
+﻿@model db.bks_OrderInfo
+
+@{
+	ViewBag.Title = "Detail";
+}
+
+
+<div class="dialog">
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.orderCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.orderCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.customerCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.customerCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.addressCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.addressCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.orderDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.orderDate)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.totalPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.totalPrice)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.status)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.employeeCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.employeeCode)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.remark)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.remark)
+    </div>
+    <fieldset>
+        <legend>进货明细</legend>
+        @Html.Action("select", "bks_OrderDetail", new { stockCode = Model.orderCode, opMode = "Detail" })
+    </fieldset>
+    <p class="button">
+        <a class="opClose">关闭</a>
+    </p>
+</div>
+

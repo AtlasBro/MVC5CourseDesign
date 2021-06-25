@@ -76,6 +76,9 @@ namespace db
         public virtual DbSet<sv_bks_BookStock> sv_bks_BookStock { get; set; }
         public virtual DbSet<sv_bks_BookStockDetail> sv_bks_BookStockDetail { get; set; }
         public virtual DbSet<sv_bks_BookType> sv_bks_BookType { get; set; }
+        public virtual DbSet<sv_bks_OrderDetail> sv_bks_OrderDetail { get; set; }
+        public virtual DbSet<sv_bks_OrderInfo> sv_bks_OrderInfo { get; set; }
+        public virtual DbSet<sv_bks_supplier> sv_bks_supplier { get; set; }
         public virtual DbSet<sv_rbac_Resource> sv_rbac_Resource { get; set; }
         public virtual DbSet<sv_rbac_User> sv_rbac_User { get; set; }
         public virtual DbSet<sv_rbac_UserOrg> sv_rbac_UserOrg { get; set; }

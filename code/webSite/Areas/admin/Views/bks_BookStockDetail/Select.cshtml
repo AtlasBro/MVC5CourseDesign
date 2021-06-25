@@ -1,6 +1,6 @@
 ﻿@model db.view.bks_BookStockDetail
 @{
-    ViewBag.Title = "入库明细表表";
+    ViewBag.Title = "入库明细主表";
     //wzrui 2020-02-19
 }
 
@@ -22,11 +22,13 @@
     <div class="search">
         <span>@Html.HiddenFor(a => a.stockCode)</span>
         <span>@Html.HiddenFor(a => a.opMode)</span>
+     
+    
     </div>
-    @*<div class="toolbar">
-        <a class="opSearch">查询</a>
+    <div class="toolbar">
+        
         @Html.ActionLink("新增", "Insert", new { }, new { data_show = @rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Insert), @class = "showDialogR opInsert" })
-    </div>*@
+    </div>
     <div class="pager" style="width: 90%; margin-left: auto; margin-right: auto; margin-top: 0px; margin-bottom: 0px;"></div>
     <div class="showData cbxCol">
         @{Html.RenderPartial("_ShowData" + Model.opMode);}

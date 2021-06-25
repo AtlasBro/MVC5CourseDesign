@@ -20,6 +20,9 @@ namespace db.view
         public string fromType { get; set; }
         //保存选择来源主键值
         public string fromCode { get; set; }
+        public string lessnum { get; set; }
+
+        public string isNeedStock;
 
         public override void Search()
         {
@@ -28,12 +31,18 @@ namespace db.view
             
             //拼接搜索语句
             string querySql = " select * from sv_bks_Book where 1=1 ";
+            if (isNeedStock == "是")
+            {
+                querySql += " and stockSum <= lessnum ";
+            }
             querySql += rui.dbTools.searchDdl("bookTypeCode", this.bookTypeCode, this.cmdPara);
             querySql += rui.dbTools.searchDdl("pressCode", this.pressCode, this.cmdPara);
             querySql += rui.dbTools.searchTbx("bookCode", this.bookCode, this.cmdPara);
             querySql += rui.dbTools.searchTbx("bookName", this.bookName, this.cmdPara);
             querySql += rui.dbTools.searchDate("pressDate", this.pressDateStart, this.pressDateEnd, this.cmdPara);
             querySql += rui.dbTools.searchDdl("isSell", this.isSell, this.cmdPara);
+
+           
 
             //如果选择来源于进货管理
             if(this.fromType == "bks_BookStock")
@@ -53,5 +62,6 @@ namespace db.view
             //获取要展示的列配置
             this.showColumn = this.getShowColumn();
         }
+      
     }
 }

@@ -139,6 +139,7 @@
     <Folder Include="upload\bill\rbac_Resource\2019\3\" />
     <Folder Include="upload\excelImport\" />
     <Folder Include="upload\excelTemplate\" />
+    <Folder Include="Views\Default1\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -152,6 +153,8 @@
     <Compile Include="Areas\admin\Controllers\bks_BookStockController.cs" />
     <Compile Include="Areas\admin\Controllers\bks_BookStockDetailController.cs" />
     <Compile Include="Areas\admin\Controllers\bks_BookTypeController.cs" />
+    <Compile Include="Areas\admin\Controllers\bks_OrderDetailController.cs" />
+    <Compile Include="Areas\admin\Controllers\bks_OrderInfoController.cs" />
     <Compile Include="Areas\admin\Controllers\bks_PressController.cs" />
     <Compile Include="Areas\admin\Controllers\bks_SupplierController.cs" />
     <Compile Include="Areas\admin\Controllers\rbac_ModuleController.cs" />
@@ -820,6 +823,13 @@
     <Content Include="Areas\admin\Views\bks_Press\Select.cshtml" />
     <Content Include="Areas\admin\Views\bks_BookType\bookTypeNav.cshtml" />
     <Content Include="Areas\admin\Views\bks_Supplier\Select.cshtml" />
+    <Content Include="Areas\admin\Views\bks_BookStock\_ShowData.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderInfo\Select.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderDetail\Select.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderInfo\Detail.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderDetail\_ShowDataDetail.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderDetail\_ShowDataUpdate.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderDetail\Detail.cshtml" />
     <None Include="Content\scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Content\scripts\jquery-1.12.4.js" />
     <Content Include="Content\scripts\jquery-1.12.4.min.js" />
@@ -1149,7 +1159,9 @@
     <Content Include="upload\preview\rbac_Resource\2019\0315091434\index.html" />
     <Content Include="upload\preview\rbac_Resource\2019\0315092133\index.html" />
     <Content Include="upload\preview\rbac_Resource\2019\0315094634\index.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

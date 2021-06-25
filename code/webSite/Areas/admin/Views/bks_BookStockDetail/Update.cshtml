@@ -4,12 +4,12 @@
     ViewBag.Title = "入库明细表修改";
     //wzrui 2020-02-19
 }
-
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-
+    
     <div class="dialog">
         <div class="editor-label">
             @Html.LabelFor(model => model.stockCode)

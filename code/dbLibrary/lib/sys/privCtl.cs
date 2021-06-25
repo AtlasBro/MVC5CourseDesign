@@ -98,7 +98,7 @@ namespace rui
             AllowLogin,         //允许登录
             resetPW,            //重置密码
             Priv,               //授权
-
+            pirnt,              //发布
             AttachUpload,       //附件上传
             AttachDownload,     //附件下载
             AttachDelete,       //附件删除

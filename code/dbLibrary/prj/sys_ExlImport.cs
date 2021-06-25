@@ -13,7 +13,13 @@ namespace db.bll
             //根据表名调用对应业务类内的业务方法
             if (tableName == "bks_Press")
                 db.bll.bks_Press.SaveData(null);
+            if (tableName == "bks_BookStock")
+            {
+                db.bll.bks_BookStock.SaveData(null);
+            }
+                
 
         }
+       
     }
 }

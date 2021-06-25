@@ -28,6 +28,8 @@
     <div class="toolbar">
         <a class="opSearch">查询</a>
         @Html.ActionLink("新增", "Insert", new { }, new { data_show = @rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Insert), @class = "showDialogR opInsert" })
+        @Html.ActionLink("Excel导入", "Import", "sys_ExlImport", new { tableName = "bks_BookStock" }, new { data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Import), @class = "showDialogR opImport" })
+        @Html.ActionLink("缺货书单导出", "SelectExportl", null, new { @class = "opExlExport" })
     </div>
     <div class="pager" style="width: 90%; margin-left: auto; margin-right: auto; margin-top: 0px; margin-bottom: 0px;"></div>
     <div class="showData cbxCol">

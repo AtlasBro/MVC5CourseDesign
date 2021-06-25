@@ -1,0 +1,35 @@
+﻿@model db.view.bks_OrderDetail
+
+@{
+    ViewBag.Title = "商品明细";
+}
+
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+    </script>
+
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+<div class="container" id="container" data-width="@Model.PageWidth" data-url="/admin/bks_OrderDetail/select">
+    <div class="search">
+        <span>@Html.HiddenFor(a => a.orderCode)</span>
+        <span>@Html.HiddenFor(a => a.opMode)</span>
+    </div>
+    <div class="toolbar">
+        <a class="opSearch">查询</a>
+        @Html.ActionLink("新增", "Insert", new { }, new { data_show = rui.privCtl.isPriv(ctrl, rui.privCtl.eOp.Insert), @class = "showDialogR opInsert" })
+    </div>
+    <div class="pager"></div>
+    <div class="showData cbxCol">
+        @{Html.RenderPartial("_ShowData" + Model.opMode);}
+    </div>
+</div>
+
