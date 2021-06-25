@@ -131,6 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+<<<<<<< Updated upstream
+=======
+    <Folder Include="Areas\onlineSell\Views\bks_CustomerAddress\" />
+    <Folder Include="Areas\onlineSell\Views\myInfo\" />
+    <Folder Include="Client\img\" />
+>>>>>>> Stashed changes
     <Folder Include="Content\images\source\" />
     <Folder Include="Models\" />
     <Folder Include="uEditor\net\upload\image\" />
@@ -172,6 +178,11 @@
     <Compile Include="Areas\admin\Controllers\sys_ExlImportController.cs" />
     <Compile Include="Areas\admin\Controllers\sys_HomeController.cs" />
     <Compile Include="Areas\admin\Controllers\sys_PageController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\bks_bookPressController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\bks_bookTypeController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\bks_CustomerAddressController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\myInfoController.cs" />
     <Compile Include="Controllers\baseController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Filters\checkLoginAttribute.cs" />
@@ -193,6 +204,17 @@
     <Compile Include="uEditor\net\App_Code\UploadHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\onlineSell\Views\bks_bookPress\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_bookPress\showNav.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_bookType\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_bookType\showNav.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Default\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Default\Login.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Shared\_ShowData.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Web.config" />
+    <Content Include="Areas\onlineSell\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\css\bootstrap.css" />
@@ -820,6 +842,16 @@
     <Content Include="Areas\admin\Views\bks_Press\Select.cshtml" />
     <Content Include="Areas\admin\Views\bks_BookType\bookTypeNav.cshtml" />
     <Content Include="Areas\admin\Views\bks_Supplier\Select.cshtml" />
+<<<<<<< Updated upstream
+=======
+    <Content Include="Areas\admin\Views\bks_Supplier\Detail.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Supplier\Insert.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Supplier\Update.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Press\Detail.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Press\Insert.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Press\Update.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_bookType\_ShowData.cshtml" />
+>>>>>>> Stashed changes
     <None Include="Content\scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Content\scripts\jquery-1.12.4.js" />
     <Content Include="Content\scripts\jquery-1.12.4.min.js" />
@@ -1149,6 +1181,9 @@
     <Content Include="upload\preview\rbac_Resource\2019\0315091434\index.html" />
     <Content Include="upload\preview\rbac_Resource\2019\0315092133\index.html" />
     <Content Include="upload\preview\rbac_Resource\2019\0315094634\index.html" />
+    <Content Include="Views\Login\errorShow.cshtml" />
+    <Content Include="Views\Login\loginAdmin.cshtml" />
+    <Content Include="Views\Login\toLoginAdmin.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1166,9 +1201,6 @@
     <Content Include="uEditor\third-party\video-js\font\vjs.eot" />
     <Content Include="uEditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="uEditor\third-party\video-js\font\vjs.woff" />
-    <Content Include="Views\Login\loginAdmin.cshtml" />
-    <Content Include="Views\Login\toLoginAdmin.cshtml" />
-    <Content Include="Views\Login\errorShow.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\weixin\test.cshtml" />
