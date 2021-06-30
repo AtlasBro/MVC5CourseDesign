@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace db.bll.client
+namespace db.client.bll
 {
     public class bks_BookType
     {

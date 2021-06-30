@@ -1,0 +1,29 @@
+﻿@model db.client.view.Register
+@section header
+{
+    <style type="text/css">
+        .register {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16pt;
+            padding-top: 40px;
+        }
+    </style>
+}
+<div class="register">
+    @using (Html.BeginForm())
+    {
+        <div>用户编码 @Html.TextBox("customerCode")</div>
+        <div>用户名 @Html.TextBox("cusomterName")</div>
+        <div>密码 @Html.TextBox("password")</div>
+        <div>确认密码 @Html.TextBox("Confirmpass")</div>
+        <div>电话 @Html.TextBox("telphone")</div>
+        <div>邮箱 @Html.TextBox("email")</div>
+        <div style="margin-top:5px;">
+            <input type="submit" value="注册" />
+            <a href="@Url.Action("login")">返回登陆</a>
+        </div>
+        <div>@ViewData["msg"]</div>
+    }
+</div>

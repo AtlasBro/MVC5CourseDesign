@@ -198,6 +198,8 @@ function showJsonResult(data, successFunc) {
 function showError(error) {
     if (error == "登陆状态失效")
         top.location.href = "/login/loginAdmin";
+    if (error == "客户端未登录")
+        top.location.href = "/onlineSell/Default/login";//客户端登陆界面
     if (isNotNull(error)) {
         layui.use('layer', function () {
             var layer = layui.layer;

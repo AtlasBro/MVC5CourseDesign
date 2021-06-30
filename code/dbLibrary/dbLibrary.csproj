@@ -156,12 +156,16 @@
     <Compile Include="bll\book\bks_Press.cs" />
     <Compile Include="bll\book\bks_Supplier.cs" />
     <Compile Include="client\bll\bks_BookType.cs" />
-    <Compile Include="client\bll\books.cs" />
+    <Compile Include="client\bll\bks_Press.cs" />
+    <Compile Include="client\bll\bks_ShoppingTrolley.cs" />
     <Compile Include="client\bll\loginHelper.cs" />
-    <Compile Include="client\bll\user.cs" />
+    <Compile Include="client\bll\registerHelper.cs" />
     <Compile Include="client\view\bks_Book.cs" />
     <Compile Include="client\view\bks_BookType.cs" />
+    <Compile Include="client\view\bks_CustomerAddress.cs" />
     <Compile Include="client\view\bks_Press.cs" />
+    <Compile Include="client\view\bks_ShoppingTrolley.cs" />
+    <Compile Include="client\view\Register.cs" />
     <Compile Include="sv_bks_OrderDetail.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -418,7 +422,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="client\meat\" />
+    <Folder Include="client\meta\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -1,0 +1,32 @@
+﻿@section header
+{
+    <style type="text/css">
+        .register {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16pt;
+            padding-top: 40px;
+        }
+    </style>
+}
+<div class="register">
+    <div>
+        用户编号:@TempData["code"]
+    </div>
+    <div>
+        账号:@TempData["name"]
+    </div>
+    <div>
+        密码:@TempData["password"]
+    </div>
+    <div>
+        邮箱:@TempData["email"]
+    </div>
+    <div>
+        电话:@TempData["telphone"]
+    </div>
+    <div>
+        <a href="@Url.Action("login")">返回登陆界面</a>
+    </div>
+</div>

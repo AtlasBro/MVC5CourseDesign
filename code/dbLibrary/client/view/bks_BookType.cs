@@ -18,7 +18,6 @@ namespace db.client.view
         {
             this.keyField = "rowNum";
             this.ResourceCode = "bks_BookType";
-
 		
             //搜索语句
             string querySql = "SELECT * FROM dbo.bks_BookType where 1=1 ";

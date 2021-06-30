@@ -18,6 +18,12 @@ namespace web
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Login", action = "loginAdmin", id = UrlParameter.Optional }
             );
+
+            //routes.MapRoute(
+            //    name: "Default",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "Default", action = "login", id = UrlParameter.Optional }
+            //);
         }
     }
 }

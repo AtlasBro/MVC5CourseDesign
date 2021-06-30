@@ -1,0 +1,14 @@
+﻿<ul>
+    <li><a href="@Url.Action("Index","bks_bookType")">所有图书</a></li>
+    @{
+        System.Data.DataTable table = (System.Data.DataTable)ViewData["bks_BookTypeTable"];
+    }
+    @foreach (System.Data.DataRow row in table.Rows)
+    {
+        <li>
+            <a href="@Url.Action("Index","bks_bookType",new { type=row["bookTypeCode"]})">
+                @row["bookTypeName"].ToString()
+            </a>
+        </li>
+    }
+</ul>

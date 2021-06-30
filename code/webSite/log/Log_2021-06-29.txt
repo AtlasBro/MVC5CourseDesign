@@ -1,0 +1,100 @@
+2021-06-29 08:54:26.3306 Info sys_Home-index 
+2021-06-29 08:54:27.1054 Info sys_Home-desktop 
+2021-06-29 10:42:50.6734 Info sys_Home-index 
+2021-06-29 10:42:51.5152 Info sys_Home-desktop 
+2021-06-29 10:42:54.0132 Info bks_BookType-Select 
+2021-06-29 16:53:20.5164 Info sys_Home-index 
+2021-06-29 16:53:21.2574 Info sys_Home-desktop 
+2021-06-29 16:53:22.7514 Info bks_Book-Select 
+2021-06-29 16:53:26.8156 Info bks_Book-select 
+2021-06-29 16:53:27.8538 Info bks_Book-select 
+2021-06-29 16:53:30.6805 Info bks_Book-select 
+2021-06-29 16:53:31.1313 Info bks_Book-select 
+2021-06-29 16:53:31.2909 Info bks_Book-select 
+2021-06-29 16:53:31.4545 Info bks_Book-select 
+2021-06-29 16:53:31.6519 Info bks_Book-select 
+2021-06-29 16:53:31.8155 Info bks_Book-select 
+2021-06-29 16:59:29.2677 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 16:59:32.1186 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 16:59:33.5528 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.subNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 44
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.sub(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 73
+------------End-------------
+ 
+2021-06-29 17:07:02.8564 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 17:12:47.6178 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 17:13:14.5182 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 17:16:09.4291 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 17:16:27.1194 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.subNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 44
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.sub(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 73
+------------End-------------
+ 
+2021-06-29 17:16:40.8411 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 17:21:07.0420 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 17:37:44.6090 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 17:51:47.2389 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 17:58:11.3888 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 
+2021-06-29 18:14:20.0749 Error 未将对象引用设置到对象的实例。
+------------begin-------------
+   在 db.client.bll.bks_ShoppingTrolley.addNum1(String customerCode, String bookCode, dbEntities dc) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\dbLibrary\client\bll\bks_ShoppingTrolley.cs:行号 36
+   在 web.Areas.onlineSell.Controllers.bks_ShoppingTrolleyController.add(String bookCode) 位置 C:\Users\Jimbrody\Desktop\MVC5CourseDesign\code\WebSite\Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs:行号 52
+------------End-------------
+ 

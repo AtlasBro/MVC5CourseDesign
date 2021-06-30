@@ -113,7 +113,7 @@ namespace web.Areas.admin.Controllers
         [ChildActionOnly]
         public ActionResult bookTypeNav()
         {
-            ViewData["bks_BookTypeTable"] = db.bll.client.bks_BookType.getTable(dc);
+            ViewData["bks_BookTypeTable"] = db.client.bll.bks_BookType.getTable(dc);
             return PartialView();
         }
 
