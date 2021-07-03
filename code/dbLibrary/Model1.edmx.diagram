@@ -1,67 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a51d96787efc4688be3096f42e41f024" Name="Diagram1">
-        <EntityTypeShape EntityType="BookSaleModel.af_AuditFlow" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_AuditFlowDept" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_AuditLog" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_AuditNode" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_AuditPost" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_AuditPostUser" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_AuditType" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_BillCdnField" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_BillEditField" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.af_NodeRelation" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_Book" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_BookStock" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_BookStockDetail" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_BookType" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_Customer" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_CustomerAddress" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_OrderDetail" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_OrderInfo" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_Press" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_ShoppingTrolley" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.bks_Supplier" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_Config" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_DataPriv" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_Module" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_Operation" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_Resource" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_ResourceOp" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_Role" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_RolePriv" Width="1.5" PointX="6.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_RoleUser" Width="1.5" PointX="12.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_User" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_UserOrg" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.rbac_UserPriv" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sbs_Dept" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sbs_Empl" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sbs_Org" Width="1.5" PointX="8.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sys_BillAttach" Width="1.5" PointX="16.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sys_Column" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sys_DataSyncInterface" Width="1.5" PointX="18.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sys_DataSyncInterfaceDetail" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sys_UCColumn" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sys_UCPager" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sys_WebLog" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.wx_User" Width="1.5" PointX="18.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_af_AuditCenter" Width="1.5" PointX="4.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_af_AuditFlow" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_af_AuditPostUser" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_bks_Book" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_bks_BookStock" Width="1.5" PointX="20.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_bks_BookStockDetail" Width="1.5" PointX="6.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_bks_BookType" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_rbac_Resource" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_rbac_User" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_rbac_UserOrg" Width="1.5" PointX="18.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_sbs_Dept" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_sbs_Empl" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookSaleModel.sv_sys_BillAttach" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
+      <Diagram DiagramId="21d2eedfd6644c49804440c2819d8edf" Name="Diagram1">
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_AuditFlow" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_AuditFlowDept" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_AuditLog" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_AuditNode" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_AuditPost" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_AuditPostUser" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_AuditType" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_BillCdnField" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_BillEditField" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.af_NodeRelation" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_Book" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_BookStock" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_BookStockDetail" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_BookType" Width="1.5" PointX="6.75" PointY="10.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_Customer" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_CustomerAddress" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_OrderDetail" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_OrderInfo" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_Press" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_ShoppingTrolley" Width="1.5" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.bks_Supplier" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_Config" Width="1.5" PointX="12.75" PointY="11.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_DataPriv" Width="1.5" PointX="4.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_Module" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_Operation" Width="1.5" PointX="14.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_Resource" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_ResourceOp" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_Role" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_RolePriv" Width="1.5" PointX="6.75" PointY="15.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_RoleUser" Width="1.5" PointX="12.75" PointY="15.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_User" Width="1.5" PointX="14.75" PointY="15.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_UserOrg" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.rbac_UserPriv" Width="1.5" PointX="2.75" PointY="16.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sbs_Dept" Width="1.5" PointX="16.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sbs_Empl" Width="1.5" PointX="16.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sbs_Org" Width="1.5" PointX="8.75" PointY="16.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sys_BillAttach" Width="1.5" PointX="16.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sys_Column" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sys_DataSyncInterface" Width="1.5" PointX="18.75" PointY="5.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sys_DataSyncInterfaceDetail" Width="1.5" PointX="18.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sys_UCColumn" Width="1.5" PointX="10.75" PointY="18.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sys_UCPager" Width="1.5" PointX="18.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sys_WebLog" Width="1.5" PointX="16.75" PointY="18.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.wx_User" Width="1.5" PointX="18.75" PointY="17.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_af_AuditCenter" Width="1.5" PointX="4.75" PointY="19.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_af_AuditFlow" Width="1.5" PointX="12.75" PointY="19.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_af_AuditPostUser" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_Book" Width="1.5" PointX="0.75" PointY="20.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_BookStock" Width="1.5" PointX="20.75" PointY="5.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_BookStockDetail" Width="1.5" PointX="6.75" PointY="20.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_BookType" Width="1.5" PointX="20.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_OrderDetail" Width="1.5" PointX="20.75" PointY="12.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_OrderInfo" Width="1.5" PointX="20.75" PointY="16.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_supplier" Width="1.5" PointX="20.75" PointY="20.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_rbac_Resource" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_rbac_User" Width="1.5" PointX="22.75" PointY="5.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_rbac_UserOrg" Width="1.5" PointX="22.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_sbs_Dept" Width="1.5" PointX="22.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_sbs_Empl" Width="1.5" PointX="14.75" PointY="22.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_sys_BillAttach" Width="1.5" PointX="16.75" PointY="22.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_Sell" Width="1.5" PointX="9.375" PointY="23.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_bks_ShoppingTrolley" Width="1.5" PointX="11.375" PointY="23.75" />
+        <EntityTypeShape EntityType="ruiBookSaleModel.sv_shopTrolley" Width="1.5" PointX="23.375" PointY="17.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

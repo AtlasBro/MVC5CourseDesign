@@ -1,0 +1,161 @@
+2021-06-25 19:32:55.6770 Info sys_Home-index 
+2021-06-25 19:32:57.9130 Info sys_Home-desktop 
+2021-06-25 19:33:01.8575 Info bks_OrderInfo-Select 
+2021-06-25 19:33:04.1723 Info bks_OrderInfo-Detail 
+2021-06-25 19:33:05.9027 Info bks_OrderDetail-select 
+2021-06-25 19:33:30.3972 Info bks_OrderDetail-select 
+2021-06-25 19:33:32.1226 Info bks_OrderDetail-select 
+2021-06-25 19:33:45.4579 Info bks_OrderDetail-select 
+2021-06-25 19:33:52.6886 Info bks_OrderInfo-select 
+2021-06-25 19:35:59.4950 Info sys_Home-desktop 
+2021-06-25 19:38:59.6069 Info sys_Home-desktop 
+2021-06-25 19:41:59.7070 Info sys_Home-desktop 
+2021-06-25 19:43:22.8656 Info sys_Home-index 
+2021-06-25 19:43:25.1475 Info sys_Home-desktop 
+2021-06-25 19:43:27.5970 Info bks_OrderInfo-Select 
+2021-06-25 19:43:29.8679 Info bks_OrderInfo-Detail 
+2021-06-25 19:43:31.5225 Info bks_OrderDetail-select 
+2021-06-25 19:43:33.9031 Info bks_OrderDetail-Detail 
+2021-06-25 19:43:34.4347 Info bks_OrderDetail-Detail 
+2021-06-25 19:43:43.4187 Info bks_OrderDetail-Detail 
+2021-06-25 19:43:43.9313 Info bks_OrderDetail-Detail 
+2021-06-25 19:43:57.0762 Info bks_OrderDetail-Detail 
+2021-06-25 19:43:57.5878 Info bks_OrderDetail-Detail 
+2021-06-25 19:44:00.6915 Info bks_OrderDetail-Detail 
+2021-06-25 19:44:01.2041 Info bks_OrderDetail-Detail 
+2021-06-25 19:44:21.3183 Info bks_BookStock-Select 
+2021-06-25 19:44:23.5703 Info bks_BookStock-Detail 
+2021-06-25 19:44:23.6242 Info sys_BillAttach-SelectPartial 
+2021-06-25 19:44:26.8396 Info bks_BookStock-Detail 
+2021-06-25 19:44:26.8545 Info sys_BillAttach-SelectPartial 
+2021-06-25 19:44:28.5400 Info bks_BookStock-Detail 
+2021-06-25 19:44:28.5560 Info sys_BillAttach-SelectPartial 
+2021-06-25 19:44:30.0789 Info bks_BookStock-Detail 
+2021-06-25 19:44:30.0949 Info sys_BillAttach-SelectPartial 
+2021-06-25 19:44:33.6025 Info bks_BookStock-Detail 
+2021-06-25 19:44:33.6185 Info sys_BillAttach-SelectPartial 
+2021-06-25 19:44:36.2734 Info bks_BookStock-Update 
+2021-06-25 19:44:36.4020 Info bks_BookStockDetail-select 
+2021-06-25 19:44:37.5360 Info sys_BillAttach-SelectPartial 
+2021-06-25 19:44:39.5346 Info bks_BookStockDetail-Detail 
+2021-06-25 19:44:42.4608 Info bks_BookStockDetail-Detail 
+2021-06-25 19:44:47.4205 Info bks_BookStock-Select 
+2021-06-25 19:44:59.7975 Info sys_Home-desktop 
+2021-06-25 19:47:20.9913 Info bks_OrderInfo-Detail 
+2021-06-25 19:47:21.0402 Info bks_OrderDetail-select 
+2021-06-25 19:47:22.6608 Info bks_OrderDetail-Detail 
+2021-06-25 19:47:23.1944 Info bks_OrderDetail-Detail 
+2021-06-25 19:47:59.9503 Info sys_Home-desktop 
+2021-06-25 19:48:21.0319 Info sys_Home-index 
+2021-06-25 19:48:23.2281 Info sys_Home-desktop 
+2021-06-25 19:48:25.2626 Info bks_OrderInfo-Select 
+2021-06-25 19:48:29.8903 Info bks_OrderInfo-Detail 
+2021-06-25 19:48:31.5458 Info bks_OrderDetail-select 
+2021-06-25 19:48:33.7649 Info bks_OrderDetail-Detail 
+2021-06-25 19:48:34.2825 Info bks_OrderDetail-Detail 
+2021-06-25 19:51:00.0425 Info sys_Home-desktop 
+2021-06-25 19:51:24.7218 Info sys_Home-desktop 
+2021-06-25 19:51:49.2542 Info sys_Home-index 
+2021-06-25 19:51:51.3217 Info sys_Home-desktop 
+2021-06-25 19:51:55.7309 Info bks_OrderInfo-Select 
+2021-06-25 19:51:58.0178 Info bks_OrderInfo-Detail 
+2021-06-25 19:51:59.6415 Info bks_OrderDetail-select 
+2021-06-25 19:52:02.0610 Info bks_OrderDetail-Detail 
+2021-06-25 19:52:02.5816 Info bks_OrderDetail-Detail 
+2021-06-25 19:53:30.2207 Info sys_Home-index 
+2021-06-25 19:53:32.9105 Info sys_Home-desktop 
+2021-06-25 19:53:35.2303 Info bks_OrderInfo-Select 
+2021-06-25 19:53:38.1664 Info bks_OrderInfo-Detail 
+2021-06-25 19:53:40.1471 Info bks_OrderDetail-select 
+2021-06-25 19:53:43.4812 Info bks_OrderDetail-Detail 
+2021-06-25 19:56:07.7455 Info sys_Home-index 
+2021-06-25 19:56:08.5514 Info sys_Home-desktop 
+2021-06-25 19:56:13.9110 Info bks_BookStock-Select 
+2021-06-25 19:56:19.2368 Info bks_BookStock-Update 
+2021-06-25 19:56:21.4549 Info bks_BookStockDetail-select 
+2021-06-25 19:56:23.5772 Info sys_BillAttach-SelectPartial 
+2021-06-25 19:56:27.4249 Info bks_BookStockDetail-Detail 
+2021-06-25 20:12:21.2105 Info sys_Home-index 
+2021-06-25 20:12:23.4844 Info sys_Home-desktop 
+2021-06-25 20:12:25.5788 Info bks_OrderInfo-Select 
+2021-06-25 20:12:32.6709 Info bks_OrderInfo-Detail 
+2021-06-25 20:12:34.2476 Info bks_OrderDetail-select 
+2021-06-25 20:12:36.5395 Info bks_OrderDetail-Detail 
+2021-06-25 20:12:37.0561 Info bks_OrderDetail-Detail 
+2021-06-25 20:12:43.0361 Info bks_OrderDetail-Detail 
+2021-06-25 20:12:43.5498 Info bks_OrderDetail-Detail 
+2021-06-25 20:12:48.0258 Info bks_OrderDetail-Detail 
+2021-06-25 20:12:48.0437 Info bks_OrderDetail-Detail 
+2021-06-25 20:18:42.4433 Info sys_Home-index 
+2021-06-25 20:18:45.3955 Info sys_Home-desktop 
+2021-06-25 20:18:47.9756 Info bks_OrderInfo-Select 
+2021-06-25 20:21:07.8197 Info sys_Home-index 
+2021-06-25 20:21:08.6674 Info sys_Home-desktop 
+2021-06-25 20:21:18.4093 Info bks_OrderInfo-Select 
+2021-06-25 20:22:27.2563 Info sys_Home-index 
+2021-06-25 20:22:28.0013 Info sys_Home-desktop 
+2021-06-25 20:22:29.6578 Info bks_OrderInfo-Select 
+2021-06-25 20:22:31.1528 Info bks_OrderInfo-Select 
+2021-06-25 20:23:48.5419 Info sys_Home-index 
+2021-06-25 20:23:49.4375 Info sys_Home-desktop 
+2021-06-25 20:23:51.4053 Info bks_OrderInfo-Select 
+2021-06-25 20:25:28.8418 Info sys_Home-desktop 
+2021-06-25 20:41:21.3419 Info sys_Home-index 
+2021-06-25 20:41:23.5969 Info sys_Home-desktop 
+2021-06-25 20:41:26.6707 Info bks_OrderInfo-Select 
+2021-06-25 20:43:58.2258 Info bks_OrderInfo-Detail 
+2021-06-25 20:43:59.6480 Info bks_OrderDetail-select 
+2021-06-25 20:44:21.9822 Info sys_Home-index 
+2021-06-25 20:44:23.6867 Info sys_Home-desktop 
+2021-06-25 20:44:29.7216 Info bks_OrderInfo-Select 
+2021-06-25 20:45:42.8059 Info sys_Home-index 
+2021-06-25 20:45:43.0552 Info sys_Home-desktop 
+2021-06-25 20:45:46.8531 Info bks_OrderInfo-Select 
+2021-06-25 20:46:04.7831 Info sys_Home-exit 
+2021-06-25 20:46:06.2791 Info sys_Home-index 
+2021-06-25 20:46:06.4427 Info sys_Home-desktop 
+2021-06-25 20:48:51.9033 Info sys_Home-index 
+2021-06-25 20:48:53.9389 Info sys_Home-desktop 
+2021-06-25 20:48:56.7803 Info bks_OrderInfo-Select 
+2021-06-25 20:49:01.5465 Info bks_OrderInfo-batchpush 
+2021-06-25 20:49:01.5974 Error 列名 'stockCode' 无效。
+列名 'stockCode' 无效。
+------------begin-------------
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderImpl(IDbConnection cnn, CommandDefinition& command, CommandBehavior commandBehavior, IDbCommand& cmd)
+   在 Dapper.SqlMapper.ExecuteReader(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 db.efHelper.ExecuteDataTable(String cmdText, Object param, CommandType type) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\lib\db\efHelper.cs:行号 149
+   在 db.bll.bks_OrderInfo.batchpush(String keyFieldValues, dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_OrderInfo.cs:行号 150
+   在 web.Areas.admin.Controllers.bks_OrderInfoController.batchpush(String keyFieldValues) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_OrderInfoController.cs:行号 23
+------------End-------------
+ 
+2021-06-25 20:51:11.7261 Info sys_Home-index 
+2021-06-25 20:51:14.0669 Info sys_Home-desktop 
+2021-06-25 20:51:16.6081 Info bks_OrderInfo-Select 
+2021-06-25 20:51:21.7902 Info bks_OrderInfo-batchpush 
+2021-06-25 20:51:21.8351 Info bks_OrderInfo-select 
+2021-06-25 20:51:28.5541 Info sys_Home-index 
+2021-06-25 20:51:28.7347 Info sys_Home-desktop 
+2021-06-25 20:51:30.0771 Info sys_Home-index 
+2021-06-25 20:51:30.2366 Info sys_Home-desktop 
+2021-06-25 20:53:13.3809 Info sys_Home-index 
+2021-06-25 20:53:15.2599 Info sys_Home-desktop 
+2021-06-25 20:53:19.9852 Info bks_OrderInfo-Select 
+2021-06-25 20:53:30.5799 Info sys_Home-index 
+2021-06-25 20:53:30.7454 Info sys_Home-desktop 
+2021-06-25 20:53:33.5789 Info bks_OrderInfo-Select 
+2021-06-25 20:53:36.9808 Info bks_OrderInfo-batchpush 
+2021-06-25 20:53:37.0227 Info bks_OrderInfo-select 

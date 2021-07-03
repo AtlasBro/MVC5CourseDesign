@@ -113,5 +113,40 @@ namespace web.Areas.admin.Controllers
             }
             return Json(result.data);
         }
+        [HttpPost]
+        public JsonResult Print(string rowID)
+        {
+            rui.jsonResult result = new rui.jsonResult();
+            try
+            {
+                db.bll.bks_BookStock.Print(rowID, dc);
+                result.data = rui.jsonResult.getAJAXResult("发布成功", true);
+            }
+            catch (Exception ex)
+            {
+                rui.logHelper.log(ex);
+                result.data = rui.jsonResult.getAJAXResult(rui.excptHelper.getExMsg(ex), false);
+            }
+            return Json(result.data);
+        }
+        public ActionResult SelectExportl(db.view.bks_Book model)
+        {
+            
+            try
+            {
+                //all代表要导出查询的所有数据,page代表导出本页的数据
+                model.ExportRange = rui.dataRange.all.ToString();
+                model.SheetName = "图书缺货信息";
+                model.isNeedStock = "是";
+                model.Search();
+                return File(model.ExportToXls(), rui.innerCode.mime(".xlsx"), "图书缺货信息.xlsx");
+            }
+            catch (Exception ex)
+            {
+                rui.logHelper.log(ex);
+                Response.Write(string.Format("<script>alert('{0}');history.go(-1);</script>", ex.Message));
+            }
+            return null;
+        }
     }
 }

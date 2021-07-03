@@ -153,6 +153,9 @@
     <Compile Include="bll\book\bks_BookStock.cs" />
     <Compile Include="bll\book\bks_BookStockDetail.cs" />
     <Compile Include="bll\book\bks_BookType.cs" />
+    <Compile Include="bll\book\bks_customerAddress.cs" />
+    <Compile Include="bll\book\bks_OrderDetail.cs" />
+    <Compile Include="bll\book\bks_OrderInfo.cs" />
     <Compile Include="bll\book\bks_Press.cs" />
     <Compile Include="bll\book\bks_Supplier.cs" />
     <Compile Include="bll\client\bks_BookType.cs" />
@@ -176,12 +179,26 @@
     <Compile Include="bll\system\sys_BillAttach.Df.cs" />
     <Compile Include="bll\system\sys_UCPage.cs" />
     <Compile Include="bll\system\sys_WebLog.Df.cs" />
+    <Compile Include="client\bll\bks_BookType.cs" />
+    <Compile Include="client\bll\bks_Press.cs" />
+    <Compile Include="client\bll\bks_ShoppingTrolley.cs" />
+    <Compile Include="client\bll\loginHelper.cs" />
+    <Compile Include="client\bll\registerHelper.cs" />
+    <Compile Include="client\meta\bks_CustomerAddress.cs" />
+    <Compile Include="client\view\bks_Book.cs" />
+    <Compile Include="client\view\bks_BookType.cs" />
+    <Compile Include="client\view\bks_CustomerAddress.cs" />
+    <Compile Include="client\view\bks_OrderInfo.cs" />
+    <Compile Include="client\view\bks_Press.cs" />
+    <Compile Include="client\view\bks_ShoppingTrolley.cs" />
+    <Compile Include="client\view\Register.cs" />
     <Compile Include="lib\db\ruiDbContext.cs" />
     <Compile Include="lib\db\efHelper.cs" />
     <Compile Include="meta\Book\bks_Book.cs" />
     <Compile Include="meta\Book\bks_BookStock.cs" />
     <Compile Include="meta\Book\bks_BookStockDetail.cs" />
     <Compile Include="meta\Book\bks_BookType.cs" />
+    <Compile Include="meta\Book\bks_OrderInfo.cs" />
     <Compile Include="meta\Book\bks_Press.cs" />
     <Compile Include="meta\Book\bks_Supplier.cs" />
     <Compile Include="Model1.Context.cs">
@@ -293,6 +310,21 @@
     <Compile Include="sv_bks_BookType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="sv_bks_OrderDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_bks_OrderInfo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_bks_Sell.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_bks_ShoppingTrolley.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_bks_supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="sv_rbac_Resource.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -306,6 +338,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_sbs_Empl.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sv_shopTrolley.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sv_sys_BillAttach.cs">
@@ -344,7 +379,10 @@
     <Compile Include="view\book\bks_BookStock.cs" />
     <Compile Include="view\book\bks_BookStockDetail.cs" />
     <Compile Include="view\book\bks_BookType.cs" />
+    <Compile Include="view\book\bks_OrderDetail.cs" />
+    <Compile Include="view\book\bks_OrderInfo.cs" />
     <Compile Include="view\book\bks_Press.cs" />
+    <Compile Include="view\book\bks_Sell.cs" />
     <Compile Include="view\book\bks_Supplier.cs" />
     <Compile Include="view\rbac\rbac_Module.cs" />
     <Compile Include="view\rbac\rbac_Resource.cs" />
@@ -375,24 +413,24 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\dbLibrary.dll" />
     <Content Include="bin\Debug\dbLibrary.pdb" />
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

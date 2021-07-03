@@ -198,6 +198,16 @@ function showJsonResult(data, successFunc) {
 function showError(error) {
     if (error == "登陆状态失效")
         top.location.href = "/login/loginAdmin";
+    if (error == "客户端未登录")
+        top.location.href = "/onlineSell/Default/login";//客户端登陆界面
+    if (error == "用户编号已存在") {
+        layui.use('layer', function () {
+            var layer = layui.layer;
+            layer.ready(function () {
+                layer.alert(error, { title: "请注意", area: ['300px', '240px'] });
+            });
+        });
+    }
     if (isNotNull(error)) {
         layui.use('layer', function () {
             var layer = layui.layer;

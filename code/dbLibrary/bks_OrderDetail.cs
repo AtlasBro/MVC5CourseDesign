@@ -16,7 +16,7 @@ namespace db
     {
         public long rowNum { get; set; }
         public string rowID { get; set; }
-        public System.Guid orderCode { get; set; }
+        public string orderCode { get; set; }
         public string bookCode { get; set; }
         public Nullable<int> quantity { get; set; }
         public Nullable<decimal> price { get; set; }

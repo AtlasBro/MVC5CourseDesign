@@ -172,3 +172,648 @@
 2021-06-22 13:45:20.6113 Info sys_Home-desktop 
 2021-06-22 14:00:14.7736 Info sys_Home-index 
 2021-06-22 14:00:15.6262 Info sys_Home-desktop 
+2021-06-22 14:25:36.8817 Info sys_Home-index 
+2021-06-22 14:25:39.1387 Info sys_Home-desktop 
+2021-06-22 14:28:24.7859 Info bks_BookStock-Select 
+2021-06-22 14:28:40.2864 Info sys_Home-desktop 
+2021-06-22 14:29:24.7877 Info bks_BookStock-Select 
+2021-06-22 14:29:28.0420 Info bks_BookStock-Detail 
+2021-06-22 14:29:31.7551 Info bks_BookStock-Update 
+2021-06-22 14:29:33.9193 Info bks_BookStock-Select 
+2021-06-22 14:29:34.8678 Info bks_BookStock-Select 
+2021-06-22 14:29:36.0486 Info bks_BookStock-Update 
+2021-06-22 14:29:39.4934 Info bks_BookStock-Select 
+2021-06-22 14:29:42.5542 Info bks_BookStock-Detail 
+2021-06-22 14:29:52.3261 Info sys_Home-index 
+2021-06-22 14:29:52.6113 Info sys_Home-desktop 
+2021-06-22 14:30:05.4390 Info bks_Supplier-Select 
+2021-06-22 14:30:09.9759 Info bks_BookStock-Select 
+2021-06-22 14:30:11.0421 Info bks_BookStock-Detail 
+2021-06-22 14:30:24.2378 Info bks_BookStock-Detail 
+2021-06-22 14:30:28.7966 Info bks_BookStock-Update 
+2021-06-22 14:30:35.7450 Info bks_BookStock-Select 
+2021-06-22 14:30:37.7507 Info bks_Supplier-Select 
+2021-06-22 14:30:41.1037 Info bks_Book-Select 
+2021-06-22 14:30:42.3833 Info bks_BookType-Select 
+2021-06-22 14:30:44.9694 Info bks_Press-Select 
+2021-06-22 14:30:46.2649 Info bks_Book-Select 
+2021-06-22 14:30:47.5894 Info bks_Book-Detail 
+2021-06-22 14:31:04.6448 Info bks_Book-Detail 
+2021-06-22 14:45:46.4128 Info sys_Home-index 
+2021-06-22 14:45:48.5182 Info sys_Home-desktop 
+2021-06-22 14:45:50.6674 Info bks_BookType-Select 
+2021-06-22 14:45:54.1292 Info bks_BookType-Detail 
+2021-06-22 14:46:28.7776 Info bks_BookStock-Select 
+2021-06-22 14:46:32.4957 Info bks_BookStock-Detail 
+2021-06-22 14:46:32.5645 Info sys_BillAttach-SelectPartial 
+2021-06-22 14:46:41.5445 Info bks_BookStock-Update 
+2021-06-22 14:46:41.6562 Info bks_BookStockDetail-select 
+2021-06-22 14:46:42.8321 Info sys_BillAttach-SelectPartial 
+2021-06-22 14:47:47.8261 Info bks_BookStock-Select 
+2021-06-22 14:47:49.7011 Info bks_Press-Select 
+2021-06-22 14:47:53.2935 Info bks_BookStock-Select 
+2021-06-22 14:51:18.9695 Info sys_Home-index 
+2021-06-22 14:51:20.9662 Info sys_Home-desktop 
+2021-06-22 14:51:27.5645 Info bks_BookStock-Select 
+2021-06-22 14:54:22.0693 Info sys_Home-desktop 
+2021-06-22 14:56:05.2559 Info sys_Home-index 
+2021-06-22 14:56:05.5172 Info sys_Home-desktop 
+2021-06-22 14:56:10.5896 Info bks_BookStock-Select 
+2021-06-22 14:56:15.6651 Info bks_BookStock-Detail 
+2021-06-22 14:56:17.0823 Info sys_BillAttach-SelectPartial 
+2021-06-22 14:56:23.8821 Info bks_BookStock-Update 
+2021-06-22 14:56:23.9998 Info bks_BookStockDetail-select 
+2021-06-22 14:56:25.0320 Info sys_BillAttach-SelectPartial 
+2021-06-22 14:59:05.7283 Info sys_Home-desktop 
+2021-06-22 15:02:05.8274 Info sys_Home-desktop 
+2021-06-22 15:04:19.1924 Info rbac_Module-select 
+2021-06-22 15:05:05.9205 Info sys_Home-desktop 
+2021-06-22 15:08:06.0223 Info sys_Home-desktop 
+2021-06-22 15:09:19.7919 Info sys_Home-index 
+2021-06-22 15:09:22.3521 Info sys_Home-desktop 
+2021-06-22 15:09:33.0584 Info bks_BookStock-Select 
+2021-06-22 15:09:36.4195 Info sys_ExlImport-Import 
+2021-06-22 15:09:42.5321 Info bks_BookStock-Select 
+2021-06-22 15:12:23.7845 Info sys_Home-desktop 
+2021-06-22 15:12:26.0435 Info bks_BookStock-Detail 
+2021-06-22 15:12:27.5684 Info sys_BillAttach-SelectPartial 
+2021-06-22 15:12:31.5398 Info bks_BookStock-Update 
+2021-06-22 15:12:31.6215 Info bks_BookStockDetail-select 
+2021-06-22 15:12:32.6997 Info sys_BillAttach-SelectPartial 
+2021-06-22 15:12:36.0816 Info bks_BookStock-Select 
+2021-06-22 15:12:40.3253 Info sys_ExlImport-Import 
+2021-06-22 15:12:51.1743 Info sys_ExlImport-ImportUpload 
+2021-06-22 15:12:51.9163 Info sys_ExlImport-disPlayImport 
+2021-06-22 15:12:56.6257 Info sys_ExlImport-SaveData 
+2021-06-22 15:12:59.3365 Info bks_BookStock-Select 
+2021-06-22 15:13:00.7676 Info bks_BookStock-Detail 
+2021-06-22 15:13:00.7856 Info sys_BillAttach-SelectPartial 
+2021-06-22 15:13:02.9378 Info bks_BookStock-Update 
+2021-06-22 15:13:02.9817 Info bks_BookStockDetail-select 
+2021-06-22 15:13:03.0894 Info sys_BillAttach-SelectPartial 
+2021-06-22 15:13:11.1090 Info bks_BookStock-Select 
+2021-06-22 15:13:15.3307 Info bks_Press-Select 
+2021-06-22 15:13:20.0401 Info bks_Press-Detail 
+2021-06-22 15:42:13.5275 Info sys_Home-index 
+2021-06-22 15:42:15.7326 Info sys_Home-desktop 
+2021-06-22 15:42:21.3974 Info bks_BookStock-Select 
+2021-06-22 15:42:27.5651 Info sys_ExlImport-Import 
+2021-06-22 15:42:33.4713 Info sys_ExlImport-ImportUpload 
+2021-06-22 15:42:34.0807 Info sys_ExlImport-disPlayImport 
+2021-06-22 15:42:36.2489 Info sys_ExlImport-SaveData 
+2021-06-22 15:42:38.2286 Info bks_BookStock-Select 
+2021-06-22 15:42:45.5929 Info bks_Book-Select 
+2021-06-22 15:42:48.2827 Info bks_BookStock-Select 
+2021-06-22 15:42:55.2501 Info bks_BookStock-Update 
+2021-06-22 15:42:56.8558 Info bks_BookStockDetail-select 
+2021-06-22 15:42:57.9319 Info sys_BillAttach-SelectPartial 
+2021-06-22 15:43:02.2853 Info bks_BookStock-Select 
+2021-06-22 15:43:59.2789 Info sys_Home-index 
+2021-06-22 15:43:59.5043 Info sys_Home-desktop 
+2021-06-22 15:44:02.2021 Info bks_BookStock-Select 
+2021-06-22 15:44:03.5236 Info sys_ExlImport-Import 
+2021-06-22 15:44:07.8031 Info sys_ExlImport-ImportUpload 
+2021-06-22 15:44:07.8321 Info sys_ExlImport-disPlayImport 
+2021-06-22 15:44:10.2825 Info sys_ExlImport-SaveData 
+2021-06-22 15:44:11.5631 Info bks_BookStock-Select 
+2021-06-22 15:44:13.6655 Info bks_BookStock-Select 
+2021-06-22 15:44:16.2157 Info bks_BookStock-Select 
+2021-06-22 15:55:59.1843 Info sys_Home-index 
+2021-06-22 15:56:01.1999 Info sys_Home-desktop 
+2021-06-22 15:56:05.3348 Info bks_BookStock-Select 
+2021-06-22 15:56:08.1383 Info sys_ExlImport-Import 
+2021-06-22 15:56:13.3903 Info sys_ExlImport-ImportUpload 
+2021-06-22 15:56:13.9897 Info sys_ExlImport-disPlayImport 
+2021-06-22 15:56:16.0482 Info sys_ExlImport-SaveData 
+2021-06-22 15:56:16.6765 Info 导入出错 
+2021-06-22 15:56:16.6925 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 222
+------------End-------------
+ 
+2021-06-22 15:56:16.7034 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 228
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\prj\sys_ExlImport.cs:行号 18
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-22 15:56:31.5697 Info sys_ExlImport-SaveData 
+2021-06-22 15:56:31.6166 Info 导入出错 
+2021-06-22 15:56:31.6176 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 222
+------------End-------------
+ 
+2021-06-22 15:56:31.6196 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 228
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\prj\sys_ExlImport.cs:行号 18
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-22 15:57:14.5573 Info sys_ExlImport-SaveData 
+2021-06-22 15:57:14.6042 Info 导入出错 
+2021-06-22 15:57:14.6042 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 222
+------------End-------------
+ 
+2021-06-22 15:57:14.6052 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 228
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\prj\sys_ExlImport.cs:行号 18
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-22 15:57:54.6750 Info sys_ExlImport-SaveData 
+2021-06-22 15:57:54.8645 Info 导入出错 
+2021-06-22 15:57:54.8655 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 222
+------------End-------------
+ 
+2021-06-22 15:57:54.8675 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 228
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\prj\sys_ExlImport.cs:行号 18
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-22 15:59:02.4677 Info sys_Home-desktop 
+2021-06-22 16:02:02.5816 Info sys_Home-desktop 
+2021-06-22 16:05:02.7320 Info sys_Home-desktop 
+2021-06-22 16:05:49.8989 Info sys_Home-index 
+2021-06-22 16:05:51.8338 Info sys_Home-desktop 
+2021-06-22 16:06:00.0757 Info bks_BookStock-Select 
+2021-06-22 16:06:03.1904 Info sys_ExlImport-Import 
+2021-06-22 16:06:08.5770 Info sys_ExlImport-ImportUpload 
+2021-06-22 16:06:09.2183 Info sys_ExlImport-disPlayImport 
+2021-06-22 16:06:11.8273 Info sys_ExlImport-SaveData 
+2021-06-22 16:06:13.5776 Info 导入出错 
+2021-06-22 16:06:13.5866 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 208
+------------End-------------
+ 
+2021-06-22 16:06:13.5906 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+------------End-------------
+ 
+2021-06-22 16:06:13.5986 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 235
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\prj\sys_ExlImport.cs:行号 18
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-22 16:06:13.5986 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+------------End-------------
+ 
+2021-06-22 16:08:02.8490 Info sys_Home-desktop 
+2021-06-22 16:08:52.8623 Info sys_Home-desktop 
+2021-06-22 16:09:33.9864 Info bks_BookStock-Select 
+2021-06-22 16:11:04.0650 Info sys_Home-index 
+2021-06-22 16:11:06.2283 Info sys_Home-desktop 
+2021-06-22 16:11:18.2211 Info bks_Supplier-Select 
+2021-06-22 16:11:19.9345 Info bks_BookStock-Select 
+2021-06-22 16:11:22.0538 Info sys_ExlImport-Import 
+2021-06-22 16:11:26.6984 Info sys_ExlImport-ImportUpload 
+2021-06-22 16:11:27.2918 Info sys_ExlImport-disPlayImport 
+2021-06-22 16:11:29.0900 Info sys_ExlImport-SaveData 
+2021-06-22 16:11:30.7426 Info 导入出错 
+2021-06-22 16:11:30.7496 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 210
+------------End-------------
+ 
+2021-06-22 16:11:30.7545 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+------------End-------------
+ 
+2021-06-22 16:11:30.7565 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 238
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\prj\sys_ExlImport.cs:行号 18
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-22 16:11:30.7575 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+------------End-------------
+ 
+2021-06-22 16:14:07.7434 Info sys_Home-desktop 
+2021-06-22 16:15:21.4893 Info sys_Home-index 
+2021-06-22 16:15:23.6774 Info sys_Home-desktop 
+2021-06-22 16:15:25.2821 Info bks_BookStock-Select 
+2021-06-22 16:15:28.1644 Info sys_ExlImport-Import 
+2021-06-22 16:15:32.6592 Info sys_ExlImport-ImportUpload 
+2021-06-22 16:15:33.3254 Info sys_ExlImport-disPlayImport 
+2021-06-22 16:15:35.1755 Info sys_ExlImport-SaveData 
+2021-06-22 16:15:36.7593 Info 导入出错 
+2021-06-22 16:15:36.8082 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 210
+------------End-------------
+ 
+2021-06-22 16:15:36.8131 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+------------End-------------
+ 
+2021-06-22 16:15:36.8530 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 rui.logHelper.log(Exception ex, Boolean isThrow)
+   在 rui.logHelper.log(String message, Exception ex, Boolean isThrow)
+   在 db.bll.bks_BookStock.SaveData(dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStock.cs:行号 238
+   在 db.bll.sys_ExlImport.importData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\prj\sys_ExlImport.cs:行号 18
+   在 web.Areas.admin.Controllers.comm.sys_ExlImportController.SaveData(String tableName) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\sys_ExlImportController.cs:行号 60
+------------End-------------
+ 
+2021-06-22 16:15:36.8540 Error 更新条目时出错。有关详细信息，请参阅内部异常。
+------------begin-------------
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+------------End-------------
+ 
+2021-06-22 16:17:13.3500 Info sys_Home-index 
+2021-06-22 16:17:15.9451 Info sys_Home-desktop 
+2021-06-22 16:17:18.4235 Info bks_Book-Select 
+2021-06-22 16:17:22.2732 Info bks_BookStock-Select 
+2021-06-22 16:17:30.3426 Info bks_BookStock-Update 
+2021-06-22 16:17:33.6258 Info bks_BookStock-Select 
+2021-06-22 16:18:17.5215 Info sys_Home-index 
+2021-06-22 16:18:19.4414 Info sys_Home-desktop 
+2021-06-22 16:18:21.5078 Info bks_BookStock-Select 
+2021-06-22 16:18:23.9054 Info bks_BookStock-Detail 
+2021-06-22 16:18:25.5371 Info sys_BillAttach-SelectPartial 
+2021-06-22 16:18:28.4204 Info bks_BookStock-Update 
+2021-06-22 16:18:28.5231 Info bks_BookStockDetail-select 
+2021-06-22 16:18:29.7897 Info sys_BillAttach-SelectPartial 
+2021-06-22 16:18:30.6654 Info bks_BookStock-Select 
+2021-06-22 16:18:31.1820 Info sys_ExlImport-Import 
+2021-06-22 16:18:35.8824 Info sys_ExlImport-ImportUpload 
+2021-06-22 16:18:36.4718 Info sys_ExlImport-disPlayImport 
+2021-06-22 16:18:40.2737 Info sys_ExlImport-SaveData 
+2021-06-22 16:18:43.2946 Info bks_BookStock-Select 
+2021-06-22 16:18:47.7906 Info bks_BookStock-Update 
+2021-06-22 16:18:47.8275 Info bks_BookStockDetail-select 
+2021-06-22 16:18:47.8873 Info sys_BillAttach-SelectPartial 
+2021-06-22 16:21:20.5562 Info sys_Home-desktop 
+2021-06-22 16:21:55.3661 Info bks_BookStock-Select 
+2021-06-22 16:22:06.2819 Info bks_BookStock-Update 
+2021-06-22 16:22:06.3278 Info bks_BookStockDetail-select 
+2021-06-22 16:22:06.3966 Info sys_BillAttach-SelectPartial 
+2021-06-22 16:24:20.6298 Info sys_Home-desktop 
+2021-06-22 16:24:21.8086 Info bks_BookStock-Update 
+2021-06-22 16:24:21.8894 Info bks_BookStock-Select 
+2021-06-22 16:27:20.7533 Info sys_Home-desktop 
+2021-06-22 16:31:26.2161 Info sys_Home-index 
+2021-06-22 16:31:26.4685 Info sys_Home-desktop 
+2021-06-22 16:31:30.9425 Info bks_BookStock-Select 
+2021-06-22 16:34:35.4572 Info sys_Home-index 
+2021-06-22 16:34:35.9948 Info sys_Home-desktop 
+2021-06-22 16:34:38.6238 Info bks_BookStock-Select 
+2021-06-22 16:34:42.9721 Info bks_BookStock-Detail 
+2021-06-22 16:34:43.0021 Info sys_BillAttach-SelectPartial 
+2021-06-22 16:34:46.5835 Info bks_BookStock-Update 
+2021-06-22 16:34:46.9306 Info bks_BookStockDetail-select 
+2021-06-22 16:34:47.0074 Info sys_BillAttach-SelectPartial 
+2021-06-22 16:34:49.9495 Info bks_BookStockDetail-Insert 
+2021-06-22 16:34:50.0652 Error 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+------------begin-------------
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 db.bll.bks_BookStockDetail.insert(bks_BookStockDetail entry, dbEntities dc) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\bll\book\bks_BookStockDetail.cs:行号 52
+   在 web.Areas.admin.Controllers.bks_BookStockDetailController.Insert(bks_BookStockDetail model) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_BookStockDetailController.cs:行号 50
+------------End-------------
+ 
+2021-06-22 16:34:52.3411 Info select_Dlg-SelectBook 
+2021-06-22 16:34:57.3357 Info bks_BookStockDetail-batchInsert 
+2021-06-22 16:34:57.5282 Info bks_BookStockDetail-Select 
+2021-06-22 16:35:07.7788 Info bks_BookStock-Select 
+2021-06-22 16:36:19.2110 Info bks_BookStock-Select 
+2021-06-22 16:36:26.2522 Info bks_BookStock-Select 
+2021-06-22 16:36:28.3017 Info bks_BookStock-Select 
+2021-06-22 16:36:36.3910 Info bks_BookStock-Select 
+2021-06-22 16:36:40.1271 Info bks_BookStock-Select 
+2021-06-22 16:38:38.5465 Info sys_Home-index 
+2021-06-22 16:38:38.8118 Info sys_Home-desktop 
+2021-06-22 16:38:41.1605 Info bks_Book-Select 
+2021-06-22 16:39:47.2582 Info bks_Book-Update 
+2021-06-22 16:39:59.3957 Info bks_Book-Update 
+2021-06-22 16:39:59.4615 Info bks_Book-select 
+2021-06-22 16:40:08.7946 Info bks_BookStock-Select 
+2021-06-22 16:40:18.7749 Info bks_BookStock-Update 
+2021-06-22 16:40:18.8228 Info bks_BookStockDetail-select 
+2021-06-22 16:40:18.8996 Info sys_BillAttach-SelectPartial 
+2021-06-22 16:41:22.8010 Info bks_BookStock-Select 
+2021-06-22 16:41:25.5577 Info bks_Book-Select 
+2021-06-22 16:41:30.8056 Info bks_Book-Select 
+2021-06-22 16:41:31.3921 Info bks_Book-Select 
+2021-06-22 16:41:39.0197 Info sys_Home-desktop 
+2021-06-22 16:41:40.2065 Info bks_Book-Select 
+2021-06-22 16:41:44.8102 Info bks_BookStock-Select 
+2021-06-22 16:44:39.1053 Info sys_Home-desktop 
+2021-06-22 16:47:39.2177 Info sys_Home-desktop 
+2021-06-22 16:50:39.3243 Info sys_Home-desktop 
+2021-06-22 16:53:39.4250 Info sys_Home-desktop 
+2021-06-22 16:56:39.5162 Info sys_Home-desktop 
+2021-06-22 16:58:31.2205 Info sys_Home-index 
+2021-06-22 16:58:31.4709 Info sys_Home-desktop 
+2021-06-22 16:58:34.4928 Info bks_BookStock-Select 
+2021-06-22 17:00:34.9551 Info sys_Home-index 
+2021-06-22 17:00:36.9408 Info sys_Home-desktop 
+2021-06-22 17:00:38.8367 Info bks_BookStock-Select 
+2021-06-22 17:00:42.9408 Info bks_BookStock-SelectExportl 
+2021-06-22 17:00:43.0086 Error “stockSum”附近有语法错误。
+------------begin-------------
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderImpl(IDbConnection cnn, CommandDefinition& command, CommandBehavior commandBehavior, IDbCommand& cmd)
+   在 Dapper.SqlMapper.ExecuteReader(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 rui.dbHelper.ExecuteDataTable(String cmdText, Object cmdPara, CommandType cmdType)
+   在 rui.pagerHelper.Execute(Int32 pageSize, Int32 pageIndex, pagerBase pager, String exceptDateFieldName)
+   在 db.view.bks_Book.dllSearch() 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\view\book\bks_Book.cs:行号 84
+   在 web.Areas.admin.Controllers.bks_BookStockController.SelectExportl(bks_Book model) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_BookStockController.cs:行号 123
+------------End-------------
+ 
+2021-06-22 17:00:46.7690 Info bks_BookStock-Select 
+2021-06-22 17:00:48.0017 Info bks_BookStock-SelectExportl 
+2021-06-22 17:00:48.0376 Error “stockSum”附近有语法错误。
+------------begin-------------
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderImpl(IDbConnection cnn, CommandDefinition& command, CommandBehavior commandBehavior, IDbCommand& cmd)
+   在 Dapper.SqlMapper.ExecuteReader(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 rui.dbHelper.ExecuteDataTable(String cmdText, Object cmdPara, CommandType cmdType)
+   在 rui.pagerHelper.Execute(Int32 pageSize, Int32 pageIndex, pagerBase pager, String exceptDateFieldName)
+   在 db.view.bks_Book.dllSearch() 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\view\book\bks_Book.cs:行号 84
+   在 web.Areas.admin.Controllers.bks_BookStockController.SelectExportl(bks_Book model) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_BookStockController.cs:行号 123
+------------End-------------
+ 
+2021-06-22 17:00:54.7128 Info bks_BookStock-Select 
+2021-06-22 17:24:33.7800 Info sys_Home-index 
+2021-06-22 17:24:35.9283 Info sys_Home-desktop 
+2021-06-22 17:24:38.4146 Info bks_BookStock-Select 
+2021-06-22 17:24:41.1822 Info bks_BookStock-SelectExportl 
+2021-06-22 17:24:41.2490 Error “stockSum”附近有语法错误。
+------------begin-------------
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderImpl(IDbConnection cnn, CommandDefinition& command, CommandBehavior commandBehavior, IDbCommand& cmd)
+   在 Dapper.SqlMapper.ExecuteReader(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 rui.dbHelper.ExecuteDataTable(String cmdText, Object cmdPara, CommandType cmdType)
+   在 rui.pagerHelper.Execute(Int32 pageSize, Int32 pageIndex, pagerBase pager, String exceptDateFieldName)
+   在 db.view.bks_Book.Search() 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\view\book\bks_Book.cs:行号 58
+   在 web.Areas.admin.Controllers.bks_BookStockController.SelectExportl(bks_Book model) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_BookStockController.cs:行号 125
+------------End-------------
+ 
+2021-06-22 17:24:44.0017 Info bks_BookStock-Select 
+2021-06-22 17:24:45.0978 Info bks_BookStock-SelectExportl 
+2021-06-22 17:24:45.1297 Error “stockSum”附近有语法错误。
+------------begin-------------
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderImpl(IDbConnection cnn, CommandDefinition& command, CommandBehavior commandBehavior, IDbCommand& cmd)
+   在 Dapper.SqlMapper.ExecuteReader(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 rui.dbHelper.ExecuteDataTable(String cmdText, Object cmdPara, CommandType cmdType)
+   在 rui.pagerHelper.Execute(Int32 pageSize, Int32 pageIndex, pagerBase pager, String exceptDateFieldName)
+   在 db.view.bks_Book.Search() 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\view\book\bks_Book.cs:行号 58
+   在 web.Areas.admin.Controllers.bks_BookStockController.SelectExportl(bks_Book model) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_BookStockController.cs:行号 125
+------------End-------------
+ 
+2021-06-22 17:24:50.9631 Info bks_BookStock-Select 
+2021-06-22 17:25:54.3619 Info sys_Home-index 
+2021-06-22 17:25:56.4373 Info sys_Home-desktop 
+2021-06-22 17:26:00.0866 Info bks_BookStock-Select 
+2021-06-22 17:26:02.3625 Info bks_BookStock-SelectExportl 
+2021-06-22 17:26:02.4303 Error “stockSum”附近有语法错误。
+------------begin-------------
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderImpl(IDbConnection cnn, CommandDefinition& command, CommandBehavior commandBehavior, IDbCommand& cmd)
+   在 Dapper.SqlMapper.ExecuteReader(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 rui.dbHelper.ExecuteDataTable(String cmdText, Object cmdPara, CommandType cmdType)
+   在 rui.pagerHelper.Execute(Int32 pageSize, Int32 pageIndex, pagerBase pager, String exceptDateFieldName)
+   在 db.view.bks_Book.Search() 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\view\book\bks_Book.cs:行号 59
+   在 web.Areas.admin.Controllers.bks_BookStockController.SelectExportl(bks_Book model) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_BookStockController.cs:行号 125
+------------End-------------
+ 
+2021-06-22 17:26:07.4160 Info bks_BookStock-Select 
+2021-06-22 17:26:08.4841 Info bks_BookStock-SelectExportl 
+2021-06-22 17:26:08.5150 Error “stockSum”附近有语法错误。
+------------begin-------------
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderImpl(IDbConnection cnn, CommandDefinition& command, CommandBehavior commandBehavior, IDbCommand& cmd)
+   在 Dapper.SqlMapper.ExecuteReader(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 rui.dbHelper.ExecuteDataTable(String cmdText, Object cmdPara, CommandType cmdType)
+   在 rui.pagerHelper.Execute(Int32 pageSize, Int32 pageIndex, pagerBase pager, String exceptDateFieldName)
+   在 db.view.bks_Book.Search() 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\view\book\bks_Book.cs:行号 59
+   在 web.Areas.admin.Controllers.bks_BookStockController.SelectExportl(bks_Book model) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_BookStockController.cs:行号 125
+------------End-------------
+ 
+2021-06-22 17:26:09.2491 Info bks_BookStock-Select 
+2021-06-22 17:26:10.4888 Info bks_BookStock-SelectExportl 
+2021-06-22 17:26:10.5197 Error “stockSum”附近有语法错误。
+------------begin-------------
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderImpl(IDbConnection cnn, CommandDefinition& command, CommandBehavior commandBehavior, IDbCommand& cmd)
+   在 Dapper.SqlMapper.ExecuteReader(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 rui.dbHelper.ExecuteDataTable(String cmdText, Object cmdPara, CommandType cmdType)
+   在 rui.pagerHelper.Execute(Int32 pageSize, Int32 pageIndex, pagerBase pager, String exceptDateFieldName)
+   在 db.view.bks_Book.Search() 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\dbLibrary\view\book\bks_Book.cs:行号 59
+   在 web.Areas.admin.Controllers.bks_BookStockController.SelectExportl(bks_Book model) 位置 d:\6.22项目实训\6.22\MVC5CourseDesign\code\webSite\Areas\admin\Controllers\bks_BookStockController.cs:行号 125
+------------End-------------
+ 
+2021-06-22 17:26:11.4003 Info bks_BookStock-Select 

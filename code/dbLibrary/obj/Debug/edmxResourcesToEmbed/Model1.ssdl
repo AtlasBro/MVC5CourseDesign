@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BookSaleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="ruiBookSaleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="af_AuditFlow">
     <Key>
       <PropertyRef Name="flowCode" />
@@ -175,6 +175,7 @@
     <Property Name="stockSum" Type="int" />
     <Property Name="sellSum" Type="int" />
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
+    <Property Name="lessnum" Type="int" />
   </EntityType>
   <EntityType Name="bks_BookStock">
     <Key>
@@ -247,7 +248,7 @@
     </Key>
     <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="rowID" Type="nchar" MaxLength="32" />
-    <Property Name="orderCode" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="orderCode" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="bookCode" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="quantity" Type="int" />
     <Property Name="price" Type="decimal" Precision="18" Scale="2" />
@@ -263,9 +264,9 @@
     </Key>
     <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="rowID" Type="nchar" MaxLength="32" />
-    <Property Name="orderCode" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="orderCode" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="customerCode" Type="nvarchar" MaxLength="50" />
-    <Property Name="addressCode" Type="uniqueidentifier" />
+    <Property Name="addressCode" Type="varchar" MaxLength="50" />
     <Property Name="orderDate" Type="datetime" />
     <Property Name="totalPrice" Type="decimal" Precision="18" Scale="2" />
     <Property Name="status" Type="nvarchar" MaxLength="10" />
@@ -646,7 +647,7 @@
     <Property Name="remark" Type="nvarchar(max)" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditCenter”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditCenter”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_af_AuditCenter">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -684,7 +685,7 @@
     <Property Name="sendUserName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditFlow”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditFlow”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_af_AuditFlow">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -703,7 +704,7 @@
     <Property Name="auditTypeName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_af_AuditPostUser”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_af_AuditPostUser”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_af_AuditPostUser">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -724,7 +725,7 @@
     <Property Name="isDeptPost" Type="nchar" MaxLength="1" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_Book”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_Book”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_bks_Book">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -749,11 +750,12 @@
     <Property Name="stockSum" Type="int" />
     <Property Name="sellSum" Type="int" />
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
+    <Property Name="lessnum" Type="int" />
     <Property Name="pressName" Type="nvarchar" MaxLength="100" />
     <Property Name="bookTypeName" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookStock”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookStock”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_bks_BookStock">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -769,7 +771,7 @@
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookStockDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookStockDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_bks_BookStockDetail">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -788,7 +790,7 @@
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_bks_BookType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_BookType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_bks_BookType">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -802,7 +804,101 @@
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_Resource”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_OrderDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="sv_bks_OrderDetail">
+    <Key>
+      <PropertyRef Name="rowNum" />
+      <PropertyRef Name="orderCode" />
+      <PropertyRef Name="bookCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="orderCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="bookCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="costPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="subTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="isComment" Type="bit" />
+    <Property Name="commentDate" Type="datetime" />
+    <Property Name="commentContent" Type="nvarchar(max)" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_OrderInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="sv_bks_OrderInfo">
+    <Key>
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="orderCode" />
+    </Key>
+    <Property Name="Expr1" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="orderCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="customerCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="addressCode" Type="varchar" MaxLength="50" />
+    <Property Name="orderDate" Type="datetime" />
+    <Property Name="totalPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="status" Type="nvarchar" MaxLength="10" />
+    <Property Name="employeeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_Sell”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="sv_bks_Sell">
+    <Key>
+      <PropertyRef Name="rowNum" />
+      <PropertyRef Name="orderCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="orderCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="customerCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="addressCode" Type="varchar" MaxLength="50" />
+    <Property Name="orderDate" Type="datetime" />
+    <Property Name="totalPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="status" Type="nvarchar" MaxLength="10" />
+    <Property Name="employeeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="costPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="subTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="bookCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_ShoppingTrolley”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="sv_bks_ShoppingTrolley">
+    <Key>
+      <PropertyRef Name="rowNum" />
+      <PropertyRef Name="customerCode" />
+      <PropertyRef Name="bookCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="customerCode" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="bookCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+    <Property Name="bookName" Type="nvarchar" MaxLength="100" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="subPrice" Type="decimal" Precision="29" Scale="2" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“ruiBookSale.dbo.sv_bks_supplier”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="sv_bks_supplier">
+    <Key>
+      <PropertyRef Name="rowNum" />
+      <PropertyRef Name="supplierCode" />
+    </Key>
+    <Property Name="rowNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rowID" Type="nchar" MaxLength="32" />
+    <Property Name="supplierCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="supplierName" Type="nvarchar" MaxLength="100" />
+    <Property Name="contactUser" Type="nvarchar" MaxLength="10" />
+    <Property Name="contactPhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_Resource”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_rbac_Resource">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -826,7 +922,7 @@
     <Property Name="moduleName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_User”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_User”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_rbac_User">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -847,7 +943,7 @@
     <Property Name="isLogin" Type="nchar" MaxLength="1" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_rbac_UserOrg”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_rbac_UserOrg”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_rbac_UserOrg">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -867,7 +963,7 @@
     <Property Name="deptName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sbs_Dept”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sbs_Dept”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_sbs_Dept">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -888,7 +984,7 @@
     <Property Name="orgName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sbs_Empl”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sbs_Empl”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_sbs_Empl">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -913,7 +1009,18 @@
     <Property Name="isLogin" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <!--生成过程中发现错误:
-警告 6002: 表/视图“BookSale.dbo.sv_sys_BillAttach”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+警告 6002: 表/视图“ruiBookSale.dbo.sv_shopTrolley”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="sv_shopTrolley">
+    <Key>
+      <PropertyRef Name="bookCode" />
+    </Key>
+    <Property Name="bookName" Type="nvarchar" MaxLength="100" />
+    <Property Name="authorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="bookCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“ruiBookSale.dbo.sv_sys_BillAttach”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
   <EntityType Name="sv_sys_BillAttach">
     <Key>
       <PropertyRef Name="rowNum" />
@@ -937,7 +1044,7 @@
     <Property Name="remark" Type="nvarchar" MaxLength="500" />
     <Property Name="uploadUserName" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityContainer Name="BookSaleModelStoreContainer">
+  <EntityContainer Name="ruiBookSaleModelStoreContainer">
     <EntitySet Name="af_AuditFlow" EntityType="Self.af_AuditFlow" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="af_AuditFlowDept" EntityType="Self.af_AuditFlowDept" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="af_AuditLog" EntityType="Self.af_AuditLog" Schema="dbo" store:Type="Tables" />
@@ -1062,6 +1169,7 @@
     [sv_bks_Book].[stockSum] AS [stockSum], 
     [sv_bks_Book].[sellSum] AS [sellSum], 
     [sv_bks_Book].[remark] AS [remark], 
+    [sv_bks_Book].[lessnum] AS [lessnum], 
     [sv_bks_Book].[pressName] AS [pressName], 
     [sv_bks_Book].[bookTypeName] AS [bookTypeName]
     FROM [dbo].[sv_bks_Book] AS [sv_bks_Book]</DefiningQuery>
@@ -1100,6 +1208,78 @@
     [sv_bks_BookType].[showOrder] AS [showOrder], 
     [sv_bks_BookType].[remark] AS [remark]
     FROM [dbo].[sv_bks_BookType] AS [sv_bks_BookType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sv_bks_OrderDetail" EntityType="Self.sv_bks_OrderDetail" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sv_bks_OrderDetail].[rowNum] AS [rowNum], 
+    [sv_bks_OrderDetail].[rowID] AS [rowID], 
+    [sv_bks_OrderDetail].[orderCode] AS [orderCode], 
+    [sv_bks_OrderDetail].[bookCode] AS [bookCode], 
+    [sv_bks_OrderDetail].[quantity] AS [quantity], 
+    [sv_bks_OrderDetail].[price] AS [price], 
+    [sv_bks_OrderDetail].[costPrice] AS [costPrice], 
+    [sv_bks_OrderDetail].[subTotal] AS [subTotal], 
+    [sv_bks_OrderDetail].[isComment] AS [isComment], 
+    [sv_bks_OrderDetail].[commentDate] AS [commentDate], 
+    [sv_bks_OrderDetail].[commentContent] AS [commentContent]
+    FROM [dbo].[sv_bks_OrderDetail] AS [sv_bks_OrderDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sv_bks_OrderInfo" EntityType="Self.sv_bks_OrderInfo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sv_bks_OrderInfo].[Expr1] AS [Expr1], 
+    [sv_bks_OrderInfo].[rowID] AS [rowID], 
+    [sv_bks_OrderInfo].[orderCode] AS [orderCode], 
+    [sv_bks_OrderInfo].[customerCode] AS [customerCode], 
+    [sv_bks_OrderInfo].[addressCode] AS [addressCode], 
+    [sv_bks_OrderInfo].[orderDate] AS [orderDate], 
+    [sv_bks_OrderInfo].[totalPrice] AS [totalPrice], 
+    [sv_bks_OrderInfo].[status] AS [status], 
+    [sv_bks_OrderInfo].[employeeCode] AS [employeeCode], 
+    [sv_bks_OrderInfo].[remark] AS [remark]
+    FROM [dbo].[sv_bks_OrderInfo] AS [sv_bks_OrderInfo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sv_bks_Sell" EntityType="Self.sv_bks_Sell" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sv_bks_Sell].[rowNum] AS [rowNum], 
+    [sv_bks_Sell].[rowID] AS [rowID], 
+    [sv_bks_Sell].[orderCode] AS [orderCode], 
+    [sv_bks_Sell].[customerCode] AS [customerCode], 
+    [sv_bks_Sell].[addressCode] AS [addressCode], 
+    [sv_bks_Sell].[orderDate] AS [orderDate], 
+    [sv_bks_Sell].[totalPrice] AS [totalPrice], 
+    [sv_bks_Sell].[status] AS [status], 
+    [sv_bks_Sell].[employeeCode] AS [employeeCode], 
+    [sv_bks_Sell].[remark] AS [remark], 
+    [sv_bks_Sell].[quantity] AS [quantity], 
+    [sv_bks_Sell].[price] AS [price], 
+    [sv_bks_Sell].[costPrice] AS [costPrice], 
+    [sv_bks_Sell].[subTotal] AS [subTotal], 
+    [sv_bks_Sell].[bookCode] AS [bookCode]
+    FROM [dbo].[sv_bks_Sell] AS [sv_bks_Sell]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sv_bks_ShoppingTrolley" EntityType="Self.sv_bks_ShoppingTrolley" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sv_bks_ShoppingTrolley].[rowNum] AS [rowNum], 
+    [sv_bks_ShoppingTrolley].[rowID] AS [rowID], 
+    [sv_bks_ShoppingTrolley].[customerCode] AS [customerCode], 
+    [sv_bks_ShoppingTrolley].[bookCode] AS [bookCode], 
+    [sv_bks_ShoppingTrolley].[quantity] AS [quantity], 
+    [sv_bks_ShoppingTrolley].[remark] AS [remark], 
+    [sv_bks_ShoppingTrolley].[bookName] AS [bookName], 
+    [sv_bks_ShoppingTrolley].[price] AS [price], 
+    [sv_bks_ShoppingTrolley].[subPrice] AS [subPrice]
+    FROM [dbo].[sv_bks_ShoppingTrolley] AS [sv_bks_ShoppingTrolley]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sv_bks_supplier" EntityType="Self.sv_bks_supplier" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sv_bks_supplier].[rowNum] AS [rowNum], 
+    [sv_bks_supplier].[rowID] AS [rowID], 
+    [sv_bks_supplier].[supplierCode] AS [supplierCode], 
+    [sv_bks_supplier].[supplierName] AS [supplierName], 
+    [sv_bks_supplier].[contactUser] AS [contactUser], 
+    [sv_bks_supplier].[contactPhone] AS [contactPhone], 
+    [sv_bks_supplier].[remark] AS [remark]
+    FROM [dbo].[sv_bks_supplier] AS [sv_bks_supplier]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="sv_rbac_Resource" EntityType="Self.sv_rbac_Resource" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -1185,6 +1365,14 @@
     [sv_sbs_Empl].[orgName] AS [orgName], 
     [sv_sbs_Empl].[isLogin] AS [isLogin]
     FROM [dbo].[sv_sbs_Empl] AS [sv_sbs_Empl]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sv_shopTrolley" EntityType="Self.sv_shopTrolley" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sv_shopTrolley].[bookName] AS [bookName], 
+    [sv_shopTrolley].[authorName] AS [authorName], 
+    [sv_shopTrolley].[quantity] AS [quantity], 
+    [sv_shopTrolley].[bookCode] AS [bookCode]
+    FROM [dbo].[sv_shopTrolley] AS [sv_shopTrolley]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="sv_sys_BillAttach" EntityType="Self.sv_sys_BillAttach" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

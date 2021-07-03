@@ -1,0 +1,14 @@
+﻿<ul>
+    <li><a href="@Url.Action("Index","bks_Press")">所有图书</a></li>
+    @{
+        System.Data.DataTable table = (System.Data.DataTable)ViewData["bks_PressTable"];
+    }
+    @foreach (System.Data.DataRow row in table.Rows)
+    {
+        <li>
+            <a href="@Url.Action("Index","bks_Press",new { press=row["PressCode"]})">
+                @row["PressName"].ToString()
+            </a>
+        </li>
+    }
+</ul>

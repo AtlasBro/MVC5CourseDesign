@@ -1,0 +1,24 @@
+﻿@*数据展示的公用视图*@
+@model rui.pagerBase
+@{ string ctrl = ViewContext.RouteData.Values["controller"].ToString(); }
+<input type="hidden" class="pagerinfo"
+       data-rowcount="@Model.RowCount"
+       data-pagesize="@Model.PageSize"
+       data-pageindex="@Model.PageIndex" data-pagecount="@Model.PageCount"
+       data-orderfield="@Model.OrderField" data-orderway="@Model.OrderWay" />
+<ul style="margin-right:5px;">
+    @for (int i = 0; i < Model.dataTable.Rows.Count; i++)
+    {
+        string rowID = Model.dataTable.Rows[i]["rowID"].ToString();
+        string keyCode = Model.dataTable.Rows[i][Model.keyField].ToString();
+        string bookCode = Model.dataTable.Rows[i]["bookCode"].ToString();
+    <li>
+        <div>图书名称：@Model.dataTable.Rows[i]["bookName"]</div>
+        <div>
+            @Html.ActionLink("加入购物车", "addCart", "bks_ShoppingTrolley",
+            new { bookCode = bookCode },
+            new { @class = "listOp", data_msg = "确认加入购物车？" })
+    </div>
+    </li>
+    }
+</ul>

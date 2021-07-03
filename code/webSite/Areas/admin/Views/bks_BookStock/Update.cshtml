@@ -77,7 +77,8 @@
             @Html.EditorFor(model => model.remark)
             @Html.ValidationMessageFor(model => model.remark)
         </div>
-
+        
+        </div>
         <p class="button">
             <a class="billSave opSave" data-close="true">保存</a>
             @Html.ActionLink("新增明细方式1", "Insert", "bks_BookStockDetail", new { stockCode = Model.stockCode }, new { @class = "showDialogR opInsert" })
@@ -85,10 +86,11 @@
             @Html.ActionLink("新增明细方式3", "SelectBook", "select_Dlg", new { fromCode = Model.stockCode, fromType = "bks_BookStock" }, new { @class = "selectedBook opInsert", data_stockCode = Model.stockCode })
             <a class="opClose">关闭</a>
         </p>
-    </div>
+    
 }
 <fieldset>
     <legend>进货明细</legend>
+    
     @Html.Action("select", "bks_BookStockDetail", new { stockCode = Model.stockCode, opMode = "Update" })
 </fieldset>
 <fieldset>

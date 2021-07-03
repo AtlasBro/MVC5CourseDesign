@@ -39,6 +39,55 @@
                 if (isNull(userCode) == false) {
                     ajaxPost("/login/getLoginOrg", { userCode: userCode }, function (data) {
                         showJsonResult(data, function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             updateDdl($(".ddlOrg"), parseJSON(data.orgList), false);
                         });
                     });

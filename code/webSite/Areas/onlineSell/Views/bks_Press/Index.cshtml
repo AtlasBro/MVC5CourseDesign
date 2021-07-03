@@ -1,0 +1,66 @@
+﻿@model db.client.view.bks_Book
+
+@section header{
+    <style type="text/css">
+        .left {
+            width: 220px;
+            float: left;
+            background-color: antiquewhite;
+            font-size: 16px;
+            padding-left: 10px;
+            margin-left: 20px;
+            padding-top: 10px;
+            min-height: 730px;
+            box-sizing: border-box;
+        }
+
+        .right {
+            width: 740px;
+            float: right;
+            padding-top: 10px;
+            font-size: 12pt;
+            box-sizing: border-box;
+        }
+
+            .right li {
+                float: left;
+                width: 220px;
+                height: 300px;
+                margin-left: 20px;
+                border: 1pt dotted black;
+                margin-bottom: 15px;
+                box-sizing: border-box;
+            }
+    </style>
+    <script type="text/javascript">
+        //刷新当前页面的数据
+        function refleshData(exeCountSql) {
+            $("#container").pager("reflesh", exeCountSql);
+        }
+        //初始化分页
+        $(function () {
+            $("#container").pager();
+        });
+    </script>
+}
+<div class="left">
+    @Html.Action("showNav", "bks_Press")
+</div>
+
+<div class="right">
+    <div class="container" id="container"
+         data-width="@Model.PageWidth" data-url="bks_Press/Index">
+        <div class="search" style="padding-left:20px; padding-right:20px;">
+            <span>图书名称：@Html.TextBoxFor(a => a.bookName)</span>
+            <span>@Html.HiddenFor(a => a.type)</span>
+            <div class="toolbar">
+                <a class="opSearch">查询</a>
+            </div>
+        </div>
+        <div class="pager"></div>
+        <div class="showData noTable">
+            @{Html.RenderPartial("_ShowData");}
+        </div>
+    </div>
+</div>
+

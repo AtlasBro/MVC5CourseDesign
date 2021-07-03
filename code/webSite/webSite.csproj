@@ -139,6 +139,7 @@
     <Folder Include="upload\bill\rbac_Resource\2019\3\" />
     <Folder Include="upload\excelImport\" />
     <Folder Include="upload\excelTemplate\" />
+    <Folder Include="Views\Default1\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -152,7 +153,10 @@
     <Compile Include="Areas\admin\Controllers\bks_BookStockController.cs" />
     <Compile Include="Areas\admin\Controllers\bks_BookStockDetailController.cs" />
     <Compile Include="Areas\admin\Controllers\bks_BookTypeController.cs" />
+    <Compile Include="Areas\admin\Controllers\bks_OrderDetailController.cs" />
+    <Compile Include="Areas\admin\Controllers\bks_OrderInfoController.cs" />
     <Compile Include="Areas\admin\Controllers\bks_PressController.cs" />
+    <Compile Include="Areas\admin\Controllers\bks_SellController.cs" />
     <Compile Include="Areas\admin\Controllers\bks_SupplierController.cs" />
     <Compile Include="Areas\admin\Controllers\rbac_ModuleController.cs" />
     <Compile Include="Areas\admin\Controllers\rbac_ResourceController.cs" />
@@ -172,8 +176,17 @@
     <Compile Include="Areas\admin\Controllers\sys_ExlImportController.cs" />
     <Compile Include="Areas\admin\Controllers\sys_HomeController.cs" />
     <Compile Include="Areas\admin\Controllers\sys_PageController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\bks_bookTypeController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\bks_CustomerAddressController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\bks_OrderInfoController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\bks_PressController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\bks_ShoppingTrolleyController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\onlineSell\Controllers\myInfoController.cs" />
+    <Compile Include="Areas\onlineSell\onlineSellAreaRegistration.cs" />
     <Compile Include="Controllers\baseController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Filters\checkClientLoginAttribute.cs" />
     <Compile Include="Filters\checkLoginAttribute.cs" />
     <Compile Include="Filters\HandleExceptionAttribute.cs" />
     <Compile Include="Filters\NoCacheAttribute.cs" />
@@ -820,6 +833,41 @@
     <Content Include="Areas\admin\Views\bks_Press\Select.cshtml" />
     <Content Include="Areas\admin\Views\bks_BookType\bookTypeNav.cshtml" />
     <Content Include="Areas\admin\Views\bks_Supplier\Select.cshtml" />
+    <Content Include="Areas\admin\Views\bks_BookStock\_ShowData.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderInfo\Select.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderDetail\Select.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderDetail\_ShowDataDetail.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderDetail\_ShowDataUpdate.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderDetail\Detail.cshtml" />
+    <Content Include="Areas\admin\Views\bks_Sell\Select.cshtml" />
+    <Content Include="Areas\admin\Views\bks_OrderInfo\Detail.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_bookType\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_bookType\showNav.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_bookType\_ShowData.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_CustomerAddress\Detail.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_CustomerAddress\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_CustomerAddress\Insert.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_CustomerAddress\Update.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_CustomerAddress\_ShowData.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_OrderInfo\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_OrderInfo\_ShowData.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_Press\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_Press\showNav.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_Press\_ShowData.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_ShoppingTrolley\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\bks_ShoppingTrolley\_ShowData.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Default\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Default\Login.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Default\Register.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Default\show.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Default\_ShowData.cshtml" />
+    <Content Include="Areas\onlineSell\Views\myInfo\Index.cshtml" />
+    <Content Include="Areas\onlineSell\Views\myInfo\Nav.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\onlineSell\Views\Shared\_ShowData.cshtml" />
+    <Content Include="Areas\onlineSell\Views\web.config" />
+    <Content Include="Areas\onlineSell\Views\_ViewStart.cshtml" />
     <None Include="Content\scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Content\scripts\jquery-1.12.4.js" />
     <Content Include="Content\scripts\jquery-1.12.4.min.js" />
@@ -1149,7 +1197,9 @@
     <Content Include="upload\preview\rbac_Resource\2019\0315091434\index.html" />
     <Content Include="upload\preview\rbac_Resource\2019\0315092133\index.html" />
     <Content Include="upload\preview\rbac_Resource\2019\0315094634\index.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

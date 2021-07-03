@@ -1,0 +1,34 @@
+﻿@section header
+{
+    <style type="text/css">
+        .register {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16pt;
+            padding-top: 40px;
+        }
+    </style>
+}
+<div class="register">
+    <div>
+        @*用户编号:@TempData["code"]*@
+        用户编号:@db.client.bll.loginHelper.getLoginUserCode()
+    </div>
+    <div>
+        @*账号:@TempData["name"]*@
+        账号:@db.client.bll.loginHelper.getLoginUserName()
+    </div>
+    <div>
+        密码:@db.client.bll.loginHelper.getLoginPass()
+    </div>
+    <div>
+        邮箱:@db.client.bll.loginHelper.getLoginEmail()
+    </div>
+    <div>
+        电话:@db.client.bll.loginHelper.getLoginTel()
+    </div>
+    @*<div>
+        <a href="@Url.Action("login")">返回登陆界面</a>
+    </div>*@
+</div>
